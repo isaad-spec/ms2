@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skin Infections by Pathogen — T3/T5/T6</title>
+<style>
+:root{
+  --ink:#1e2430;
+  --ink-soft:#4a5568;
+  --paper:#f6f5f1;
+  --card:#ffffff;
+  --line:#e4e1d8;
+  --bact:#2f6690; --bact-bg:#eaf2f7; --bact-soft:#d7e6f0;
+  --fungi:#3f7d5c; --fungi-bg:#eaf4ee; --fungi-soft:#d6ebde;
+  --viral:#7a4fa3; --viral-bg:#f3eef8; --viral-soft:#e6daf1;
+  --accent: var(--bact);
+  --accent-bg: var(--bact-bg);
+  --accent-soft: var(--bact-soft);
+  --warn:#b5541c;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:"Sarabun","Segoe UI",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.65;
+}
+header.app-head{
+  padding:22px 28px 14px;
+  border-bottom:1px solid var(--line);
+  background:var(--card);
+}
+header.app-head h1{
+  margin:0 0 4px;
+  font-size:1.5rem;
+  letter-spacing:.2px;
+}
+header.app-head p{
+  margin:0;
+  color:var(--ink-soft);
+  font-size:.92rem;
+}
+nav.tabs{
+  display:flex;
+  gap:6px;
+  padding:10px 24px 0;
+  background:var(--card);
+  border-bottom:1px solid var(--line);
+  flex-wrap:wrap;
+}
+.tab-btn{
+  border:1px solid var(--line);
+  border-bottom:none;
+  background:var(--paper);
+  color:var(--ink-soft);
+  padding:10px 18px;
+  border-radius:10px 10px 0 0;
+  cursor:pointer;
+  font-size:.95rem;
+  font-weight:600;
+  font-family:inherit;
+  transition:.15s;
+}
+.tab-btn:hover{ color:var(--ink); }
+.tab-btn.active{
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+}
+.tab-btn[data-tab="t3"].active{ background:var(--bact); }
+.tab-btn[data-tab="t5"].active{ background:var(--fungi); }
+.tab-btn[data-tab="t6"].active{ background:var(--viral); }
+
+.layout{
+  display:flex;
+  align-items:flex-start;
+  min-height:calc(100vh - 130px);
+}
+aside.sidebar{
+  width:250px;
+  min-width:250px;
+  background:var(--card);
+  border-right:1px solid var(--line);
+  padding:16px 10px;
+  position:sticky;
+  top:0;
+  align-self:flex-start;
+  max-height:100vh;
+  overflow-y:auto;
+}
+.sidebar-title{
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--ink-soft);
+  padding:4px 10px 8px;
+}
+.side-btn{
+  display:block;
+  width:100%;
+  text-align:left;
+  padding:10px 12px;
+  margin-bottom:4px;
+  border:none;
+  background:transparent;
+  border-radius:8px;
+  cursor:pointer;
+  font-family:inherit;
+  font-size:.9rem;
+  color:var(--ink);
+  border-left:3px solid transparent;
+}
+.side-btn:hover{ background:var(--accent-bg); }
+.side-btn.active{
+  background:var(--accent-bg);
+  border-left:3px solid var(--accent);
+  font-weight:700;
+  color:var(--accent);
+}
+.side-btn .latin{ font-style:italic; display:block; font-size:.78rem; color:var(--ink-soft); font-weight:400;}
+.side-btn.active .latin{ color:var(--accent); opacity:.8;}
+
+main.content{
+  flex:1;
+  padding:24px 32px 60px;
+  max-width:980px;
+}
+.panel{ display:none; animation:fade .25s ease; }
+.panel.active{ display:block; }
+@keyframes fade{ from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;} }
+
+.organism-head{
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:6px;
+}
+.organism-head h2{
+  margin:0;
+  font-size:1.5rem;
+  color:var(--accent);
+}
+.organism-head .sci{
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:1rem;
+}
+.tagline{
+  color:var(--ink-soft);
+  margin:0 0 18px;
+  font-size:.95rem;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-left:4px solid var(--accent);
+  border-radius:10px;
+  padding:16px 20px;
+  margin-bottom:16px;
+}
+.card h3{
+  margin:0 0 10px;
+  font-size:1.02rem;
+  color:var(--ink);
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.card h3::before{
+  content:"";
+  width:8px;height:8px;
+  border-radius:50%;
+  background:var(--accent);
+  display:inline-block;
+}
+.card ul, .card ol{ margin:6px 0; padding-left:20px; }
+.card li{ margin-bottom:5px; }
+
+.disease-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:10px;
+  margin:10px 0 4px;
+}
+.disease-chip{
+  background:var(--accent-bg);
+  border:1px solid var(--accent-soft);
+  border-radius:8px;
+  padding:10px 12px;
+}
+.disease-chip .th{ font-weight:700; font-size:.92rem; }
+.disease-chip .en{ font-size:.78rem; color:var(--ink-soft); font-style:italic;}
+
+table.cmp{
+  width:100%;
+  border-collapse:collapse;
+  margin:8px 0 4px;
+  font-size:.88rem;
+}
+table.cmp th{
+  background:var(--accent);
+  color:#fff;
+  padding:9px 10px;
+  text-align:left;
+  font-weight:600;
+}
+table.cmp td{
+  padding:9px 10px;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+table.cmp tr:nth-child(even) td{ background:#fafaf7; }
+
+details.accordion{
+  border:1px solid var(--line);
+  border-radius:8px;
+  margin-bottom:10px;
+  overflow:hidden;
+  background:#fdfdfb;
+}
+details.accordion summary{
+  cursor:pointer;
+  padding:11px 16px;
+  font-weight:600;
+  background:var(--accent-bg);
+  color:var(--accent);
+  list-style:none;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+details.accordion summary::-webkit-details-marker{display:none;}
+details.accordion summary::after{
+  content:"+";
+  font-size:1.2rem;
+  font-weight:400;
+}
+details.accordion[open] summary::after{ content:"–"; }
+details.accordion .acc-body{ padding:12px 16px; }
+
+mark.imgref{
+  background:#fff2cf;
+  padding:1px 5px;
+  border-radius:4px;
+  font-weight:600;
+  color:#6b4d00;
+}
+.imgnote{
+  font-size:.78rem;
+  color:var(--ink-soft);
+  font-style:italic;
+}
+
+.keyterms{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:6px;
+}
+.kt{
+  background:var(--accent);
+  color:#fff;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:.82rem;
+}
+.kt b{ font-weight:700; }
+.kt small{ display:block; font-weight:400; opacity:.9; font-size:.75rem; }
+
+.exam-note{
+  background:#fff6ec;
+  border:1px solid #f0dcb8;
+  border-left:4px solid var(--warn);
+  border-radius:8px;
+  padding:12px 16px;
+  margin-bottom:16px;
+  font-size:.92rem;
+}
+.exam-note h3{ color:var(--warn); margin:0 0 8px; }
+.exam-note h3::before{ background:var(--warn); }
+
+svg{ max-width:100%; height:auto; }
+.diagram-wrap{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:14px;
+  margin-bottom:16px;
+  text-align:center;
+}
+.diagram-cap{ font-size:.8rem; color:var(--ink-soft); margin-top:6px; }
+
+footer.credits{
+  text-align:center;
+  color:var(--ink-soft);
+  font-size:.8rem;
+  padding:20px;
+}
+@media (max-width:820px){
+  .layout{ flex-direction:column; }
+  aside.sidebar{ width:100%; position:relative; max-height:none; border-right:none; border-bottom:1px solid var(--line);}
+  main.content{ padding:18px; }
+}
+</style>
+</head>
+<body>
+
+<header class="app-head">
+  <h1>🦠 Skin Infections — จัดเรียงตามเชื้อก่อโรค</h1>
+  <p>T3 Bacterial · T5 Fungal · T6 Viral Exanthems — 1501 215 Skin and Related Connective Tissue</p>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="t3">T3 · Bacterial</button>
+  <button class="tab-btn" data-tab="t5">T5 · Fungal</button>
+  <button class="tab-btn" data-tab="t6">T6 · Viral Exanthems</button>
+</nav>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-group" data-tab="t3">
+      <div class="sidebar-title">เชื้อแบคทีเรีย</div>
+      <button class="side-btn active" data-panel="t3-staph">Staphylococcus aureus</button>
+      <button class="side-btn" data-panel="t3-strep">Streptococcus pyogenes <span class="latin">(Group A Strep)</span></button>
+      <button class="side-btn" data-panel="t3-cuti">Cutibacterium acnes</button>
+      <button class="side-btn" data-panel="t3-clost">Clostridium perfringens</button>
+      <button class="side-btn" data-panel="t3-lep">Mycobacterium leprae</button>
+      <button class="side-btn" data-panel="t3-anthrax">Bacillus anthracis</button>
+      <button class="side-btn" data-panel="t3-lab">🔬 Lab Diagnosis (รวม)</button>
+      <button class="side-btn" data-panel="t3-cmp">📊 ตารางเปรียบเทียบ</button>
+    </div>
+    <div class="sidebar-group" data-tab="t5" style="display:none">
+      <div class="sidebar-title">เชื้อรา</div>
+      <button class="side-btn active" data-panel="t5-derm">Dermatophytes <span class="latin">(Trichophyton/Microsporum/Epidermophyton)</span></button>
+      <button class="side-btn" data-panel="t5-cand">Candida spp.</button>
+      <button class="side-btn" data-panel="t5-mal">Malassezia furfur</button>
+      <button class="side-btn" data-panel="t5-hort">Hortaea werneckii</button>
+      <button class="side-btn" data-panel="t5-cmp">📊 ตารางเปรียบเทียบ</button>
+    </div>
+    <div class="sidebar-group" data-tab="t6" style="display:none">
+      <div class="sidebar-title">ไวรัส</div>
+      <button class="side-btn active" data-panel="t6-measles">Measles virus</button>
+      <button class="side-btn" data-panel="t6-rubella">Rubella virus</button>
+      <button class="side-btn" data-panel="t6-vzv">Varicella-Zoster Virus</button>
+      <button class="side-btn" data-panel="t6-entero">Enteroviruses <span class="latin">(Coxsackie/Echo/EV71)</span></button>
+      <button class="side-btn" data-panel="t6-hhv67">HHV-6 & HHV-7</button>
+      <button class="side-btn" data-panel="t6-hhv8">HHV-8</button>
+      <button class="side-btn" data-panel="t6-cmp">📊 ตารางเปรียบเทียบ</button>
+    </div>
+  </aside>
+
+  <main class="content">
+
+  <!-- ============ T3 BACTERIAL ============ -->
+
+  <section class="panel active" data-tab="t3" id="t3-staph">
+    <div class="organism-head"><h2>Staphylococcus aureus</h2><span class="sci">Gram-positive cocci, cluster</span></div>
+    <p class="tagline">แบคทีเรีย Normal flora บนผิวหนัง ที่กลายเป็นสาเหตุอันดับต้นๆ ของการติดเชื้อผิวหนังแทบทุกชั้น — ตั้งแต่ตื้นสุด (folliculitis) ถึงลึกสุด (necrotizing infection) และก่อโรคระบบผ่าน toxin ได้ด้วย</p>
+
+    <div class="card">
+      <h3>ลักษณะเชื้อ &amp; กลไกก่อโรค</h3>
+      <ul>
+        <li><b>Gram stain:</b> Gram-positive cocci เรียงเป็น cluster (พวงองุ่น) · <b>Catalase +</b> · <b>Coagulase +</b> (แยกจาก S. epidermidis ที่ coagulase −)</li>
+        <li><b>Toxin:</b> Hemolysin (ทำลาย RBC/เซลล์อื่น), Leukocidin (ทำลาย neutrophils), <b>Exfoliative toxin A/B</b> (ย่อย desmoglein-1 → เซลล์ epidermis แยกกัน → SSSS/bullous impetigo), <b>TSST-1</b> (superantigen → cytokine storm)</li>
+        <li><b>Enzyme:</b> Coagulase (fibrinogen→fibrin หุ้มเชื้อ หลบภูมิคุ้มกัน), Lipase, Hyaluronidase</li>
+        <li><b>Protein A:</b> จับ Fc ของ antibody แบบผิดทิศ → หลบการจับกินของเม็ดเลือดขาว</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>โรคที่ก่อ (7 โรคหลัก)</h3>
+      <div class="disease-grid">
+        <div class="disease-chip"><div class="th">ต่อมขุมขนอักเสบ</div><div class="en">Folliculitis</div></div>
+        <div class="disease-chip"><div class="th">ฝี</div><div class="en">Furuncle</div></div>
+        <div class="disease-chip"><div class="th">ฝีฝักบัว</div><div class="en">Carbuncle</div></div>
+        <div class="disease-chip"><div class="th">แผลพุพอง (ทั้ง 2 แบบ)</div><div class="en">Non-bullous &amp; Bullous Impetigo</div></div>
+        <div class="disease-chip"><div class="th">เซลล์เนื้อเยื่ออักเสบ (มีหนอง)</div><div class="en">Cellulitis</div></div>
+        <div class="disease-chip"><div class="th">ผิวหนังลอกทั้งตัวในเด็ก</div><div class="en">SSSS (Ritter's disease)</div></div>
+        <div class="disease-chip"><div class="th">ช็อกจาก superantigen</div><div class="en">Toxic Shock Syndrome</div></div>
+      </div>
+
+      <details class="accordion">
+        <summary>Folliculitis → Furuncle → Carbuncle (spectrum เดียวกัน)</summary>
+        <div class="acc-body">
+          <p><b>Folliculitis:</b> อักเสบตื้นของรูขุมขน 1 รู เป็นตุ่มหนองเล็กรอบเส้นขน มักหายเองใน 7–10 วัน (เชื้ออื่นที่พบ: <i>Pseudomonas aeruginosa</i> = hot-tub folliculitis)</p>
+          <p><b>Furuncle (ฝี):</b> เชื้อลุกลามลง dermis/subcutaneous → เนื้อตายตรงกลาง + abscess</p>
+          <p><b>Carbuncle (ฝีฝักบัว):</b> furuncle หลายก้อนเชื่อมกัน มีรูระบายหนองหลายรู มักมีไข้ อ่อนเพลียร่วมด้วย</p>
+          <p><b>รักษา:</b> ประคบอุ่น ผ่าระบายหนอง; ถ้าต้องใช้ยา → cloxacillin/dicloxacillin/cephalexin (พื้นที่ MRSA สูง → clindamycin, doxycycline)</p>
+        </div>
+      </details>
+
+      <details class="accordion">
+        <summary>Impetigo — Non-bullous vs Bullous</summary>
+        <div class="acc-body">
+          <p><b>Non-bullous (70–80%):</b> เกิดจาก S. aureus, S. pyogenes หรือร่วมกัน → papule→vesicle→pustule→<mark class="imgref">honey-colored crust</mark> พบบ่อยในเด็ก 2–5 ปี</p>
+          <p><b>Bullous (20–30%):</b> S. aureus ที่สร้าง exfoliative toxin A/B เท่านั้น → ตุ่มพองน้ำผนังบางแตกง่าย เหลือขอบเป็นขุย (collarette of scale) พบบ่อยในทารก</p>
+          <p><b>ภาวะแทรกซ้อน:</b> Acute poststreptococcal glomerulonephritis (APSGN — เกิดหลัง Strep เท่านั้น ไม่ป้องกันได้ด้วยการรักษา), cellulitis</p>
+        </div>
+      </details>
+
+      <details class="accordion">
+        <summary>Staphylococcal Scalded Skin Syndrome (SSSS / Ritter's disease)</summary>
+        <div class="acc-body">
+          <p>เด็กเล็ก &lt;5 ปี โดยเฉพาะ &lt;2 ปี — Exfoliative toxin A/B ย่อย desmoglein-1 → <b>acantholysis</b> ในชั้นตื้นของ epidermis (แยกจาก TEN ที่แยกลึกกว่า)</p>
+          <p>ไข้สูง ผื่นแดงทั่วตัว ผิวเจ็บมากเมื่อสัมผัส ตุ่มน้ำแตกง่ายลอกคล้ายน้ำร้อนลวก <b>Nikolsky's sign บวก</b></p>
+          <p><b>รักษา:</b> สารน้ำ/อิเล็กโทรไลต์ + ดูแลแผลแบบ burn + oxacillin/nafcillin/cloxacillin</p>
+        </div>
+      </details>
+
+      <details class="accordion">
+        <summary>Toxic Shock Syndrome (TSS)</summary>
+        <div class="acc-body">
+          <p>TSST-1 (superantigen) หรือ enterotoxin B/C → กระตุ้น T cell หลั่ง cytokine จำนวนมาก (cytokine storm) → shock + multi-organ dysfunction</p>
+          <p>เกี่ยวข้องกับ tampon ใช้นาน, แผลผ่าตัด, แผลไฟไหม้, nasal packing</p>
+          <p><b>อาการ:</b> ไข้ ≥38.9°C, hypotension, diffuse erythema/sunburn-like rash → desquamation ที่ฝ่ามือฝ่าเท้าใน 1–2 สัปดาห์ + organ dysfunction ≥3 ระบบ (ตาม CDC criteria)</p>
+          <p><b>รักษา:</b> สารน้ำ+รักษา shock, กำจัดแหล่งติดเชื้อ, clindamycin+vancomycin (สงสัย MRSA)</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <ul>
+        <li>แยก Bullous impetigo (exfoliative toxin เฉพาะจุด) ออกจาก SSSS (exfoliative toxin กระจายทั่วตัวทางกระแสเลือด) — กลไกโมเลกุลเดียวกัน (desmoglein-1) แต่ scope ต่างกัน</li>
+        <li>Coagulase คือตัวแยก S. aureus (+) จาก S. epidermidis (−) บนผิวหนังปกติ</li>
+        <li>TSS เกณฑ์ CDC ต้องมี organ involvement ≥3 ระบบ ไม่ใช่แค่ผื่น+ไข้</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Coagulase</b><small>เปลี่ยน fibrinogen→fibrin หุ้มเชื้อ</small></span>
+        <span class="kt"><b>Exfoliative toxin A/B</b><small>ย่อย desmoglein-1</small></span>
+        <span class="kt"><b>TSST-1</b><small>superantigen ก่อ TSS</small></span>
+        <span class="kt"><b>Nikolsky's sign</b><small>ผิวลอกเมื่อถูสัมผัส</small></span>
+        <span class="kt"><b>Acantholysis</b><small>เซลล์ epidermis แยกออกจากกัน</small></span>
+        <span class="kt"><b>MRSA</b><small>Methicillin-resistant S. aureus</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t3" id="t3-strep">
+    <div class="organism-head"><h2>Streptococcus pyogenes</h2><span class="sci">Group A β-hemolytic Streptococcus (GAS)</span></div>
+    <p class="tagline">คู่แข่งสำคัญของ S. aureus ในกลุ่มโรคผิวหนังชั้นตื้น แต่มีจุดเด่นที่ toxin-mediated systemic disease (Scarlet fever) และเป็นสาเหตุหลักของ erysipelas</p>
+
+    <div class="card">
+      <h3>ลักษณะเชื้อ &amp; กลไกก่อโรค</h3>
+      <ul>
+        <li>Gram-positive cocci เรียงเป็นสายโซ่ (chains) · <b>Catalase −</b> · β-hemolytic · <b>Bacitracin sensitive</b></li>
+        <li><b>Streptococcal pyrogenic exotoxin (SpeA, SpeC)</b> = erythrogenic toxin = superantigen → ผื่น scarlet fever + cytokine storm ใน STSS</li>
+        <li>Streptolysin O, Streptolysin S = hemolysin ทำลาย RBC</li>
+        <li>Hyaluronidase, Streptokinase (สลาย fibrin), DNase, <b>M protein</b> (ป้องกันการจับกินของเม็ดเลือดขาว)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>โรคที่ก่อ</h3>
+      <div class="disease-grid">
+        <div class="disease-chip"><div class="th">แผลพุพอง (non-bullous)</div><div class="en">Impetigo</div></div>
+        <div class="disease-chip"><div class="th">ไฟลามทุ่ง</div><div class="en">Erysipelas</div></div>
+        <div class="disease-chip"><div class="th">เซลล์เนื้อเยื่ออักเสบ</div><div class="en">Cellulitis</div></div>
+        <div class="disease-chip"><div class="th">เนื้อเยื่ออ่อนตายเร็ว Type II</div><div class="en">Necrotizing Fasciitis</div></div>
+        <div class="disease-chip"><div class="th">ไข้อีดำอีแดง</div><div class="en">Scarlet Fever</div></div>
+        <div class="disease-chip"><div class="th">ช็อกจาก GAS</div><div class="en">Streptococcal TSS (STSS)</div></div>
+      </div>
+
+      <details class="accordion">
+        <summary>Erysipelas — ลักษณะเฉพาะ</summary>
+        <div class="acc-body">
+          <p>อักเสบที่ <b>upper dermis + superficial lymphatics</b> เท่านั้น (ตื้นกว่า cellulitis) → ผื่นแดงสด <b>ขอบเขตชัดเจน</b> (well-demarcated ต่างจาก cellulitis ที่ poorly demarcated) บวมตึงร้อน ผิวคล้าย <mark class="imgref">peau d'orange</mark> พบบ่อยที่ใบหน้าและขา</p>
+          <p><b>ภาวะแทรกซ้อน:</b> APSGN</p>
+        </div>
+      </details>
+
+      <details class="accordion">
+        <summary>Scarlet Fever — ไข้อีดำอีแดง</summary>
+        <div class="acc-body">
+          <p>SpeA/SpeC (superantigen) → เจ็บคอ ทอนซิลบวมแดง <mark class="imgref">white strawberry tongue → red strawberry tongue</mark>, ผื่น <b>sandpaper-like rash</b> เริ่มที่คอ/รักแร้/ขาหนีบ, <b>Pastia's lines</b> ที่ข้อพับ, <b>circumoral pallor</b></p>
+          <p>หลังผื่นจาง 1–2 สัปดาห์ → ผิวลอกที่ปลายนิ้ว</p>
+          <p><b>ภาวะแทรกซ้อน:</b> Acute rheumatic fever, APSGN</p>
+          <p><b>รักษา:</b> Penicillin V/Amoxicillin (แพ้ penicillin → macrolide)</p>
+        </div>
+      </details>
+
+      <details class="accordion">
+        <summary>Necrotizing Fasciitis Type II &amp; STSS</summary>
+        <div class="acc-body">
+          <p>Type II NF = <i>S. pyogenes</i> เดี่ยวหรือร่วมกับ S. aureus (ต่างจาก Type I ที่เป็น polymicrobial)</p>
+          <p><b>STSS:</b> bacteremia พบเพียง 50–60% (ไม่ใช่ทุกราย) → hypotension, ARDS, DIC, multi-organ failure ได้เร็วมาก</p>
+          <p><b>รักษา:</b> Penicillin G + Clindamycin (clindamycin ช่วยหยุดการสร้าง toxin) + surgical debridement</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <ul>
+        <li>Erysipelas = ขอบชัด (sharp) vs Cellulitis = ขอบไม่ชัด (poorly demarcated) — เป็นตัวลวงยอดฮิต</li>
+        <li>Bacitracin sensitive แยก S. pyogenes จาก Group B/other strep</li>
+        <li>Clindamycin ในการรักษา toxin-mediated disease ให้ร่วมกับ penicillin เสมอ (mechanism: ยับยั้ง protein/toxin synthesis)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>M protein</b><small>anti-phagocytosis virulence factor</small></span>
+        <span class="kt"><b>SpeA/SpeC</b><small>superantigen = erythrogenic toxin</small></span>
+        <span class="kt"><b>Pastia's lines</b><small>เส้นสีแดงเข้มบริเวณข้อพับ</small></span>
+        <span class="kt"><b>Well-demarcated</b><small>ขอบชัด (erysipelas)</small></span>
+        <span class="kt"><b>APSGN</b><small>Acute poststreptococcal glomerulonephritis</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t3" id="t3-cuti">
+    <div class="organism-head"><h2>Cutibacterium acnes</h2><span class="sci">(เดิม Propionibacterium acnes)</span></div>
+    <p class="tagline">Normal flora ของรูขุมขน/ต่อมไขมัน ที่กลายเป็นตัวการหลักของสิว — เป็นตัวอย่างคลาสสิกของ "แบคทีเรียปกติที่ก่อโรคเมื่อสภาวะเปลี่ยน"</p>
+
+    <div class="card">
+      <h3>ลักษณะเชื้อ &amp; กลไกก่อโรค (Acne Vulgaris)</h3>
+      <ul>
+        <li>Gram-positive, pleomorphic, non-spore forming, <b>anaerobic bacillus</b> — พบใน follicle/sebaceous gland ปกติ</li>
+        <li>ปัจจัยร่วมก่อ acne: Sebum production เพิ่มขึ้น + Follicular hyperkeratinization + colonization โดย C. acnes + Inflammation</li>
+        <li>เชื้อสร้าง <b>lipase</b> ย่อย sebum triglycerides → free fatty acids → กระตุ้นการอักเสบ + neutrophil chemotactic factors + proinflammatory cytokines (IL-1α, IL-8, IL-12, TNF-α)</li>
+      </ul>
+      <p>พบได้ 80–90% ของวัยรุ่น บริเวณใบหน้า อก หลังส่วนบน</p>
+    </div>
+
+    <div class="card">
+      <h3>การรักษา</h3>
+      <ul>
+        <li><b>Topical:</b> Benzoyl peroxide, topical retinoids, topical antibiotics (ร่วมกับ benzoyl peroxide เพื่อลดการดื้อยา)</li>
+        <li><b>Oral antibiotics:</b> Doxycycline, tetracycline, minocycline</li>
+        <li><b>Oral isotretinoin:</b> ลด sebum, ยับยั้งการโต C. acnes, ปรับ follicular keratinization, ลดการอักเสบ (ยาแรงสุด ใช้ในรายรุนแรง)</li>
+      </ul>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>C. acnes ไม่ใช่ตัวการเดียวของสิว — ต้องมีทั้ง 4 ปัจจัยร่วมกัน (sebum↑ + hyperkeratinization + colonization + inflammation) เชื้อเป็นเพียงหนึ่งในกลไก ไม่ใช่สาเหตุเดี่ยวแบบ infection ทั่วไป</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Lipase</b><small>ย่อย sebum → free fatty acid</small></span>
+        <span class="kt"><b>Follicular hyperkeratinization</b><small>รูขุมขนอุดตัน</small></span>
+        <span class="kt"><b>Isotretinoin</b><small>Vitamin A derivative ลดสิวรุนแรง</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t3" id="t3-clost">
+    <div class="organism-head"><h2>Clostridium perfringens</h2><span class="sci">Histotoxic clostridial infection</span></div>
+    <p class="tagline">เชื้อจากดิน/สิ่งแวดล้อม ที่สร้างความรุนแรงจาก exotoxin หลายชนิดร่วมกับการสร้างแก๊สในเนื้อเยื่อ — ตัวแทนของ deep soft tissue infection ที่อันตรายที่สุด</p>
+
+    <div class="card">
+      <h3>ลักษณะเชื้อ &amp; Toxin</h3>
+      <ul>
+        <li>Gram-positive, spore-forming, <b>anaerobic bacillus</b> — สปอร์ปนเปื้อนจากดิน</li>
+        <li><b>Alpha-toxin</b> (Phospholipase C) — toxin หลัก ทำลาย membrane phospholipid → myonecrosis, ทำลาย RBC/WBC, กระตุ้นเกล็ดเลือดจับกลุ่ม</li>
+        <li><b>Theta-toxin</b> (Perfringolysin O) — cholesterol-dependent cytolysin → hemolysis + ทำลาย endothelium</li>
+        <li>Kappa-toxin (Collagenase), Mu-toxin (Hyaluronidase) — ย่อยเนื้อเยื่อเกี่ยวพัน ช่วยการบุกรุก</li>
+        <li>Nu-toxin (DNase) — ย่อย DNA ของ host</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Spectrum ของโรค (3 ระดับความรุนแรง)</h3>
+      <ol>
+        <li><b>Wound contamination</b> — เชื้อปนเปื้อนแผล ไม่เพิ่มจำนวน ไม่มีอาการ</li>
+        <li><b>Anaerobic cellulitis</b> — เพิ่มจำนวนที่ skin/subcutaneous, สร้างแก๊ส (crepitus) แต่ไม่ลุกลามถึงกล้ามเนื้อ</li>
+        <li><b>Clostridial myonecrosis (Gas gangrene)</b> — ทำลายกล้ามเนื้ออย่างรุนแรง ปวดมาก บวม น้ำเหม็น มี crepitus ใต้ผิวหนัง → shock/organ failure ได้เร็ว</li>
+      </ol>
+      <p>ยังเป็นสาเหตุหลักของ <b>Necrotizing Fasciitis Type I (Polymicrobial)</b> ร่วมกับ Streptococcus spp., S. aureus, Enterobacteriaceae, Bacteroides fragilis</p>
+    </div>
+
+    <div class="card">
+      <h3>การวินิจฉัยและรักษา</h3>
+      <ul>
+        <li><b>Nagler's test:</b> lecithinase ย่อย lecithin → white opaque halo รอบโคโลนี (β-hemolysis บน blood agar)</li>
+        <li><b>รักษา:</b> Surgical debridement (เร่งด่วน) + Hyperbaric Oxygen Therapy (HBO2) + Penicillin G/Clindamycin + Antitoxin + Supportive care</li>
+      </ul>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>แยก Anaerobic cellulitis (ไม่ถึงกล้ามเนื้อ อาการเบากว่า) ออกจาก Myonecrosis/Gas gangrene (ถึงกล้ามเนื้อ รุนแรงถึงชีวิต) — คำถามมักถามระดับความลึกของการติดเชื้อ ไม่ใช่แค่ชื่อโรค</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Myonecrosis</b><small>เนื้อกล้ามเนื้อตาย</small></span>
+        <span class="kt"><b>Crepitus</b><small>เสียงกรอบแกรบจากแก๊สใต้ผิวหนัง</small></span>
+        <span class="kt"><b>Nagler's test</b><small>ตรวจ lecithinase</small></span>
+        <span class="kt"><b>HBO2</b><small>Hyperbaric oxygen therapy</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t3" id="t3-lep">
+    <div class="organism-head"><h2>Mycobacterium leprae</h2><span class="sci">Leprosy (โรคเรื้อน)</span></div>
+    <p class="tagline">เชื้อที่เพาะเลี้ยงไม่ได้ในห้องปฏิบัติการ เจริญช้ามาก และเลือกทำลายเนื้อเยื่อที่อุณหภูมิต่ำ — โรคเรื้อรังที่กระทบทั้งผิวหนังและระบบประสาทส่วนปลาย</p>
+
+    <div class="card">
+      <h3>ลักษณะเชื้อ &amp; การติดต่อ</h3>
+      <ul>
+        <li>แบคทีเรียรูปแท่ง ติดสี <b>acid-fast</b>, <b>obligate intracellular pathogen</b> — เพาะเลี้ยงในอาหารเลี้ยงเชื้อไม่ได้</li>
+        <li>เพิ่มจำนวนใน <b>macrophages</b> และ <b>Schwann cells</b> เจริญได้ดีที่ ~30°C → รอยโรคอยู่บริเวณอุณหภูมิต่ำ (จมูก หู ข้อศอก มือ เท้า)</li>
+        <li><b>ติดต่อ:</b> Respiratory droplets จากผู้ป่วย multibacillary leprosy, สัมผัสใกล้ชิดเป็นเวลานาน</li>
+        <li>ระยะฟักตัวยาวมาก 2–20 ปี (เฉลี่ย 3–5 ปี) — คน &gt;95% มีภูมิคุ้มกันธรรมชาติ ไม่เกิดโรคแม้รับเชื้อ</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>อาการ (3 ระบบที่ถูกทำลาย)</h3>
+      <ul>
+        <li><b>ผิวหนัง:</b> ผื่น/ปื้นสีซีด แดง หรือเข้มกว่าปกติ สูญเสียความรู้สึก (ร้อน เย็น เจ็บ สัมผัส), ขน/เหงื่อลดลงบริเวณรอยโรค</li>
+        <li><b>เส้นประสาทส่วนปลาย:</b> เส้นประสาทหนาตัว กดเจ็บ ชา กล้ามเนื้ออ่อนแรง/ฝ่อ → <mark class="imgref">claw hand, foot drop</mark></li>
+        <li><b>เยื่อบุทางเดินหายใจส่วนบน:</b> คัดจมูก แผลในโพรงจมูก เลือดกำเดา เสียงแหบ</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>การวินิจฉัยและรักษา</h3>
+      <ul>
+        <li><b>Slit-skin smear</b> ย้อม Ziehl-Neelsen → พบ acid-fast bacilli; Skin biopsy ช่วยจำแนกชนิด</li>
+        <li><b>Paucibacillary (PB):</b> Rifampicin + Dapsone (6 เดือน)</li>
+        <li><b>Multibacillary (MB):</b> Rifampicin + Dapsone + Clofazimine (12 เดือน)</li>
+        <li>BCG vaccine ลดความเสี่ยงได้บางส่วน ไม่ป้องกันได้ทั้งหมด</li>
+      </ul>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>M. leprae เพาะเลี้ยงในอาหารเลี้ยงเชื้อไม่ได้ (ต่างจากแบคทีเรียส่วนใหญ่) — การวินิจฉัยจึงพึ่ง slit-skin smear + clinical + biopsy ไม่ใช่ culture</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Obligate intracellular</b><small>เพาะเลี้ยงนอกเซลล์ไม่ได้</small></span>
+        <span class="kt"><b>Slit-skin smear</b><small>วิธีตรวจ AFB จากรอยโรค</small></span>
+        <span class="kt"><b>Paucibacillary/Multibacillary</b><small>แบ่งตามจำนวนเชื้อ/รอยโรค</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t3" id="t3-anthrax">
+    <div class="organism-head"><h2>Bacillus anthracis</h2><span class="sci">Anthrax (แอนแทรกซ์)</span></div>
+    <p class="tagline">โรคติดต่อจากสัตว์สู่คน (Zoonosis) ที่พบทางผิวหนังบ่อยที่สุด — ลักษณะแผลเฉพาะตัวที่จำง่ายและมักออกข้อสอบ</p>
+
+    <div class="card">
+      <h3>ลักษณะเชื้อ &amp; การติดต่อ</h3>
+      <ul>
+        <li>Gram-positive rod, aerobic/facultative anaerobic, <b>สร้างสปอร์</b> ที่ทนทานในดินได้นานหลายปี</li>
+        <li>Zoonosis จาก โค กระบือ แพะ แกะ ม้า — ติดต่อทางผิวหนัง (บ่อยสุด) การหายใจ หรือการกิน</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Cutaneous Anthrax — พยาธิกำเนิดและอาการ</h3>
+      <ul>
+        <li>เชื้อเข้าทางบาดแผล สปอร์งอกเป็นเซลล์แบคทีเรีย สร้าง <b>Edema toxin</b> และ <b>Lethal toxin</b></li>
+        <li>ลำดับรอยโรค: papule (คัน) → vesicle → ulcer → <mark class="imgref">black eschar</mark> ("bamboo-like appearance") — บวมรอบแผลมาก แต่ <b>แผลมักไม่เจ็บ (painless ulcer)</b></li>
+      </ul>
+      <details class="accordion">
+        <summary>รูปแบบอื่น: Inhalational &amp; Gastrointestinal anthrax</summary>
+        <div class="acc-body">
+          <p><b>Inhalational:</b> ไข้ อ่อนเพลีย ไอ → หายใจลำบาก เจ็บหน้าอกรุนแรง → hemorrhagic mediastinitis, septic shock, เสียชีวิตได้</p>
+          <p><b>Gastrointestinal:</b> จากเนื้อสัตว์ปนเปื้อนปรุงไม่สุก → ไข้ คลื่นไส้ ปวดท้อง ถ่ายเป็นเลือด</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <h3>การวินิจฉัยและรักษา</h3>
+      <ul>
+        <li>ตรวจร่างกาย: black eschar ไม่เจ็บ + ประวัติสัมผัสสัตว์; Gram stain → gram-positive bacilli; Culture บน blood agar → <mark class="imgref">"medusa head" colony</mark>; PCR ยืนยัน</li>
+        <li><b>รักษา:</b> Ciprofloxacin หรือ Doxycycline (ยาหลัก), Penicillin ถ้าเชื้อไวต่อยา</li>
+        <li><b>วัคซีน:</b> สัตว์ = live attenuated Sterne strain; คน = Anthrax Vaccine Adsorbed (AVA) ในกลุ่มเสี่ยงสูง</li>
+      </ul>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>Black eschar ของ cutaneous anthrax เป็น <b>painless</b> ทั้งที่บวมมาก — ตัวลวงคือคิดว่าแผลติดเชื้อรุนแรงต้องเจ็บมาก ซึ่งตรงข้ามกับความจริง</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Black eschar</b><small>สะเก็ดดำ painless</small></span>
+        <span class="kt"><b>Medusa head colony</b><small>ลักษณะโคโลนีบน blood agar</small></span>
+        <span class="kt"><b>Zoonosis</b><small>โรคติดต่อจากสัตว์สู่คน</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t3" id="t3-lab">
+    <div class="organism-head"><h2>🔬 Laboratory Diagnosis</h2><span class="sci">ภาพรวมการตรวจทางห้องปฏิบัติการของเชื้อแบคทีเรียผิวหนัง</span></div>
+
+    <div class="card">
+      <h3>การเก็บสิ่งส่งตรวจ (Specimen Collection)</h3>
+      <ul>
+        <li><b>Skin biopsy</b> — แผลลึก เรื้อรัง หรือรอยโรคไม่ปกติ</li>
+        <li><b>Skin swab</b> — รอยโรคผิวเผินหรือแผลติดเชื้อ</li>
+        <li><b>Pus swab/aspirate</b> — จากฝีหรือรอยโรคมีหนอง</li>
+        <li><b>Throat swab</b> — สงสัย S. pyogenes (เช่น scarlet fever)</li>
+        <li><b>Slit-skin smear</b> — ตรวจ M. leprae</li>
+      </ul>
+      <p class="imgnote">หมายเหตุ: หากมี pustule/vesicle ให้เปิดหลังคาตุ่มด้วยใบมีดปลอดเชื้อ เก็บหนอง/สิ่งคัดหลั่งจากฐานแผล ทำ smear บาง ๆ สำหรับ Gram stain</p>
+    </div>
+
+    <div class="card">
+      <h3>ขั้นตอนมาตรฐาน</h3>
+      <ol>
+        <li><b>Gram stain:</b> Gram(+) cocci เป็น cluster (Staph) หรือ chain (Strep)</li>
+        <li><b>Culture:</b> Blood agar (ทั้งคู่ให้ β-hemolysis) / Mannitol Salt Agar (คัดกรอง Staph — เชื้อ S. aureus หมัก mannitol → โคโลนีเปลี่ยนสีเหลือง)</li>
+        <li><b>Biochemical test:</b> Catalase test (Staph +, Strep −), Coagulase test (S. aureus +), Bacitracin sensitivity (S. pyogenes sensitive)</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t3" id="t3-cmp">
+    <div class="organism-head"><h2>📊 ตารางเปรียบเทียบ — Bacterial</h2></div>
+
+    <div class="card">
+      <h3>Staphylococcus aureus vs Streptococcus pyogenes</h3>
+      <table class="cmp">
+        <tr><th>หัวข้อ</th><th>S. aureus</th><th>S. pyogenes (GAS)</th></tr>
+        <tr><td>การเรียงตัว</td><td>Cluster (พวงองุ่น)</td><td>Chain (สายโซ่)</td></tr>
+        <tr><td>Catalase</td><td>+</td><td>−</td></tr>
+        <tr><td>Coagulase</td><td>+</td><td>ไม่เกี่ยวข้อง</td></tr>
+        <tr><td>ความไวต่อ Bacitracin</td><td>Resistant</td><td>Sensitive</td></tr>
+        <tr><td>Superantigen</td><td>TSST-1</td><td>SpeA, SpeC</td></tr>
+        <tr><td>โรค Systemic เด่น</td><td>Toxic Shock Syndrome, SSSS</td><td>Scarlet Fever, STSS</td></tr>
+        <tr><td>Cellulitis ลักษณะ</td><td>มักมีหนอง</td><td>มักไม่มีหนอง</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>Erysipelas vs Cellulitis</h3>
+      <table class="cmp">
+        <tr><th>หัวข้อ</th><th>Erysipelas</th><th>Cellulitis</th></tr>
+        <tr><td>ชั้นที่ติดเชื้อ</td><td>Upper dermis + superficial lymphatics</td><td>Deep dermis + subcutaneous tissue</td></tr>
+        <tr><td>ขอบเขตรอยโรค</td><td>ชัดเจน (well-demarcated)</td><td>ไม่ชัดเจน (poorly demarcated)</td></tr>
+        <tr><td>สีผื่น</td><td>แดงสดชัดเจน (bright red)</td><td>แดงจางกว่า</td></tr>
+        <tr><td>เชื้อสาเหตุหลัก</td><td>S. pyogenes</td><td>S. pyogenes, S. aureus</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>Non-bullous vs Bullous Impetigo</h3>
+      <table class="cmp">
+        <tr><th>หัวข้อ</th><th>Non-bullous (70-80%)</th><th>Bullous (20-30%)</th></tr>
+        <tr><td>เชื้อสาเหตุ</td><td>S. aureus, S. pyogenes หรือร่วมกัน</td><td>S. aureus (exfoliative toxin) เท่านั้น</td></tr>
+        <tr><td>ลักษณะรอยโรค</td><td>Honey-colored crust</td><td>Flaccid bullae → collarette of scale</td></tr>
+        <tr><td>กลุ่มอายุที่พบบ่อย</td><td>เด็ก 2-5 ปี</td><td>ทารก</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ T5 FUNGAL ============ -->
+
+  <section class="panel" data-tab="t5" id="t5-derm">
+    <div class="organism-head"><h2>Dermatophytes</h2><span class="sci">Trichophyton / Microsporum / Epidermophyton</span></div>
+    <p class="tagline">เชื้อราที่ชอบกิน keratin (keratinophilic fungi) เป็นสาเหตุหลักของ tinea ทุกชนิด — invade เฉพาะ stratum corneum, hair, nail เท่านั้น ไม่ลงลึกกว่านั้น</p>
+
+    <div class="card">
+      <h3>Classification &amp; Pathogenesis</h3>
+      <ul>
+        <li><b>3 genus หลักที่ก่อโรคในคน:</b> Trichophyton (skin, hair, nails), Microsporum (skin, hair), Epidermophyton (skin, nails)</li>
+        <li><b>แบ่งตาม reservoir:</b>
+          <table class="cmp" style="margin-top:8px">
+            <tr><th>กลุ่ม</th><th>ติดต่อจาก</th><th>ความรุนแรง</th><th>ตัวอย่างเชื้อ</th></tr>
+            <tr><td>Anthropophilic</td><td>คนสู่คน</td><td>เรื้อรัง อักเสบน้อย</td><td>T. rubrum, T. tonsurans</td></tr>
+            <tr><td>Zoophilic</td><td>สัตว์สู่คน</td><td>อักเสบมาก คันมาก</td><td>Microsporum canis</td></tr>
+            <tr><td>Geophilic</td><td>ดินสู่คน</td><td>ปานกลาง-มาก</td><td>Microsporum gypseum</td></tr>
+          </table>
+        </li>
+        <li><b>Pathogenesis:</b> Arthrospore (ทนอยู่นอกโฮสต์ได้ &gt;15 เดือน) เกาะ keratinocyte → งอก (germination) → สร้าง Proteinase, Keratinase, Elastase, Lipase → ย่อยทำลาย keratin → กระตุ้นการอักเสบ (erythema, scaling, pruritus)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Tinea — แยกตามตำแหน่ง</h3>
+      <table class="cmp">
+        <tr><th>ชื่อโรค</th><th>ตำแหน่ง</th><th>ลักษณะเด่น</th><th>เชื้อที่พบบ่อย</th></tr>
+        <tr><td>Tinea corporis</td><td>ลำตัว แขน ขา</td><td>ผื่นวงแหวน ขอบนูนแดงมีขุย central clearing</td><td>T. rubrum, M. canis</td></tr>
+        <tr><td>Tinea faciei</td><td>ใบหน้า</td><td>ผื่นแดงเป็นวง สับสนกับ lupus/eczema ได้</td><td>T. rubrum, M. canis</td></tr>
+        <tr><td>Tinea capitis</td><td>หนังศีรษะ</td><td>ผมหลุดเป็นหย่อม มีขุย black dots</td><td>T. tonsurans, M. canis</td></tr>
+        <tr><td>Kerion</td><td>หนังศีรษะ</td><td>ก้อนนูนแดงอักเสบมีหนอง เสี่ยงผมร่วงถาวร</td><td>Zoophilic species</td></tr>
+        <tr><td>Favus</td><td>หนังศีรษะ</td><td>สะเก็ดเหลืองรูปถ้วย (scutula) ผมร่วงถาวร</td><td>T. schoenleinii</td></tr>
+        <tr><td>Tinea barbae</td><td>หนวดเครา</td><td>ตุ่มหนองรูขุมขนอักเสบ ขนหลุดง่าย</td><td>T. verrucosum</td></tr>
+        <tr><td>Tinea cruris</td><td>ขาหนีบ ก้น</td><td>ผื่นแดงขอบชัด คันมาก</td><td>T. rubrum, E. floccosum</td></tr>
+        <tr><td>Tinea pedis</td><td>ซอกนิ้วเท้า ฝ่าเท้า</td><td>ผิวเปื่อยยุ่ย มีขุย แตกร่อง (ฮ่องกงฟุต)</td><td>T. rubrum, T. mentagrophytes</td></tr>
+        <tr><td>Tinea manuum</td><td>ฝ่ามือ</td><td>ผิวแห้งหนา ลอกเป็นขุย</td><td>T. rubrum</td></tr>
+        <tr><td>Tinea unguium</td><td>เล็บมือ/เท้า</td><td>เล็บหนา เหลือง เปราะ (Onychomycosis)</td><td>T. rubrum, T. mentagrophytes</td></tr>
+      </table>
+    </div>
+
+    <details class="accordion">
+      <summary>Pattern การบุกรุกเส้นขน &amp; id reaction</summary>
+      <div class="acc-body">
+        <p><b>Ectothrix:</b> arthroconidia อยู่นอกเส้นขน · <b>Endothrix:</b> arthroconidia อยู่ในเส้นขน (พบบ่อยจาก T. tonsurans) · <b>Favic:</b> hyphae/arthroconidia/ช่องว่างคล้ายฟองอากาศในเส้นขน</p>
+        <p><b>Dermatophytid (id reaction):</b> ปฏิกิริยาภูมิคุ้มกันต่อการติดเชื้อที่อยู่บริเวณอื่น — รอยผื่นนี้<b>ไม่มีเชื้อราอยู่ในรอยโรค</b> ไม่ใช่การแพร่กระจายของเชื้อรา (ตัวลวงข้อสอบ)</p>
+      </div>
+    </details>
+
+    <div class="card">
+      <h3>การวินิจฉัยและรักษา</h3>
+      <ul>
+        <li><b>Direct microscopy:</b> 10–20% KOH preparation → พบ hyaline septate hyphae ± arthroconidia</li>
+        <li><b>Wood's lamp:</b> Microsporum spp. เรืองแสง blue-green — ใช้ช่วยวินิจฉัย tinea capitis</li>
+        <li><b>Culture:</b> ดู colony morphology + microscopic morphology</li>
+        <li><b>รักษา:</b> Topical azoles, terbinafine, Whitfield's ointment; Oral griseofulvin, itraconazole, fluconazole, terbinafine (สำหรับรอยโรคกว้าง/เล็บ/ผม)</li>
+      </ul>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>Dermatophyte invade เฉพาะ stratum corneum เท่านั้น (ไม่ลงลึกกว่า) — เป็นตัวแยกจาก subcutaneous mycoses; Wood's lamp ให้ผลบวกเฉพาะ Microsporum ไม่ใช่ทุก dermatophyte</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Keratinophilic</b><small>ชอบย่อย keratin</small></span>
+        <span class="kt"><b>Arthrospore/Arthroconidia</b><small>สปอร์ที่ทนทานในสิ่งแวดล้อม</small></span>
+        <span class="kt"><b>Central clearing</b><small>ตรงกลางวงซีดกว่าขอบ</small></span>
+        <span class="kt"><b>Dermatophytid</b><small>id reaction ไม่มีเชื้ออยู่ในรอยโรค</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t5" id="t5-cand">
+    <div class="organism-head"><h2>Candida spp.</h2><span class="sci">C. albicans, C. glabrata, C. parapsilosis, C. tropicalis, C. krusei</span></div>
+    <p class="tagline">Opportunistic yeast ที่เป็น normal flora อยู่แล้วในร่างกาย — ก่อโรคเมื่อสภาวะเอื้อ (moisture, immunosuppression) เป็นตัวอย่างคลาสสิกของ dimorphic fungus</p>
+
+    <div class="card">
+      <h3>ลักษณะเชื้อ &amp; Virulence Factors</h3>
+      <ul>
+        <li>เป็น colonizer ปกติในทางเดินอาหาร ช่องคลอด ท่อปัสสาวะ ผิวหนัง เล็บ — การติดเชื้อส่วนใหญ่เป็น <b>endogenous</b></li>
+        <li><b>Polymorphism:</b> เปลี่ยนรูปจาก yeast ↔ hyphae/pseudohyphae ตามสภาวะ (pH, อุณหภูมิ, CO2, nutrient) — การเปลี่ยนเป็น hyphae สัมพันธ์กับการบุกรุก</li>
+        <li><b>Adhesins:</b> Hwp1 (บนผิว germ tube/hyphae), Mannoprotein (จับ fibronectin/collagen/laminin), Als-3</li>
+        <li><b>Invasins:</b> protease, phospholipase, lipase; <b>Biofilm formation</b> — ป้องกันเชื้อจาก neutrophil และยาต้านเชื้อรา</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>ปัจจัยเสี่ยงและอาการทางผิวหนัง</h3>
+      <ul>
+        <li><b>ปัจจัยเสี่ยงเฉพาะที่:</b> ความชื้น การแช่มือในน้ำนาน, ผู้ใส่ฟันปลอม, เบาหวาน, ใช้ยาปฏิชีวนะ, corticosteroid (สูดพ่น/systemic), HIV</li>
+        <li><b>อาการทางผิวหนัง/เล็บ:</b> Intertrigo (ผื่นแดงบริเวณผิวหนังเสียดสี), Diaper dermatitis, Paronychia (เล็บอักเสบ), Chronic mucocutaneous candidiasis</li>
+        <li><b>ลักษณะเฉพาะ:</b> <mark class="imgref">satellite pustules</mark> รอบขอบผื่นหลัก</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>การวินิจฉัยและรักษา</h3>
+      <ul>
+        <li><b>KOH:</b> พบ budding yeast cells + pseudohyphae</li>
+        <li><b>รักษาผิวหนัง (superficial):</b> Topical nystatin หรือ azole</li>
+        <li><b>รักษา invasive disease:</b> Amphotericin B, fluconazole, echinocandins</li>
+      </ul>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>Satellite pustules คือลักษณะเฉพาะที่แยก candidiasis ออกจาก dermatophyte infection (ซึ่งมักเป็นวงเดียว ขอบชัด central clearing)</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Polymorphism</b><small>Yeast↔Hyphae transition</small></span>
+        <span class="kt"><b>Satellite pustules</b><small>ตุ่มหนองรอบผื่นหลัก</small></span>
+        <span class="kt"><b>Biofilm</b><small>ป้องกันเชื้อจากภูมิคุ้มกัน/ยา</small></span>
+        <span class="kt"><b>Endogenous infection</b><small>ติดเชื้อจาก flora ตนเอง</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t5" id="t5-mal">
+    <div class="organism-head"><h2>Malassezia furfur</h2><span class="sci">Malassezia furfur complex (lipophilic yeast)</span></div>
+    <p class="tagline">Normal flora ของผิวหนังที่เปลี่ยนเป็นเชื้อก่อโรคเมื่อสภาวะเอื้อ — จำง่ายจากลักษณะ hypo/hyperpigmented macules</p>
+
+    <div class="card">
+      <h3>ลักษณะเชื้อ &amp; ปัจจัยส่งเสริม</h3>
+      <ul>
+        <li>Lipophilic yeast — เป็น normal skin flora ปกติ ก่อโรคเมื่อมีความชื้น เหงื่อออกมาก หรือภูมิคุ้มกันลดลง</li>
+        <li><b>ปัจจัยเสี่ยง:</b> Hyperhidrosis, ภาวะโภชนาการไม่ดี, sebaceous gland ทำงานมาก, ผิวมันสูง, ใช้น้ำมัน/ครีมมัน, อากาศร้อนชื้น, ภูมิคุ้มกันต่ำ</li>
+        <li><b>Pathogenesis:</b> เปลี่ยนจาก yeast-phase (normal flora) → mycelial/hyphal form (pathogenic)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>โรคที่ก่อ</h3>
+      <details class="accordion">
+        <summary>Pityriasis Versicolor — กลไก hypo/hyperpigmentation</summary>
+        <div class="acc-body">
+          <p>รอยโรค hypopigmented หรือ hyperpigmented macules มี fine scales พบบ่อยที่ trunk, upper chest, back</p>
+          <p><b>Hypopigmentation:</b> Dicarboxylic acid ยับยั้ง tyrosinase (เอนไซม์สำคัญในการสร้าง melanin) → melanin ลดลง</p>
+          <p><b>Hyperpigmentation:</b> Ligand-activated transcription factors → กระตุ้น melanocyte → melanin เพิ่มขึ้น</p>
+          <p>Keratinase ย่อย keratin → stratum corneum หลวม → fine scaling</p>
+        </div>
+      </details>
+      <details class="accordion">
+        <summary>Pityrosporum Folliculitis</summary>
+        <div class="acc-body">
+          <p>Chronic folliculitis จากการสัมผัสความร้อนชื้น หรือใช้ steroid/immunosuppression → papule/pustule รอบรูขุมขนที่ trunk คอ ต้นแขน อาจไม่มีอาการหรือคัน</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <h3>การวินิจฉัยและรักษา</h3>
+      <ul>
+        <li><b>KOH:</b> ลักษณะ hyphae สั้น + budding yeast รวมกลุ่ม = <mark class="imgref">"spaghetti and meatballs"</mark></li>
+        <li><b>Wood's lamp:</b> เรืองแสง yellowish-gold</li>
+        <li><b>รักษา:</b> Topical azole/selenium sulfide 2.5% shampoo; รายกว้าง → oral ketoconazole/itraconazole</li>
+      </ul>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>Wood's lamp: Microsporum (dermatophyte) = blue-green ต่างจาก Malassezia = yellowish-gold — เป็นคู่ที่มักออกเปรียบเทียบกัน</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Tyrosinase</b><small>เอนไซม์สร้าง melanin ถูกยับยั้ง</small></span>
+        <span class="kt"><b>Spaghetti and meatballs</b><small>ลักษณะ KOH ของ Malassezia</small></span>
+        <span class="kt"><b>Lipophilic yeast</b><small>เชื้อชอบไขมัน</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t5" id="t5-hort">
+    <div class="organism-head"><h2>Hortaea werneckii</h2><span class="sci">(เดิม Phaeoannellomyces / Exophiala / Cladosporium werneckii)</span></div>
+    <p class="tagline">เชื้อรากลุ่ม Dematiaceous fungi (มีเม็ดสีในผนังเซลล์) ก่อ Tinea Nigra — โรคที่พบไม่บ่อยแต่มีลักษณะเฉพาะตัวชัดเจน</p>
+
+    <div class="card">
+      <h3>ลักษณะเชื้อและโรค (Tinea Nigra)</h3>
+      <ul>
+        <li>Dematiaceous fungi — พบในดิน compost น้ำเสีย ไม้</li>
+        <li>รอยโรค: มีขุย จุดสีน้ำตาลหรือดำ (brown/black macule) โดยทั่วไป<b>ไม่มีการอักเสบ</b></li>
+        <li>พบบ่อยที่ <b>ฝ่ามือและฝ่าเท้า</b></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>การวินิจฉัยและรักษา</h3>
+      <ul>
+        <li><b>KOH preparation:</b> พบ dark brown-colored, branching, septate hyphae และ yeast-like cells</li>
+        <li><b>รักษา:</b> ตอบสนองดีต่อ topical therapy — Whitfield ointment, azole creams, terbinafine</li>
+      </ul>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>Tinea Nigra มักถูกเข้าใจผิดว่าเป็นไฝหรือ melanoma เนื่องจากสีดำ/น้ำตาล — จุดสำคัญคือไม่มีการอักเสบและตอบสนองต่อยาต้านเชื้อรา</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Dematiaceous fungi</b><small>เชื้อรามีเม็ดสีเมลานินในผนังเซลล์</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t5" id="t5-cmp">
+    <div class="organism-head"><h2>📊 ตารางเปรียบเทียบ — Fungal</h2></div>
+    <div class="card">
+      <h3>Dermatophyte vs Candida vs Malassezia</h3>
+      <table class="cmp">
+        <tr><th>หัวข้อ</th><th>Dermatophyte</th><th>Candida spp.</th><th>Malassezia furfur</th></tr>
+        <tr><td>กลุ่มเชื้อ</td><td>Filamentous fungi (mold)</td><td>Yeast (dimorphic)</td><td>Lipophilic yeast</td></tr>
+        <tr><td>บริเวณที่ invade</td><td>Stratum corneum, hair, nail</td><td>Mucocutaneous, moist areas</td><td>Trunk/chest (sebaceous area)</td></tr>
+        <tr><td>ลักษณะรอยโรคเด่น</td><td>วงแหวน ขอบชัด central clearing</td><td>ผื่นแดงชื้น + satellite pustules</td><td>Hypo/hyperpigmented macules มีขุยละเอียด</td></tr>
+        <tr><td>KOH finding</td><td>Hyaline septate hyphae</td><td>Budding yeast + pseudohyphae</td><td>Spaghetti and meatballs</td></tr>
+        <tr><td>Wood's lamp</td><td>Blue-green (Microsporum เท่านั้น)</td><td>ไม่เรืองแสง</td><td>Yellowish-gold</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ T6 VIRAL ============ -->
+
+  <section class="panel" data-tab="t6" id="t6-measles">
+    <div class="organism-head"><h2>Measles virus</h2><span class="sci">Measles morbillivirus — Paramyxoviridae</span></div>
+    <p class="tagline">ไวรัสที่ติดต่อง่ายที่สุดชนิดหนึ่ง — ผื่นเกิดจากภูมิคุ้มกันของร่างกายเอง (immune-mediated) ไม่ใช่จาก viral cytopathic effect โดยตรง</p>
+
+    <div class="card">
+      <h3>ลักษณะไวรัส &amp; Receptor</h3>
+      <ul>
+        <li>(−) ssRNA, helical nucleocapsid, enveloped · Family Paramyxoviridae, Genus Morbillivirus · <b>มี serotype เดียว</b> — ภูมิคุ้มกันหลังติดเชื้อคงอยู่ตลอดชีวิต</li>
+        <li><b>Receptors:</b> CD46 (complement regulatory protein), PVRL4/Nectin-4 (บนเซลล์เยื่อบุ), <b>CD150/SLAM</b> (บน dendritic cell/lymphocyte — ใช้แพร่กระจายทางกระแสเลือด)</li>
+        <li>ก่อ <b>cell fusion</b> เป็น giant cell และแพร่จากเซลล์สู่เซลล์โดยตรง หลบหลีก antibody ได้</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Pathogenesis</h3>
+      <ul>
+        <li>ติดต่อทาง respiratory droplets → replicate ใน respiratory epithelium → ติด monocyte/lymphocyte → กระจายทาง lymphatic + cell-associated viremia → ไปยัง conjunctiva, respiratory tract, urinary tract, small blood vessel, CNS</li>
+        <li><b>ผื่น maculopapular เกิดจากการอักเสบที่ T cell โจมตีเซลล์เยื่อบุที่ติดเชื้อ</b> (immune-mediated ไม่ใช่ direct cytopathic)</li>
+        <li><b>กดภูมิคุ้มกัน (immunosuppressive):</b> ติดเชื้อและฆ่า monocyte/T/B cell โดยตรง + กด IL-12, type I IFN, Th1 response — ผลกดภูมิอยู่นานหลายสัปดาห์-เดือน → เสี่ยงติดเชื้อฉวยโอกาส</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>อาการทางคลินิก</h3>
+      <ul>
+        <li>Incubation 7–13 วัน → prodrome 2–4 วัน: ไข้สูง + <b>"CCC and P"</b> (Cough, Coryza, Conjunctivitis, Photophobia) — ช่วงแพร่เชื้อมากที่สุด</li>
+        <li><b>Koplik spots</b> (enanthem, pathognomonic) — จุดขาวเล็ก 1-2 มม. ล้อมรอบด้วยขอบแดง บน buccal mucosa ตรงข้ามฟันกราม ปรากฏก่อนผื่น</li>
+        <li>ผื่น maculopapular เริ่มหลังหู → กระจายทั่วตัวแบบ <b>centripetal</b> ใน 1-2 วัน จางตามลำดับที่ขึ้นก่อน</li>
+      </ul>
+      <details class="accordion">
+        <summary>ภาวะแทรกซ้อนทาง CNS — 3 กลไก</summary>
+        <div class="acc-body">
+          <p>1) Direct infection of neurons · 2) Postinfectious encephalitis (immune-mediated) · 3) <b>Subacute sclerosing panencephalitis (SSPE)</b> — เกิดช้ามาก (หลายปีหลังติดเชื้อ) จาก defective variant ของไวรัสที่ replicate ช้าในเซลล์ประสาท</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <h3>การวินิจฉัยและรักษา</h3>
+      <ul>
+        <li>วินิจฉัยทางคลินิกเป็นหลัก (rarely need lab); ยืนยันด้วย RT-PCR หรือ IgM antibody</li>
+        <li>รักษาแบบประคับประคอง, Vitamin A supplement (ลดความรุนแรงในเด็ก &lt;5 ปี), Ribavirin หากมีภาวะแทรกซ้อน</li>
+        <li>ป้องกันด้วย MMR vaccine</li>
+      </ul>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>Koplik spots = enanthem ปรากฏ<b>ก่อน</b>ผื่นที่ผิวหนัง (exanthem) — pathognomonic สำหรับ measles; SSPE เป็นภาวะแทรกซ้อนระยะยาวที่มักถูกถามแยกจาก acute encephalitis</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Koplik spots</b><small>Enanthem pathognomonic</small></span>
+        <span class="kt"><b>Centripetal distribution</b><small>กระจายจากศีรษะลงลำตัว</small></span>
+        <span class="kt"><b>SSPE</b><small>ภาวะแทรกซ้อนทางสมองระยะช้า</small></span>
+        <span class="kt"><b>CD150/SLAM</b><small>receptor สำหรับการแพร่ทางเลือด</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t6" id="t6-rubella">
+    <div class="organism-head"><h2>Rubella virus</h2><span class="sci">Rubivirus rubellae — Matonaviridae</span></div>
+    <p class="tagline">ไวรัสที่ก่อโรคไม่รุนแรงในเด็ก แต่อันตรายมากหากติดเชื้อขณะตั้งครรภ์ — key concept คือ teratogenicity</p>
+
+    <div class="card">
+      <h3>ลักษณะไวรัส &amp; Pathogenesis</h3>
+      <ul>
+        <li>+ssRNA, icosahedral capsid, envelope glycoprotein E1/E2 · Genus Rubivirus, Family Matonaviridae · มี serotype เดียว → ภูมิคุ้มกันตลอดชีวิต</li>
+        <li>ติดเชื้อ upper respiratory tract → กระจายสู่ต่อมน้ำเหลือง (<b>posterior auricular lymphadenopathy = อาการคลาสสิก</b>) → viremia → กระจายทั่วร่างกาย + ผื่น</li>
+        <li>แพร่เชื้อได้ตั้งแต่ก่อนแสดงอาการ จนถึง 2 สัปดาห์หลังผื่นขึ้น</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>อาการทางคลินิก</h3>
+      <ul>
+        <li><b>เด็ก:</b> ไม่รุนแรง — ผื่น maculopapular 3 วัน + ต่อมน้ำเหลืองโต</li>
+        <li><b>ผู้ใหญ่:</b> รุนแรงกว่า — ปวดข้อ/ข้ออักเสบ (arthralgia/arthritis), thrombocytopenia, post-infectious encephalopathy (พบน้อย) — ส่วนใหญ่เกิดจาก immune complex/cell-mediated hypersensitivity</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Congenital Rubella Syndrome (CRS)</h3>
+      <ul>
+        <li>ติดเชื้อขณะตั้งครรภ์ (โดยเฉพาะไตรมาสแรก) → ไวรัสผ่านรกไปทารก</li>
+        <li><b>Classic triad:</b> Cataracts (ต้อกระจก), Deafness (หูหนวก), Congenital heart disease (PDA)</li>
+        <li>อาจพบ <mark class="imgref">"blueberry muffin rash"</mark> (thrombocytopenic purpura), mental retardation</li>
+        <li>ไวรัสอาจคงอยู่ในเลนส์ตาได้ 3-4 ปี และแพร่เชื้อได้นานหลังคลอด</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>การวินิจฉัยและรักษา</h3>
+      <ul>
+        <li>~50% ของการติดเชื้อไม่แสดงอาการ; วินิจฉัยด้วย RT-PCR, anti-rubella IgM; ตรวจภูมิคุ้มกันหญิงตั้งครรภ์ตั้งแต่ต้น</li>
+        <li>ไม่มีการรักษาจำเพาะ — ป้องกันด้วย <b>live vaccine strain RA 27/3</b> (ส่วนหนึ่งของ MMR) หลังอายุ 12 เดือน</li>
+      </ul>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>ปัจจุบัน CMV แซง rubella ขึ้นเป็นสาเหตุ congenital defect อันดับ 1 (หลังยุควัคซีน) — Rubella triad (cataract, deafness, heart disease) ยังคงเป็นจุดที่ต้องจำแม่นเพื่อแยกจาก TORCH อื่น</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Posterior auricular lymphadenopathy</b><small>อาการคลาสสิกของ rubella</small></span>
+        <span class="kt"><b>CRS</b><small>Congenital Rubella Syndrome</small></span>
+        <span class="kt"><b>Blueberry muffin rash</b><small>thrombocytopenic purpura แต่กำเนิด</small></span>
+        <span class="kt"><b>RA 27/3</b><small>สายพันธุ์วัคซีนที่ใช้</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t6" id="t6-vzv">
+    <div class="organism-head"><h2>Varicella-Zoster Virus</h2><span class="sci">Human alphaherpesvirus 3 (VZV)</span></div>
+    <p class="tagline">ไวรัสเดียวก่อ 2 โรค — Primary infection = chickenpox, Reactivation = shingles — ตัวอย่างคลาสสิกของ herpesvirus latency</p>
+
+    <div class="card">
+      <h3>ลักษณะไวรัสและการแพร่กระจาย</h3>
+      <ul>
+        <li>dsDNA เล็กที่สุดในกลุ่ม HHVs; latent ในเซลล์ประสาท (เหมือน HSV) แต่แพร่กระจายในร่างกายทาง <b>respiratory route</b> (ต่างจาก HSV)</li>
+        <li>Primary viremia: ติดเชื้อ T cell ใน tonsillar lymphoid tissue → Secondary viremia: T cell พาไวรัสไปผิวหนัง → ผื่นตุ่มน้ำทั่วตัวแบบมี lesion หลายระยะพร้อมกัน</li>
+        <li>Latency: <b>dorsal root ganglia, trigeminal ganglion</b> และปมประสาทอื่น</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Primary infection: Varicella (Chickenpox)</h3>
+      <ul>
+        <li>Incubation ~14 วัน → ไข้ + ผื่น maculopapular → ใน 2-3 ชม. กลายเป็นตุ่มน้ำผนังบางบนฐานแดง = <mark class="imgref">"dewdrop on a rose petal"</mark></li>
+        <li>Macule → Papule → Vesicle → Pustule → Crust ใน 12 ชม. — <b>เกิดเป็นชุด (successive crops)</b> จึงเห็นทุกระยะพร้อมกันในผู้ป่วยคนเดียว (จุดวินิจฉัยสำคัญ)</li>
+        <li>กระจายทั่วตัว เด่นที่ trunk/head มากกว่าปลายแขนขา พบที่หนังศีรษะได้ (แยกจากผื่นอื่น)</li>
+        <li><b>ผู้ใหญ่รุนแรงกว่าเด็ก</b> — เสี่ยง VZV pneumonia, encephalitis</li>
+        <li>Congenital varicella syndrome หากแม่ติดเชื้อไตรมาส 1-2: skin scarring, hypoplastic limb</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Reactivation: Herpes Zoster (Shingles)</h3>
+      <ul>
+        <li>Reactivation เมื่อภูมิคุ้มกันลดลง (สูงอายุ, ภูมิคุ้มกันบกพร่อง) — ไวรัส replicate ตามแนวเส้นประสาทลงมาที่ผิวหนัง</li>
+        <li>ผื่นตุ่มน้ำจำกัดอยู่ <b>เฉพาะ dermatome เดียว (unilateral)</b> พบบ่อยที่ thoracic dermatome หรือใบหน้า</li>
+        <li>ปวดรุนแรงนำมาก่อนผื่น; <b>Herpes Zoster Ophthalmicus</b> = reactivation ที่ trigeminal ganglion เสี่ยงตาบอด</li>
+        <li><b>Postherpetic neuralgia:</b> ปวดเรื้อรังหลังผื่นหาย พบ ≥30% ของผู้ป่วย zoster</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>การรักษาและวัคซีน</h3>
+      <ul>
+        <li>Acyclovir, valacyclovir, famciclovir (VZV ต้องใช้ขนาดสูงกว่า HSV เนื่องจาก DNA polymerase ไวต่อยาน้อยกว่า)</li>
+        <li>VZIG (passive immunization) ป้องกันได้หากให้ภายใน 4 วันหลังสัมผัสโรค — สำคัญในหญิงตั้งครรภ์และทารกแรกเกิด</li>
+        <li>วัคซีน: <b>Varivax</b> (live attenuated Oka strain, เด็ก) · <b>Shingrix</b> (subunit vaccine glycoprotein E, ผู้ใหญ่ &gt;50 ปี ป้องกัน zoster)</li>
+      </ul>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>Varicella = ผื่นทั่วตัวหลายระยะพร้อมกัน (bilateral, generalized) vs Zoster = ผื่นตาม dermatome เดียว (unilateral) — เป็นคู่เปรียบเทียบที่ออกสอบบ่อยที่สุดในหัวข้อนี้</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Dewdrop on rose petal</b><small>ลักษณะตุ่มน้ำ varicella</small></span>
+        <span class="kt"><b>Dermatome</b><small>บริเวณผิวหนังตามเส้นประสาท</small></span>
+        <span class="kt"><b>Postherpetic neuralgia</b><small>ปวดเรื้อรังหลัง zoster</small></span>
+        <span class="kt"><b>VZIG</b><small>Passive immunization</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t6" id="t6-entero">
+    <div class="organism-head"><h2>Enteroviruses</h2><span class="sci">Coxsackievirus, Echovirus, Enterovirus 71 — Picornaviridae</span></div>
+    <p class="tagline">กลุ่มไวรัสทางเดินอาหารที่ก่อโรคผิวหนังเฉพาะจุด (vesicular exanthem) มักในเด็กเล็ก และมีความสำคัญเพราะบางสายพันธุ์ก่อภาวะแทรกซ้อนทางระบบประสาทได้</p>
+
+    <div class="card">
+      <h3>ลักษณะไวรัส &amp; การแพร่กระจาย</h3>
+      <ul>
+        <li>+ssRNA, Picornaviridae · มี 71 human serotypes ใน enterovirus A-H และ J</li>
+        <li>Fecal-oral route หลัก — เชื้อขับออกทางอุจจาระได้นาน; พบมากในเด็กเล็ก โดยเฉพาะสถานรับเลี้ยงเด็ก</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>โรคที่ก่อ</h3>
+      <details class="accordion" open>
+        <summary>Hand-Foot-Mouth Disease (HFMD)</summary>
+        <div class="acc-body">
+          <p>สาเหตุหลัก: <b>Coxsackievirus A16, A6</b> และ <b>Enterovirus 71 (EV71)</b></p>
+          <p>ตุ่มน้ำ (vesicular) เริ่มในช่องปากก่อน แล้วลามไปที่ <mark class="imgref">ฝ่ามือและฝ่าเท้า</mark> ภายใน 1 วัน มีไข้ต่ำ ๆ</p>
+          <p><b>EV71 สำคัญเพราะเสี่ยงภาวะแทรกซ้อนทางระบบประสาท:</b> Meningitis, Encephalitis, Acute flaccid paralysis — ต่างจาก Coxsackie A16 ที่มักไม่รุนแรง</p>
+        </div>
+      </details>
+      <details class="accordion">
+        <summary>Herpangina</summary>
+        <div class="acc-body">
+          <p>สาเหตุ: Coxsackievirus A1-10, A16, A22 (<b>ไม่เกี่ยวข้องกับ herpesvirus</b> แม้ชื่อคล้าย)</p>
+          <p>ตุ่มน้ำ/แผลตื้นบริเวณ soft palate, uvula, tonsil, pharynx — เจ็บคอ กลืนเจ็บ เบื่ออาหาร ไข้ต่ำ พบบ่อยในเด็กเล็ก</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <h3>การวินิจฉัยและรักษา</h3>
+      <ul>
+        <li>วินิจฉัยทางคลินิกเป็นหลัก; แยกเชื้อได้จากรอยโรคหรืออุจจาระหากจำเป็น</li>
+        <li>โรคหายเองส่วนใหญ่ (self-limited) — รักษาตามอาการ</li>
+        <li>วัคซีนมีเฉพาะ EV71 (สำหรับ HFMD) — สุขอนามัยยังเป็นมาตรการหลักในการควบคุม</li>
+      </ul>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>Herpangina ≠ Herpes simplex — ชื่อคล้ายกันแต่เชื้อคนละกลุ่ม; HFMD จาก EV71 ต้องเฝ้าระวังภาวะแทรกซ้อนทางระบบประสาทมากกว่าสายพันธุ์อื่น</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Enanthem</b><small>รอยโรคบนเยื่อบุภายใน</small></span>
+        <span class="kt"><b>HFMD</b><small>Hand-Foot-Mouth Disease</small></span>
+        <span class="kt"><b>EV71</b><small>สายพันธุ์เสี่ยงภาวะแทรกซ้อนทาง CNS</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t6" id="t6-hhv67">
+    <div class="organism-head"><h2>HHV-6 &amp; HHV-7</h2><span class="sci">Roseolovirus, Betaherpesvirinae</span></div>
+    <p class="tagline">ไวรัสที่พบเกือบทุกคนในวัยผู้ใหญ่ (seroprevalence เกือบ 100%) — ก่อ Roseola ในเด็กเล็ก และเป็นสาเหตุอันดับ 1 ของอาการชักจากไข้ในเด็ก</p>
+
+    <div class="card">
+      <h3>ลักษณะไวรัสและ Pathogenesis</h3>
+      <ul>
+        <li>Lymphotropic, ubiquitous — seropositive ≥45% เมื่ออายุ 2 ปี และเกือบ 100% ในผู้ใหญ่</li>
+        <li>Replicate ในต่อมน้ำลาย → shedding/แพร่ทางน้ำลาย; ติดเชื้อ CD4+ T cells เป็นหลัก</li>
+        <li>Latent ใน hematopoietic progenitor cells และ T cells — <b>HHV-6 integrate genome เข้า telomere</b> เพื่อคงสภาพ latency</li>
+        <li>Reactivation เกี่ยวข้องกับ DRESS syndrome, graft failure ในผู้ป่วยปลูกถ่าย, และมีความสัมพันธ์ (association) กับ multiple sclerosis, Alzheimer's disease</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Exanthem Subitum (Roseola / ส่าไข้)</h3>
+      <ul>
+        <li>เกิดจาก HHV-6B หรือ HHV-7 — หนึ่งใน 5 classic childhood exanthems (อายุ 6-24 เดือน)</li>
+        <li><b>ไข้สูงเฉียบพลันหลายวัน → ผื่นขึ้นหลังไข้ลด</b> (ต่างจากโรคผื่นไข้อื่นที่ผื่นขึ้นพร้อมไข้) ที่ trunk/face อยู่นาน 24-48 ชม.</li>
+        <li>ผื่นเชื่อว่าเกิดจาก T cell ที่ติดเชื้อ/ delayed-type hypersensitivity T cell ในผิวหนัง</li>
+        <li><b>สาเหตุอันดับ 1 ของ febrile seizure ในเด็ก</b> แม้โรคโดยรวมไม่รุนแรง</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>การรักษา</h3>
+      <p>ไม่มีวัคซีนสำหรับ HHV-6/7 — รักษาตามอาการ (โรคมัก benign self-limited)</p>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>Roseola เป็นโรคเดียวในกลุ่ม classic childhood exanthem ที่ <b>ผื่นขึ้นหลังไข้ลด</b> ไม่ใช่ขึ้นพร้อมไข้ — ใช้แยกจาก measles/rubella ในข้อสอบ</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Roseola/Exanthem subitum</b><small>ส่าไข้</small></span>
+        <span class="kt"><b>Febrile seizure</b><small>ภาวะแทรกซ้อนหลักในเด็ก</small></span>
+        <span class="kt"><b>Telomere integration</b><small>กลไก latency ของ HHV-6</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t6" id="t6-hhv8">
+    <div class="organism-head"><h2>HHV-8</h2><span class="sci">Kaposi sarcoma-associated herpesvirus (KSHV)</span></div>
+    <p class="tagline">ไวรัสที่ก่อมะเร็งผิวหนัง (viral oncogenesis) — สัมพันธ์ใกล้ชิดกับภาวะภูมิคุ้มกันบกพร่อง โดยเฉพาะ AIDS</p>
+
+    <div class="card">
+      <h3>ลักษณะไวรัสและกลไกก่อมะเร็ง</h3>
+      <ul>
+        <li>ค้นพบครั้งแรกจาก biopsy ของ Kaposi sarcoma; เกี่ยวข้องกับ Primary effusion lymphoma และ Multicentric Castleman disease ด้วย</li>
+        <li><b>เซลล์เป้าหมายหลัก: B cell</b> (คล้าย EBV) และติดเชื้อ endothelial cells, monocytes, epithelial, sensory nerve cells ได้บ้าง</li>
+        <li>เข้ารหัสโปรตีนคล้ายมนุษย์ เช่น <b>viral Bcl-2 homolog</b> (anti-apoptosis) → ส่งเสริมการเติบโตของเซลล์ที่ติดเชื้อและเซลล์ข้างเคียง ป้องกันการตายของเซลล์ → ก่อมะเร็ง</li>
+        <li>ติดต่อหลักทางน้ำลาย และเป็น sexually transmitted ได้</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Kaposi's Sarcoma (KS)</h3>
+      <ul>
+        <li>Skin malignancy ที่เป็นหนึ่งใน opportunistic disease คลาสสิกของ AIDS (พบในผู้ที่ภูมิคุ้มกันปกติได้เช่นกัน)</li>
+        <li>พบมากในบางพื้นที่ภูมิศาสตร์ เช่น อิตาลี กรีซ แอฟริกา และในผู้ป่วย AIDS</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>การรักษา</h3>
+      <ul>
+        <li>Combined antiretroviral therapy (cART) ลดอุบัติการณ์ AIDS-associated KS ได้มาก</li>
+        <li>Ganciclovir, Foscarnet — ช่วยลดรอยโรค KS ได้บางส่วน</li>
+        <li>ยังไม่มีวัคซีนสำหรับ HHV-8</li>
+      </ul>
+    </div>
+
+    <div class="exam-note">
+      <h3>⚠️ จุดที่ข้อสอบชอบออก</h3>
+      <p>HHV-8 เป็นไวรัสกลุ่ม Herpesviridae ตัวเดียวในบทนี้ที่ก่อ<b>มะเร็ง</b> (ไม่ใช่แค่ผื่น/vesicle) — กลไกผ่าน anti-apoptotic viral protein ไม่ใช่ toxin หรือ superantigen แบบแบคทีเรีย</p>
+    </div>
+
+    <div class="card">
+      <h3>คำศัพท์สำคัญ</h3>
+      <div class="keyterms">
+        <span class="kt"><b>Kaposi's sarcoma</b><small>มะเร็งหลอดเลือดที่ผิวหนัง</small></span>
+        <span class="kt"><b>Viral Bcl-2 homolog</b><small>โปรตีนต้าน apoptosis</small></span>
+        <span class="kt"><b>cART</b><small>Combined antiretroviral therapy</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="t6" id="t6-cmp">
+    <div class="organism-head"><h2>📊 ตารางเปรียบเทียบ — Viral Exanthems</h2></div>
+    <div class="card">
+      <h3>Varicella vs Herpes Zoster (ไวรัสเดียวกัน คนละระยะโรค)</h3>
+      <table class="cmp">
+        <tr><th>หัวข้อ</th><th>Varicella (Chickenpox)</th><th>Herpes Zoster (Shingles)</th></tr>
+        <tr><td>ระยะของโรค</td><td>Primary infection</td><td>Reactivation จาก latency</td></tr>
+        <tr><td>การกระจายผื่น</td><td>ทั่วตัว (generalized)</td><td>ตาม dermatome เดียว (unilateral)</td></tr>
+        <tr><td>ระยะของ lesion</td><td>เห็นหลายระยะพร้อมกัน (crops)</td><td>ระยะเดียวกันในบริเวณเดียว</td></tr>
+        <tr><td>กลุ่มเสี่ยงหลัก</td><td>เด็ก (มักไม่รุนแรง)</td><td>ผู้สูงอายุ / ภูมิคุ้มกันต่ำ</td></tr>
+        <tr><td>ภาวะแทรกซ้อนเด่น</td><td>Pneumonia, encephalitis</td><td>Postherpetic neuralgia</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>5 Classic Childhood Exanthems — ภาพรวมจากเนื้อหานี้</h3>
+      <table class="cmp">
+        <tr><th>โรค</th><th>เชื้อ</th><th>จุดจำสำคัญ</th></tr>
+        <tr><td>Measles</td><td>Measles morbillivirus</td><td>Koplik spots ก่อนผื่น, centripetal spread</td></tr>
+        <tr><td>Rubella</td><td>Rubivirus rubellae</td><td>Posterior auricular lymphadenopathy, teratogenic</td></tr>
+        <tr><td>Varicella</td><td>VZV</td><td>ผื่นหลายระยะพร้อมกัน ทั่วตัว</td></tr>
+        <tr><td>Roseola</td><td>HHV-6B/HHV-7</td><td>ผื่นขึ้น<b>หลัง</b>ไข้ลด ไม่ใช่ขึ้นพร้อมไข้</td></tr>
+        <tr><td>Fifth disease*</td><td>Parvovirus B19</td><td>*ไม่อยู่ในเนื้อหาบรรยายนี้ — ควรอ่านเพิ่มเติมหากต้องใช้สอบ</td></tr>
+      </table>
+    </div>
+  </section>
+
+  </main>
+</div>
+
+<footer class="credits">
+  จัดทำเพื่อการศึกษา นิสิตแพทย์ปี 2 · เนื้อหาอ้างอิงจากสไลด์บรรยาย T3/T5/T6 · ควรตรวจสอบรายละเอียดเพิ่มเติมกับอาจารย์ผู้สอนและตำรามาตรฐาน
+</footer>
+
+<script>
+const tabBtns = document.querySelectorAll('.tab-btn');
+const sideGroups = document.querySelectorAll('.sidebar-group');
+const panels = document.querySelectorAll('.panel');
+const root = document.documentElement;
+
+const theme = {
+  t3: {accent:'#2f6690', bg:'#eaf2f7', soft:'#d7e6f0'},
+  t5: {accent:'#3f7d5c', bg:'#eaf4ee', soft:'#d6ebde'},
+  t6: {accent:'#7a4fa3', bg:'#f3eef8', soft:'#e6daf1'}
+};
+
+function applyTheme(tab){
+  const t = theme[tab];
+  root.style.setProperty('--accent', t.accent);
+  root.style.setProperty('--accent-bg', t.bg);
+  root.style.setProperty('--accent-soft', t.soft);
+}
+
+function activateTab(tab){
+  tabBtns.forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  sideGroups.forEach(g => g.style.display = (g.dataset.tab === tab) ? 'block' : 'none');
+  applyTheme(tab);
+  // show first panel of this tab
+  const firstPanelInTab = document.querySelector('.panel[data-tab="'+tab+'"]');
+  panels.forEach(p => p.classList.toggle('active', p === firstPanelInTab));
+  const group = document.querySelector('.sidebar-group[data-tab="'+tab+'"]');
+  if(group){
+    group.querySelectorAll('.side-btn').forEach((b,i) => b.classList.toggle('active', i===0));
+  }
+}
+
+tabBtns.forEach(btn=>{
+  btn.addEventListener('click', ()=> activateTab(btn.dataset.tab));
+});
+
+document.querySelectorAll('.side-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const targetId = btn.dataset.panel;
+    const group = btn.closest('.sidebar-group');
+    group.querySelectorAll('.side-btn').forEach(b=> b.classList.toggle('active', b===btn));
+    const tab = group.dataset.tab;
+    panels.forEach(p=>{
+      if(p.dataset.tab === tab){
+        p.classList.toggle('active', p.id === targetId);
+      }
+    });
+  });
+});
+
+// init
+applyTheme('t3');
+</script>
+
+</body>
+</html>
