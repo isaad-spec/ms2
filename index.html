@@ -43,10 +43,10 @@ details.accordion[open] summary::after{content:"–"}details.accordion .acc-body
 footer.credits{text-align:center;color:var(--ink-soft);font-size:.8rem;padding:20px}
 button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media(max-width:820px){.layout{flex-direction:column}aside.sidebar{width:100%;min-width:0;position:relative;max-height:34vh;border-right:none;border-bottom:1px solid var(--line)}main.content{padding:18px;width:100%}header.app-head h1{font-size:1.2rem}.card{padding:14px}}
-table.cmp tr.grp td{background:var(--accent-soft)!important;color:var(--accent);font-weight:700;font-size:.85rem}table.cmp.sum td{min-width:9rem;font-size:.82rem}table.cmp.sum td:first-child{font-weight:700;color:var(--accent)}</style></head><body>
-<header class="app-head"><div><h1>💊 สรุปเภสัชวิทยา — Gout · RA · OA / Bone mineral / NSAIDs</h1><p>T9 NSAIDs · T11 Gout, RA, OA · T14 Agents for Bone Mineral Homeostasis · T10 Leg &amp; Foot · T15 Joints of Lower Limb — ป้าย ★ = จุดที่อาจารย์ใส่ดาวเน้นในสไลด์</p></div><div class="tools"><button id="fm" title="ลดขนาดตัวอักษร">A−</button><button id="fp" title="เพิ่มขนาดตัวอักษร">A+</button></div></header>
-<nav class="tabs"><button class="tab-btn active" data-tab="nsaid">T9 · NSAIDs</button><button class="tab-btn" data-tab="gout">T11 · Gout / RA / OA</button><button class="tab-btn" data-tab="bone">T14 · Bone mineral</button><button class="tab-btn" data-tab="leg">T10 · Leg &amp; Foot</button><button class="tab-btn" data-tab="joint">T15 · Joints of LL</button></nav>
-<div class="layout"><aside class="sidebar"><div class="sidebar-group" data-tab="nsaid"><button class="side-btn active" data-panel="nsaid-1">📖 อ่านก่อน · สัญลักษณ์</button><button class="side-btn" data-panel="sum-nsaid">📊 ตารางสรุปการรักษา</button><button class="side-btn" data-panel="nsaid-2">0. วัตถุประสงค์ + หนังสืออ้างอิง</button><button class="side-btn" data-panel="nsaid-3">1. ภาพรวมการแบ่งกลุ่มยา</button><button class="side-btn" data-panel="nsaid-4">2. NSAIDs: ภาพรวม + กลไกพื้นฐาน</button><button class="side-btn" data-panel="nsaid-5">3. Acetaminophen / Paracetamol</button><button class="side-btn" data-panel="nsaid-6">4. Traditional / Classical NSAIDs (tNSAIDs)</button><button class="side-btn" data-panel="nsaid-7">5. Aspirin และ Salicylates</button><button class="side-btn" data-panel="nsaid-8">6. Propionic acid derivatives</button><button class="side-btn" data-panel="nsaid-9">7. Indomethacin</button><button class="side-btn" data-panel="nsaid-10">8. Diclofenac</button><button class="side-btn" data-panel="nsaid-11">9. NSAIDs อื่นๆ</button><button class="side-btn" data-panel="nsaid-12">10. Selective COX-2 inhibitors (&quot;Coxibs&quot;)</button><button class="side-btn" data-panel="nsaid-13">11. Rubefacients / Counter-irritants</button><button class="side-btn" data-panel="nsaid-14">📝 12. Cheat sheet จุดที่อาจารย์ใส่ ★★★ (เน้น)</button><button class="side-btn" data-panel="nsaid-15">📝 13. หมายเหตุเรื่องสไลด์ที่อาจสับสน (ตรวจสอบกับอาจารย์ได้)</button></div><div class="sidebar-group" data-tab="gout" style="display:none"><button class="side-btn active" data-panel="gout-16">📖 อ่านก่อน · สัญลักษณ์</button><button class="side-btn" data-panel="sum-gout">📊 ตารางสรุปการรักษา</button><div class="sidebar-title">PART 1: GOUTY ARTHRITIS (GOUT)</div><button class="side-btn" data-panel="gout-17">1.1 พยาธิสรีรวิทยา</button><button class="side-btn" data-panel="gout-18">1.2 เป้าหมายและการแบ่งการรักษา</button><button class="side-btn" data-panel="gout-19">1.3 NSAIDs</button><button class="side-btn" data-panel="gout-20">1.4 Colchicine</button><button class="side-btn" data-panel="gout-21">1.5 Glucocorticoids</button><button class="side-btn" data-panel="gout-22">1.6 Allopurinol</button><button class="side-btn" data-panel="gout-23">1.7 Febuxostat</button><button class="side-btn" data-panel="gout-24">1.8 Uricosuric agents</button><button class="side-btn" data-panel="gout-25">1.9 Recombinant uricase</button><div class="sidebar-title">PART 2: RHEUMATOID ARTHRITIS (RA)</div><button class="side-btn" data-panel="gout-26">2.1 โรคและพยาธิกำเนิด</button><button class="side-btn" data-panel="gout-27">2.2 เป้าหมายการรักษา</button><button class="side-btn" data-panel="gout-28">2.3 NSAIDs ใน RA</button><button class="side-btn" data-panel="gout-29">2.4 Glucocorticoids ใน RA</button><button class="side-btn" data-panel="gout-30">2.5 DMARDs ภาพรวม</button><button class="side-btn" data-panel="gout-31">2.6 Methotrexate (MTX)</button><button class="side-btn" data-panel="gout-32">2.7 Leflunomide</button><button class="side-btn" data-panel="gout-33">2.8 Antimalarial drugs</button><button class="side-btn" data-panel="gout-34">2.9 Sulfasalazine (SSZ)</button><button class="side-btn" data-panel="gout-35">2.10 D-Penicillamine</button><button class="side-btn" data-panel="gout-36">2.11 Gold compounds</button><button class="side-btn" data-panel="gout-37">2.12 Immunosuppressants</button><button class="side-btn" data-panel="gout-38">2.13 Biological agents</button><div class="sidebar-title">PART 3: OSTEOARTHRITIS (OA)</div><button class="side-btn" data-panel="gout-39">3.1 โรคและพยาธิกำเนิด</button><button class="side-btn" data-panel="gout-40">3.2 แนวทางการรักษา</button><button class="side-btn" data-panel="gout-41">3.3 Pain and inflammation management (oral form)</button><button class="side-btn" data-panel="gout-42">3.4 Chondroprotective drugs</button><button class="side-btn" data-panel="gout-43">📝 CHECKLIST: จุด ★★★ (***) ที่อาจารย์เน้น — ทวนก่อนสอบ</button><button class="side-btn" data-panel="gout-44">📝 ข้อสังเกต (ความไม่ตรงกัน/จุดที่ควรเช็คกับอาจารย์)</button></div><div class="sidebar-group" data-tab="bone" style="display:none"><button class="side-btn active" data-panel="bone-45">📖 อ่านก่อน · สัญลักษณ์</button><button class="side-btn" data-panel="sum-bone">📊 ตารางสรุปการรักษา</button><button class="side-btn" data-panel="bone-46">0. Objectives และสารบัญที่อาจารย์เน้น</button><button class="side-btn" data-panel="bone-47">1. สรีรวิทยา: ฮอร์โมนควบคุมสมดุลแร่ธาตุ</button><button class="side-btn" data-panel="bone-48">2. Calcium analog (★★★)</button><button class="side-btn" data-panel="bone-49">3. Vitamin D analog (★★★)</button><button class="side-btn" data-panel="bone-50">4. Bisphosphonates (★★★)</button><button class="side-btn" data-panel="bone-51">5. Denosumab (★★★)</button><button class="side-btn" data-panel="bone-52">6. Teriparatide (★★★)</button><button class="side-btn" data-panel="bone-53">7. Raloxifene (★★)</button><button class="side-btn" data-panel="bone-54">8. Romosozumab (★★)</button><button class="side-btn" data-panel="bone-55">9. Estrogen (★)</button><button class="side-btn" data-panel="bone-56">10. Calcitonin (ยา: Calcitonin-salmon) (★)</button><button class="side-btn" data-panel="bone-57">11. Calcimimetics (Cinacalcet ★★★)</button><button class="side-btn" data-panel="bone-58">12. Strontium (Strontium ranelate) (ไม่มีดาว)</button><button class="side-btn" data-panel="bone-59">13. Oral phosphate binders (ไม่มีดาวในสารบัญ แต่มีดาวในเนื้อหา)</button><button class="side-btn" data-panel="bone-60">14. ตารางสรุปเปรียบเทียบ (สำหรับทบทวนก่อนสอบ)</button></div><div class="sidebar-group" data-tab="leg" style="display:none"><button class="side-btn" data-panel="sum-leg-m">📊 ตารางกล้ามเนื้อ (Leg + Foot)</button><button class="side-btn" data-panel="sum-leg-c">🩺 ตารางโรค / อาการ</button></div><div class="sidebar-group" data-tab="joint" style="display:none"><button class="side-btn" data-panel="sum-joint-j">📊 ตารางสรุปข้อต่อ</button><button class="side-btn" data-panel="sum-joint-m">💪 ตารางกล้ามเนื้อที่เกี่ยวข้อง</button><button class="side-btn" data-panel="sum-joint-c">🩺 ตารางโรค / การบาดเจ็บ</button></div></aside><main class="content"><section class="panel active" data-tab="nsaid" id="nsaid-1"><div class="organism-head"><h2>สรุป NSAIDs (Non-steroidal Anti-inflammatory Drugs)</h2></div><div class="card"><blockquote>
+table.cmp tr.grp td{background:var(--accent-soft)!important;color:var(--accent);font-weight:700;font-size:.85rem}table.cmp.sum td{min-width:9rem;font-size:.82rem}table.cmp.sum td:first-child{font-weight:700;color:var(--accent)}.panel p.img{font-size:.8rem;color:var(--ink-soft);opacity:.85}.panel h4{border-bottom:1px solid var(--line);padding-bottom:4px}</style></head><body>
+<header class="app-head"><div><h1>📚 สรุป MSK — เภสัช · กายวิภาค · พยาธิ (Gout · RA · OA · Tumor)</h1><p>T9 NSAIDs · T11 Gout, RA, OA · T14 Agents for Bone Mineral Homeostasis · T10 Leg &amp; Foot · T15 Joints of Lower Limb · T12 Tumor · T13 Metabolic &amp; Joint diseases — ป้าย ★ = จุดที่อาจารย์ใส่ดาวเน้นในสไลด์</p></div><div class="tools"><button id="fm" title="ลดขนาดตัวอักษร">A−</button><button id="fp" title="เพิ่มขนาดตัวอักษร">A+</button></div></header>
+<nav class="tabs"><button class="tab-btn active" data-tab="nsaid">T9 · NSAIDs</button><button class="tab-btn" data-tab="gout">T11 · Gout / RA / OA</button><button class="tab-btn" data-tab="bone">T14 · Bone mineral</button><button class="tab-btn" data-tab="leg">T10 · Leg &amp; Foot</button><button class="tab-btn" data-tab="joint">T15 · Joints of LL</button><button class="tab-btn" data-tab="tumor">T12 · Tumor</button><button class="tab-btn" data-tab="meta">T13 · Metabolic &amp; Joint</button></nav>
+<div class="layout"><aside class="sidebar"><div class="sidebar-group" data-tab="nsaid"><button class="side-btn active" data-panel="nsaid-1">📖 อ่านก่อน · สัญลักษณ์</button><button class="side-btn" data-panel="sum-nsaid">📊 ตารางสรุปการรักษา</button><button class="side-btn" data-panel="nsaid-2">0. วัตถุประสงค์ + หนังสืออ้างอิง</button><button class="side-btn" data-panel="nsaid-3">1. ภาพรวมการแบ่งกลุ่มยา</button><button class="side-btn" data-panel="nsaid-4">2. NSAIDs: ภาพรวม + กลไกพื้นฐาน</button><button class="side-btn" data-panel="nsaid-5">3. Acetaminophen / Paracetamol</button><button class="side-btn" data-panel="nsaid-6">4. Traditional / Classical NSAIDs (tNSAIDs)</button><button class="side-btn" data-panel="nsaid-7">5. Aspirin และ Salicylates</button><button class="side-btn" data-panel="nsaid-8">6. Propionic acid derivatives</button><button class="side-btn" data-panel="nsaid-9">7. Indomethacin</button><button class="side-btn" data-panel="nsaid-10">8. Diclofenac</button><button class="side-btn" data-panel="nsaid-11">9. NSAIDs อื่นๆ</button><button class="side-btn" data-panel="nsaid-12">10. Selective COX-2 inhibitors (&quot;Coxibs&quot;)</button><button class="side-btn" data-panel="nsaid-13">11. Rubefacients / Counter-irritants</button><button class="side-btn" data-panel="nsaid-14">📝 12. Cheat sheet จุดที่อาจารย์ใส่ ★★★ (เน้น)</button><button class="side-btn" data-panel="nsaid-15">📝 13. หมายเหตุเรื่องสไลด์ที่อาจสับสน (ตรวจสอบกับอาจารย์ได้)</button></div><div class="sidebar-group" data-tab="gout" style="display:none"><button class="side-btn active" data-panel="gout-16">📖 อ่านก่อน · สัญลักษณ์</button><button class="side-btn" data-panel="sum-gout">📊 ตารางสรุปการรักษา</button><div class="sidebar-title">PART 1: GOUTY ARTHRITIS (GOUT)</div><button class="side-btn" data-panel="gout-17">1.1 พยาธิสรีรวิทยา</button><button class="side-btn" data-panel="gout-18">1.2 เป้าหมายและการแบ่งการรักษา</button><button class="side-btn" data-panel="gout-19">1.3 NSAIDs</button><button class="side-btn" data-panel="gout-20">1.4 Colchicine</button><button class="side-btn" data-panel="gout-21">1.5 Glucocorticoids</button><button class="side-btn" data-panel="gout-22">1.6 Allopurinol</button><button class="side-btn" data-panel="gout-23">1.7 Febuxostat</button><button class="side-btn" data-panel="gout-24">1.8 Uricosuric agents</button><button class="side-btn" data-panel="gout-25">1.9 Recombinant uricase</button><div class="sidebar-title">PART 2: RHEUMATOID ARTHRITIS (RA)</div><button class="side-btn" data-panel="gout-26">2.1 โรคและพยาธิกำเนิด</button><button class="side-btn" data-panel="gout-27">2.2 เป้าหมายการรักษา</button><button class="side-btn" data-panel="gout-28">2.3 NSAIDs ใน RA</button><button class="side-btn" data-panel="gout-29">2.4 Glucocorticoids ใน RA</button><button class="side-btn" data-panel="gout-30">2.5 DMARDs ภาพรวม</button><button class="side-btn" data-panel="gout-31">2.6 Methotrexate (MTX)</button><button class="side-btn" data-panel="gout-32">2.7 Leflunomide</button><button class="side-btn" data-panel="gout-33">2.8 Antimalarial drugs</button><button class="side-btn" data-panel="gout-34">2.9 Sulfasalazine (SSZ)</button><button class="side-btn" data-panel="gout-35">2.10 D-Penicillamine</button><button class="side-btn" data-panel="gout-36">2.11 Gold compounds</button><button class="side-btn" data-panel="gout-37">2.12 Immunosuppressants</button><button class="side-btn" data-panel="gout-38">2.13 Biological agents</button><div class="sidebar-title">PART 3: OSTEOARTHRITIS (OA)</div><button class="side-btn" data-panel="gout-39">3.1 โรคและพยาธิกำเนิด</button><button class="side-btn" data-panel="gout-40">3.2 แนวทางการรักษา</button><button class="side-btn" data-panel="gout-41">3.3 Pain and inflammation management (oral form)</button><button class="side-btn" data-panel="gout-42">3.4 Chondroprotective drugs</button><button class="side-btn" data-panel="gout-43">📝 CHECKLIST: จุด ★★★ (***) ที่อาจารย์เน้น — ทวนก่อนสอบ</button><button class="side-btn" data-panel="gout-44">📝 ข้อสังเกต (ความไม่ตรงกัน/จุดที่ควรเช็คกับอาจารย์)</button></div><div class="sidebar-group" data-tab="bone" style="display:none"><button class="side-btn active" data-panel="bone-45">📖 อ่านก่อน · สัญลักษณ์</button><button class="side-btn" data-panel="sum-bone">📊 ตารางสรุปการรักษา</button><button class="side-btn" data-panel="bone-46">0. Objectives และสารบัญที่อาจารย์เน้น</button><button class="side-btn" data-panel="bone-47">1. สรีรวิทยา: ฮอร์โมนควบคุมสมดุลแร่ธาตุ</button><button class="side-btn" data-panel="bone-48">2. Calcium analog (★★★)</button><button class="side-btn" data-panel="bone-49">3. Vitamin D analog (★★★)</button><button class="side-btn" data-panel="bone-50">4. Bisphosphonates (★★★)</button><button class="side-btn" data-panel="bone-51">5. Denosumab (★★★)</button><button class="side-btn" data-panel="bone-52">6. Teriparatide (★★★)</button><button class="side-btn" data-panel="bone-53">7. Raloxifene (★★)</button><button class="side-btn" data-panel="bone-54">8. Romosozumab (★★)</button><button class="side-btn" data-panel="bone-55">9. Estrogen (★)</button><button class="side-btn" data-panel="bone-56">10. Calcitonin (ยา: Calcitonin-salmon) (★)</button><button class="side-btn" data-panel="bone-57">11. Calcimimetics (Cinacalcet ★★★)</button><button class="side-btn" data-panel="bone-58">12. Strontium (Strontium ranelate) (ไม่มีดาว)</button><button class="side-btn" data-panel="bone-59">13. Oral phosphate binders (ไม่มีดาวในสารบัญ แต่มีดาวในเนื้อหา)</button><button class="side-btn" data-panel="bone-60">14. ตารางสรุปเปรียบเทียบ (สำหรับทบทวนก่อนสอบ)</button></div><div class="sidebar-group" data-tab="leg" style="display:none"><button class="side-btn" data-panel="sum-leg-m">📊 ตารางกล้ามเนื้อ (Leg + Foot)</button><button class="side-btn" data-panel="sum-leg-c">🩺 ตารางโรค / อาการ</button></div><div class="sidebar-group" data-tab="joint" style="display:none"><button class="side-btn" data-panel="sum-joint-j">📊 ตารางสรุปข้อต่อ</button><button class="side-btn" data-panel="sum-joint-m">💪 ตารางกล้ามเนื้อที่เกี่ยวข้อง</button><button class="side-btn" data-panel="sum-joint-c">🩺 ตารางโรค / การบาดเจ็บ</button></div><div class="sidebar-group" data-tab="tumor" style="display:none"><button class="side-btn active" data-panel="tumor-g">🧭 เริ่มตรงนี้: วิธีตอบโจทย์</button><button class="side-btn" data-panel="tumor-sum">📊 ตารางสรุป: อายุ/เพศ + คีย์เวิร์ด→โรค</button><button class="side-btn" data-panel="tumor-1">1. Tumors and Tumor-like Lesions of Infancy and Childhood</button><button class="side-btn" data-panel="tumor-2">2. Bone Tumors and Tumor-like Lesions</button><button class="side-btn" data-panel="tumor-3">3. Metastatic Disease (Bone)</button><button class="side-btn" data-panel="tumor-4">4. Tumors and Tumor-like Lesions of Joint</button><button class="side-btn" data-panel="tumor-5">5. Soft-tissue Tumors and Tumor-like Lesions</button><button class="side-btn" data-panel="tumor-6">6. Paraffinoma</button><button class="side-btn" data-panel="tumor-7">7. ข้อสอบท้ายสไลด์ (เป็นรูปภาพ ไม่มีเฉลยในสไลด์)</button></div><div class="sidebar-group" data-tab="meta" style="display:none"><button class="side-btn active" data-panel="meta-g">🧭 เริ่มตรงนี้: วิธีตอบโจทย์</button><button class="side-btn" data-panel="meta-sum">📊 ตารางสรุปเทียบเร็ว</button><button class="side-btn" data-panel="meta-0">หน้าปก + Joints (กายวิภาคข้อ)</button><button class="side-btn" data-panel="meta-1">RHEUMATOID ARTHRITIS (RA) — โรครูมาตอยด์</button><button class="side-btn" data-panel="meta-2">ANKYLOSING SPONDYLOARTHRITIS</button><button class="side-btn" data-panel="meta-3">PSORIATIC ARTHRITIS</button><button class="side-btn" data-panel="meta-4">CRYSTAL-INDUCED ARTHRITIS</button><button class="side-btn" data-panel="meta-5">GANGLION CYST</button><button class="side-btn" data-panel="meta-6">OSTEOARTHRITIS (OA) — โรคกระดูกข้อเสื่อม</button><button class="side-btn" data-panel="meta-7">OSTEOPOROSIS</button></div></aside><main class="content"><section class="panel active" data-tab="nsaid" id="nsaid-1"><div class="organism-head"><h2>สรุป NSAIDs (Non-steroidal Anti-inflammatory Drugs)</h2></div><div class="card"><blockquote>
 <p>สรุปจากสไลด์ T9-NSAIDs (อ.ดร. Benjaporn Buranrat, คณะแพทยศาสตร์ ม.มหาสารคาม) ทั้ง 81 สไลด์
 สัญลักษณ์ <code>***</code> / <code>**</code> / <code>*</code> = จุดที่อาจารย์เน้นไว้ในสไลด์ (<span class="st s3">★★★</span> = เน้นมากสุด)
 <code><span class="sl">สไลด์ X</span></code> = เลขสไลด์ต้นทาง เผื่อย้อนกลับไปดู</p>
@@ -2863,9 +2863,1778 @@ Anti-inflammatory, Anti-pyretic, Analgesic, <strong>Anti-platelet aggregation</s
 <li>Cinacalcet: ใช้ใน CKD <strong>on dialysis</strong>; SE = hypocalcemia</li>
 <li>Calcium-based binder: ถูกแต่ระวัง hypercalcemia/calcification; Sevelamer ไม่เพิ่ม Ca load; Aluminum เลิกใช้เพราะ toxicity</li>
 <li>Alcoholism → hypocalcemia + hypokalemia + hypomagnesemia (case tetany)</li>
-</ul></div></section><section class="panel" data-tab="leg" id="sum-leg-m"><div class="organism-head"><h2>📊 T10 · กล้ามเนื้อขาและเท้า</h2></div><div class="exam-note"><p>ตัวเลขใน ( ) คือ nerve root ที่สไลด์เน้นตัวหนา · อ่านจากรูปตารางในสไลด์ ควรเทียบกับต้นฉบับอีกรอบ</p></div><div class="card"><div class="tw"><table class="cmp"><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Blood supply</th><th>Innervation</th><th>Action</th></tr><tr class="grp"><td colspan="6">Anterior compartment (dorsiflexors) · Deep fibular n. · Anterior tibial a.</td></tr><tr><td><b>Tibialis anterior</b></td><td>Lateral surface of tibia + interosseous membrane</td><td>Medial cuneiform (medial/inferior surfaces) + base of MT I</td><td>Anterior tibial a. → dorsalis pedis</td><td>Deep fibular n. (L4, L5)</td><td>Dorsiflexion, inversion; support medial arch</td></tr><tr><td><b>Extensor hallucis longus</b></td><td>Middle ½ of medial surface of fibula + interosseous membrane</td><td>Dorsal base of distal phalanx of great toe</td><td>Anterior tibial a. → dorsalis pedis</td><td>Deep fibular n. (L5, S1)</td><td>Extend great toe; dorsiflexion</td></tr><tr><td><b>Extensor digitorum longus</b></td><td>Proximal ½ of medial surface of fibula + lateral tibial condyle</td><td>Via dorsal digital expansions → middle & distal phalanges of lateral 4 toes</td><td>Anterior tibial a. → dorsalis pedis</td><td>Deep fibular n. (L5, S1)</td><td>Extend lateral 4 toes; dorsiflexion</td></tr><tr><td><b>Fibularis tertius</b></td><td>Distal part of medial surface of fibula</td><td>Dorsomedial base of MT V</td><td>Anterior tibial a. → dorsalis pedis</td><td>Deep fibular n. (L5, S1)</td><td>Dorsiflexion + eversion</td></tr><tr class="grp"><td colspan="6">Lateral compartment (evertors) · Superficial fibular n. · Fibular a.</td></tr><tr><td><b>Fibularis longus</b></td><td>Upper lateral fibula, head of fibula (± lateral tibial condyle)</td><td>Medial cuneiform (inferior, lateral side) + base of MT I</td><td>Fibular (peroneal) a.</td><td>Superficial fibular n. (L5, S1, S2)</td><td>Eversion + plantarflexion; support arches</td></tr><tr><td><b>Fibularis brevis</b></td><td>Lower ⅔ of lateral surface of fibula</td><td>Lateral tubercle at base of MT V</td><td>Fibular (peroneal) a.</td><td>Superficial fibular n. (L5, S1, S2)</td><td>Eversion</td></tr><tr class="grp"><td colspan="6">Posterior compartment — superficial group (Tibial n. · Posterior tibial a. + muscular br. of popliteal a.)</td></tr><tr><td><b>Gastrocnemius</b></td><td>Medial head: femur above medial condyle; lateral head: lateral femoral condyle</td><td>Posterior calcaneus via calcaneal (Achilles) tendon</td><td>Posterior tibial a.</td><td>Tibial n. (S1, S2)</td><td>Plantarflex foot + flex knee</td></tr><tr><td><b>Plantaris</b></td><td>Lateral supracondylar line of femur + oblique popliteal lig.</td><td>Posterior calcaneus via calcaneal tendon</td><td>Posterior tibial a.</td><td>Tibial n. (S1, S2)</td><td>Plantarflex foot + flex knee</td></tr><tr><td><b>Soleus</b></td><td>Soleal line + medial border of tibia; head/neck/proximal shaft of fibula; tendinous arch</td><td>Posterior calcaneus via calcaneal tendon</td><td>Posterior tibial a.</td><td>Tibial n. (S1, S2)</td><td>Plantarflex foot</td></tr><tr class="grp"><td colspan="6">Posterior compartment — deep group (Tibial n. · Posterior tibial a.)</td></tr><tr><td><b>Popliteus</b></td><td>Lateral femoral condyle</td><td>Posterior surface of proximal tibia</td><td>Posterior tibial a.</td><td>Tibial n. (L4–S1)</td><td>Stabilize knee; <b>unlock knee</b> (lateral rotation of femur on fixed tibia)</td></tr><tr><td><b>Flexor hallucis longus</b></td><td>Posterior fibula + interosseous membrane</td><td>Plantar distal phalanx of great toe</td><td>Posterior tibial a.</td><td>Tibial n. (S2, S3)</td><td>Flex great toe</td></tr><tr><td><b>Flexor digitorum longus</b></td><td>Medial part of posterior tibia</td><td>Plantar bases of distal phalanges of lateral 4 toes</td><td>Posterior tibial a.</td><td>Tibial n. (S2, S3)</td><td>Flex lateral 4 toes</td></tr><tr><td><b>Tibialis posterior</b></td><td>Posterior interosseous membrane + adjacent tibia & fibula</td><td>Tuberosity of navicular + medial cuneiform</td><td>Posterior tibial a.</td><td>Tibial n. (L4, L5)</td><td>Inversion + plantarflexion; support medial arch</td></tr><tr class="grp"><td colspan="6">Dorsum of foot (Deep fibular n. via lateral tarsal n.)</td></tr><tr><td><b>Extensor digitorum brevis</b></td><td>Superolateral calcaneus</td><td>Lateral sides of EDL tendons to toes II–IV</td><td>Lateral tarsal a. (from dorsalis pedis)</td><td>Deep fibular n. (S1, S2)</td><td>Extend toes II–IV</td></tr><tr><td><b>Extensor hallucis brevis</b></td><td>Superolateral calcaneus</td><td>Base of proximal phalanx of great toe</td><td>Lateral tarsal a. (from dorsalis pedis)</td><td>Deep fibular n. (S1, S2)</td><td>Extend MTP joint of great toe</td></tr><tr class="grp"><td colspan="6">Sole of foot — Layer 1</td></tr><tr><td><b>Abductor hallucis</b></td><td>Medial process of calcaneal tuberosity</td><td>Medial base of proximal phalanx of great toe</td><td>Medial plantar a.</td><td>Medial plantar n. (S1–S3)</td><td>Abduct + flex great toe</td></tr><tr><td><b>Flexor digitorum brevis</b></td><td>Medial process of calcaneal tuberosity + plantar aponeurosis</td><td>Middle phalanges of lateral 4 toes</td><td>Medial plantar a.</td><td>Medial plantar n. (S1–S3)</td><td>Flex lateral 4 toes at PIP joint</td></tr><tr><td><b>Abductor digiti minimi</b></td><td>Medial & lateral processes of calcaneal tuberosity</td><td>Lateral base of proximal phalanx of little toe</td><td>Lateral plantar a.†</td><td>Lateral plantar n. (S1–S3)</td><td>Abduct little toe</td></tr><tr class="grp"><td colspan="6">Sole of foot — Layer 2</td></tr><tr><td><b>Quadratus plantae</b></td><td>Medial surface + lateral process of calcaneus</td><td>Lateral side of FDL tendon</td><td>Lateral plantar a.†</td><td>Lateral plantar n. (S1–S3)</td><td>Assist FDL in flexing toes II–V</td></tr><tr><td><b>Lumbricals (4)</b></td><td>Tendons of FDL</td><td>Medial margins of extensor hoods of toes II–V</td><td>Plantar arch / plantar metatarsal aa.†</td><td>1st: medial plantar n.; 2nd–4th: lateral plantar n. (S2, S3)</td><td>Flex MTP + extend IP joints</td></tr><tr class="grp"><td colspan="6">Sole of foot — Layer 3</td></tr><tr><td><b>Flexor hallucis brevis</b></td><td>Cuboid, lateral cuneiform, tibialis posterior tendon</td><td>Both sides of base of proximal phalanx of great toe</td><td>Medial plantar a.†</td><td>Medial plantar n. (S1, S2)</td><td>Flex MTP joint of great toe</td></tr><tr><td><b>Adductor hallucis</b></td><td>Transverse head: MTP ligaments; oblique head: bases of MT II–IV</td><td>Lateral base of proximal phalanx of great toe</td><td>Plantar arch†</td><td>Lateral plantar n. (S2, S3)</td><td>Adduct great toe</td></tr><tr><td><b>Flexor digiti minimi brevis</b></td><td>Base of MT V + fibularis longus sheath</td><td>Lateral base of proximal phalanx of little toe</td><td>Lateral plantar a.†</td><td>Lateral plantar n. (S2, S3)</td><td>Flex little toe at MTP</td></tr><tr class="grp"><td colspan="6">Sole of foot — Layer 4</td></tr><tr><td><b>Dorsal interossei (4)</b></td><td>Sides of adjacent metatarsals</td><td>Extensor hoods + proximal phalanges of toes II–IV</td><td>Plantar arch / plantar metatarsal aa.†</td><td>Lateral plantar n. (S2, S3); 1st–2nd also deep fibular n.</td><td><b>DAB</b> — abduct toes II–IV</td></tr><tr><td><b>Plantar interossei (3)</b></td><td>Medial sides of MT III–V</td><td>Extensor hoods + proximal phalanges of toes III–V</td><td>Plantar arch / plantar metatarsal aa.†</td><td>Lateral plantar n. (S2, S3)</td><td><b>PAD</b> — adduct toes III–V</td></tr></table></div><p style="font-size:.82rem;color:var(--ink-soft)">† = สไลด์ไม่ได้ระบุ blood supply รายกล้ามเนื้อ เติมตามหลักตำรา (ในสไลด์ระบุเฉพาะ medial plantar a. → abductor hallucis, FDB) · MT = metatarsal</p></div></section><section class="panel" data-tab="leg" id="sum-leg-c"><div class="organism-head"><h2>🩺 T10 · โรค / อาการทางคลินิก</h2></div><div class="card"><div class="tw"><table class="cmp sum"><tr><th>โรค / อาการ</th><th>ส่วนที่เกี่ยวข้อง</th><th>กลไก / สาเหตุ</th><th>ลักษณะ / อาการ</th><th>ประเด็นสำคัญ / การรักษา</th></tr><tr><td><b>Tibial plateau fracture</b> (type I–VI)</td><td>Tibial plateau, <b>lateral condyle</b> ส่วนใหญ่</td><td>Direct trauma</td><td>หักเข้าข้อ (articular surface)</td><td>6 types: I split lat. plateau · II split + depression · III depression · IV comminuted medial + tibial spine · V bicondylar · VI + metaphyseal–diaphyseal separation; ต้อง stabilize</td></tr><tr><td><b>Tibial shaft fracture</b></td><td>Shaft of tibia (±fibula)</td><td>Trauma; tibia อยู่ใต้ผิวหนังตาม medial border</td><td>มักเป็น <b>open injury</b>; มักหักทั้ง tibia + fibula</td><td>Long bone fracture ที่พบบ่อยสุด; แบบ transverse / spiral / comminuted / segmental</td></tr><tr><td><b>Shin splints</b></td><td>Distal ⅔ ของ medial tibia; tibialis posterior; interosseous membrane</td><td>Traction ซ้ำจาก tibialis posterior ตอนวิ่ง (นักกีฬา)</td><td>ปวดตามขอบใน tibia: เริ่มหลังวิ่ง → ปวดตอนเดิน/ขึ้นบันได</td><td>เรื้อรัง → periostitis, bone remodeling, <b>stress fracture</b></td></tr><tr><td><b>Plantar fasciitis</b> (heel spur syndrome)</td><td>Plantar aponeurosis ที่เกาะ calcaneus; <b>medial calcaneal br. of tibial n.</b> รับความเจ็บปวด</td><td>อักเสบจากใช้งานซ้ำ (นักวิ่ง); พบมากในผู้หญิงและคนอ้วน</td><td>ปวดส้นเท้า (สาเหตุพบบ่อยสุดของ heel pain); อาจมี calcaneal spur</td><td>รักษา nonoperative: exercise + orthotics; หายใน 6–12 เดือน; heel counter ที่กระชับลดแรงกระแทก fat pad</td></tr><tr><td><b>Flat foot / High arch</b> (over-pronation / supination)</td><td>Medial longitudinal arch; spring lig.; tibialis posterior</td><td>Arch ยุบ (low) หรือสูงเกิน (high) ต่อ pronation/supination range</td><td>Low arch (flat foot), High arch</td><td>Spring lig. ต้านการยุบ medial arch; long plantar lig. แข็งแรงสุดสำหรับ lateral arch</td></tr><tr><td><b>ประเมิน circulation ขา</b> (Dorsalis pedis pulse)</td><td>Dorsalis pedis a. ระหว่าง EHL กับ EDL tendon ไป toe II</td><td>—</td><td>คลำชีพจรที่หลังเท้า</td><td>ใช้ประเมินการไหลเวียนเลือดของ lower limb</td></tr></table></div></div></section><section class="panel" data-tab="joint" id="sum-joint-j"><div class="organism-head"><h2>📊 T15 · ข้อต่อของ lower limb</h2></div><div class="card"><div class="tw"><table class="cmp"><tr><th>Joint</th><th>Type</th><th>Ligaments / structures</th><th>Blood supply</th><th>Innervation</th><th>Movement</th></tr><tr><td><b>Sacroiliac</b></td><td>Atypical synovial (plane)</td><td>Anterior, posterior, <b>interosseous SI</b> (กัน separation); sacrospinous + sacrotuberous (กัน nutation)</td><td>Iliolumbar, superior gluteal, lateral sacral aa.</td><td>S1–S2; superior gluteal n.</td><td>Slight gliding; nutation/nodding</td></tr><tr><td><b>Pubic symphysis</b></td><td>Cartilaginous (symphysis)</td><td>Superior, arcuate, anterior, posterior pubic ligs.</td><td>Pubic br. of obturator a., superficial external pudendal a., inferior epigastric a.</td><td>Iliohypogastric, ilioinguinal, pudendal nn.</td><td>แทบไม่เคลื่อนไหว; ขยายตอนคลอด</td></tr><tr><td><b>Hip</b></td><td>Ball-and-socket (multiaxial)</td><td><b>Iliofemoral</b> (แข็งแรงสุด, Y-shape, กัน hyperextension) · pubofemoral · <b>ischiofemoral</b> (อ่อนแอสุด, posterior); lig. of head of femur; acetabular labrum</td><td><b>Medial circumflex femoral a.</b> ★ · lateral circumflex femoral a. · artery of head of femur (obturator a.)</td><td>Femoral (ant.), obturator (inf.), sup. gluteal (sup.), n. to quadratus femoris (post.) — L2–S1</td><td>Flex/ext, abd/add, rotation, circumduction</td></tr><tr><td><b>Knee</b></td><td>Synovial hinge (+ plane at patellofemoral)</td><td>ACL, PCL, TCL (MCL), FCL (LCL), medial/lateral menisci, patellar lig., oblique/arcuate popliteal ligs.</td><td>Genicular anastomosis: genicular aa. จาก popliteal, descending genicular, recurrent anterior tibial</td><td>Femoral (ant.), tibial (post.), common fibular (lat.), obturator + saphenous (med.)</td><td>Flex/ext; rotation เมื่องอ; locking (medial rotation of femur)</td></tr><tr><td><b>Superior tibiofibular</b></td><td>Plane synovial</td><td>Anterior & posterior lig. of fibular head</td><td>Anterior/posterior tibial recurrent aa.</td><td>Common fibular n., n. to popliteus</td><td>Slight gliding</td></tr><tr><td><b>Inferior tibiofibular</b></td><td>Syndesmosis (fibrous)</td><td>Anterior, interosseous, posterior, transverse tibiofibular ligs.</td><td>Fibular a., lateral malleolar br.</td><td>Deep fibular, sural nn.</td><td>Slight gliding</td></tr><tr><td><b>Ankle (talocrural)</b></td><td>Synovial hinge (mortise & tenon)</td><td><b>Deltoid</b> (4 ส่วน) · lateral: <b>ATFL</b> (อ่อนแอสุด), CFL, PTFL</td><td>Malleolar br. of fibular a.; anterior & posterior tibial aa.</td><td>Tibial n., deep fibular n.</td><td>Plantarflexion 30–50°; dorsiflexion 10–20°</td></tr></table></div></div></section><section class="panel" data-tab="joint" id="sum-joint-m"><div class="organism-head"><h2>💪 T15 · กล้ามเนื้อที่เกี่ยวข้องกับข้อต่อ</h2></div><div class="card"><div class="tw"><table class="cmp"><tr><th>Joint / การเคลื่อนไหว</th><th>Muscles</th><th>Innervation / หมายเหตุ</th></tr><tr class="grp"><td colspan="3">Hip joint (จากสไลด์ 21)</td></tr><tr><td><b>Flexors</b></td><td>Iliopsoas, sartorius, TFL, rectus femoris, pectineus, adductor longus/brevis, adductor magnus (ant.), gracilis</td><td>สไลด์ไม่ระบุ nerve รายกล้ามเนื้อ</td></tr><tr><td><b>Extensors</b></td><td>Gluteus maximus, hamstrings (semitendinosus, semimembranosus, long head of biceps femoris), adductor magnus (post.)</td><td>—</td></tr><tr><td><b>Abductors</b></td><td>Gluteus medius, gluteus minimus, TFL</td><td>Abduction of femur on fixed pelvis = glut. med/min</td></tr><tr><td><b>Adductors</b></td><td>Pectineus, adductor longus/brevis/magnus, obturator externus, gracilis</td><td>—</td></tr><tr><td><b>Lateral rotators</b></td><td>Obturator externus/internus, piriformis, gemelli, quadratus femoris, gluteus maximus</td><td>—</td></tr><tr><td><b>Medial rotators</b></td><td>Gluteus medius + minimus (anterior parts), TFL</td><td>—</td></tr><tr class="grp"><td colspan="3">Knee / Ankle</td></tr><tr><td><b>Popliteus</b></td><td>Tendon เข้า capsule → lateral femoral condyle + lateral meniscus</td><td>หมุน femur ออกด้านนอกตอนเริ่ม flexion; ดึง lateral meniscus ไปหลัง</td></tr><tr><td><b>Plantarflexion</b> (30–50°)</td><td>Gastrocnemius, soleus</td><td>Tibial n. (ดูตารางกล้ามเนื้อ T10)</td></tr><tr><td><b>Dorsiflexion</b> (10–20°)</td><td>Tibialis anterior</td><td>Deep fibular n.</td></tr></table></div><p style="font-size:.82rem;color:var(--ink-soft)">สไลด์ T15 ไม่มี origin / insertion ของกล้ามเนื้อสะโพก-เข่า จึงไม่ได้ใส่ในตาราง</p></div></section><section class="panel" data-tab="joint" id="sum-joint-c"><div class="organism-head"><h2>🩺 T15 · โรค / การบาดเจ็บ</h2></div><div class="exam-note"><p>จุดที่สไลด์เขียนไม่ตรงตำรา เช่น patella "posterior part" ดูหมายเหตุท้ายไฟล์ T15 ต้นฉบับ</p></div><div class="card"><div class="tw"><table class="cmp sum"><tr><th>โรค / อาการ</th><th>ส่วนที่เกี่ยวข้อง</th><th>กลไก / สาเหตุ</th><th>ลักษณะ / อาการ</th><th>ประเด็นสำคัญ / การรักษา</th></tr><tr><td><b>Pelvic fracture</b> (iliac wing; vertical shear / Malgaigne)</td><td>Ilium, interosseous SI ligament</td><td>Direct blow; vertical shear</td><td>—</td><td>Vertical shear ฉีก interosseous SI lig.</td></tr><tr><td><b>Hip dislocation — posterior</b></td><td>Hip joint</td><td>เข่ากระแทก dashboard (อุบัติเหตุรถ)</td><td>Hip adduction + internal rotation + flexion; ปวด, ขยับขาไม่ได้, ชา, อ่อนแรง</td><td><b>Common fibular n. injury → foot drop</b></td></tr><tr><td><b>Hip dislocation — anterior</b></td><td>Hip joint</td><td>ถูกกระแทกจากด้านข้าง/หน้า</td><td>Hip abduction + external rotation + extension</td><td><b>Femoral n. injury → quadriceps weakness</b></td></tr><tr><td><b>Femoral neck fracture</b> (เสี่ยงเลือดไปเลี้ยงหัว femur)</td><td>Retinacular aa. ← medial/lateral circumflex femoral aa.</td><td>กระดูกหัก ทำลาย retinacular arteries</td><td>—</td><td>Medial circumflex femoral a. สำคัญสุดต่อ hip blood supply</td></tr><tr><td><b>ACL injury</b></td><td>Anterior cruciate lig.</td><td>แรงเกินความแข็งแรง lig.; twisting, hyperextension, direct blow</td><td>Tibia หมุนผิดปกติใต้ femur</td><td><b>Anterior drawer</b> + (>5 mm, flex 90°), <b>Lachman</b> + (>3 mm, flex 20–30°); รักษา ACL reconstruction</td></tr><tr><td><b>PCL injury</b></td><td>Posterior cruciate lig.</td><td>แรงดัน tibia ไปหลัง (dashboard injury)</td><td>Tibia เลื่อนไปหลัง</td><td><b>Posterior drawer</b> +, <b>posterior sag</b> +</td></tr><tr><td><b>Unhappy triad</b> ⭐</td><td>TCL + ACL + medial meniscus</td><td><b>Lateral blow</b> to knee</td><td>เข่าไม่มั่นคง</td><td>TCL ยึด medial meniscus จึงฉีกพร้อมกัน</td></tr><tr><td><b>Prepatellar bursitis</b> (housemaid's knee)</td><td>Subcutaneous prepatellar bursa</td><td>คุกเข่านาน</td><td>บวมนุ่ม กดเจ็บ fluctuant เหนือ patella</td><td>—</td></tr><tr><td><b>Suprapatellar bursitis</b></td><td>Suprapatellar bursa</td><td>อักเสบ/ติดเชื้อ</td><td>บวมเหนือเข่า</td><td>ติดต่อกับ synovial cavity ของเข่าโดยตรง จึงลามเข้าข้อได้</td></tr><tr><td><b>Patellar subluxation</b> (↑ Q-angle)</td><td>Patella; Q-angle ปกติ ♂12°, ♀16°</td><td>Q-angle มากขึ้น</td><td>Genu valgum (knock knee) = ↑Q</td><td>Genu varum (bow leg) = ↓Q</td></tr><tr><td><b>Pott fracture</b></td><td>Medial malleolus, fibula, posterior tibiofibular lig., deltoid lig.</td><td>แรงหมุน/บิดข้อเท้า</td><td>Fracture–dislocation ของข้อเท้า</td><td>—</td></tr><tr><td><b>Maisonneuve fracture</b></td><td>Proximal fibula + distal tibiofibular syndesmosis + medial ankle</td><td>แรงส่งผ่าน interosseous membrane</td><td>หักที่ fibula ส่วนต้น แต่เสียหายที่ข้อเท้า</td><td>—</td></tr><tr><td><b>Ankle sprain</b></td><td><b>ATFL</b> (lateral lig. ที่อ่อนแอสุด)</td><td>พลิกข้อเท้า (inversion)</td><td>ปวด/บวมด้านนอกข้อเท้า</td><td>ATFL ฉีกบ่อยสุด</td></tr></table></div></div></section><div class="pager"><button id="pv">← ก่อนหน้า</button><button id="nx">ถัดไป →</button></div></main></div>
+</ul></div></section><section class="panel" data-tab="leg" id="sum-leg-m"><div class="organism-head"><h2>📊 T10 · กล้ามเนื้อขาและเท้า</h2></div><div class="exam-note"><p>ตัวเลขใน ( ) คือ nerve root ที่สไลด์เน้นตัวหนา · อ่านจากรูปตารางในสไลด์ ควรเทียบกับต้นฉบับอีกรอบ</p></div><div class="card"><div class="tw"><table class="cmp"><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Blood supply</th><th>Innervation</th><th>Action</th></tr><tr class="grp"><td colspan="6">Anterior compartment (dorsiflexors) · Deep fibular n. · Anterior tibial a.</td></tr><tr><td><b>Tibialis anterior</b></td><td>Lateral surface of tibia + interosseous membrane</td><td>Medial cuneiform (medial/inferior surfaces) + base of MT I</td><td>Anterior tibial a. → dorsalis pedis</td><td>Deep fibular n. (L4, L5)</td><td>Dorsiflexion, inversion; support medial arch</td></tr><tr><td><b>Extensor hallucis longus</b></td><td>Middle ½ of medial surface of fibula + interosseous membrane</td><td>Dorsal base of distal phalanx of great toe</td><td>Anterior tibial a. → dorsalis pedis</td><td>Deep fibular n. (L5, S1)</td><td>Extend great toe; dorsiflexion</td></tr><tr><td><b>Extensor digitorum longus</b></td><td>Proximal ½ of medial surface of fibula + lateral tibial condyle</td><td>Via dorsal digital expansions → middle & distal phalanges of lateral 4 toes</td><td>Anterior tibial a. → dorsalis pedis</td><td>Deep fibular n. (L5, S1)</td><td>Extend lateral 4 toes; dorsiflexion</td></tr><tr><td><b>Fibularis tertius</b></td><td>Distal part of medial surface of fibula</td><td>Dorsomedial base of MT V</td><td>Anterior tibial a. → dorsalis pedis</td><td>Deep fibular n. (L5, S1)</td><td>Dorsiflexion + eversion</td></tr><tr class="grp"><td colspan="6">Lateral compartment (evertors) · Superficial fibular n. · Fibular a.</td></tr><tr><td><b>Fibularis longus</b></td><td>Upper lateral fibula, head of fibula (± lateral tibial condyle)</td><td>Medial cuneiform (inferior, lateral side) + base of MT I</td><td>Fibular (peroneal) a.</td><td>Superficial fibular n. (L5, S1, S2)</td><td>Eversion + plantarflexion; support arches</td></tr><tr><td><b>Fibularis brevis</b></td><td>Lower ⅔ of lateral surface of fibula</td><td>Lateral tubercle at base of MT V</td><td>Fibular (peroneal) a.</td><td>Superficial fibular n. (L5, S1, S2)</td><td>Eversion</td></tr><tr class="grp"><td colspan="6">Posterior compartment — superficial group (Tibial n. · Posterior tibial a. + muscular br. of popliteal a.)</td></tr><tr><td><b>Gastrocnemius</b></td><td>Medial head: femur above medial condyle; lateral head: lateral femoral condyle</td><td>Posterior calcaneus via calcaneal (Achilles) tendon</td><td>Posterior tibial a.</td><td>Tibial n. (S1, S2)</td><td>Plantarflex foot + flex knee</td></tr><tr><td><b>Plantaris</b></td><td>Lateral supracondylar line of femur + oblique popliteal lig.</td><td>Posterior calcaneus via calcaneal tendon</td><td>Posterior tibial a.</td><td>Tibial n. (S1, S2)</td><td>Plantarflex foot + flex knee</td></tr><tr><td><b>Soleus</b></td><td>Soleal line + medial border of tibia; head/neck/proximal shaft of fibula; tendinous arch</td><td>Posterior calcaneus via calcaneal tendon</td><td>Posterior tibial a.</td><td>Tibial n. (S1, S2)</td><td>Plantarflex foot</td></tr><tr class="grp"><td colspan="6">Posterior compartment — deep group (Tibial n. · Posterior tibial a.)</td></tr><tr><td><b>Popliteus</b></td><td>Lateral femoral condyle</td><td>Posterior surface of proximal tibia</td><td>Posterior tibial a.</td><td>Tibial n. (L4–S1)</td><td>Stabilize knee; <b>unlock knee</b> (lateral rotation of femur on fixed tibia)</td></tr><tr><td><b>Flexor hallucis longus</b></td><td>Posterior fibula + interosseous membrane</td><td>Plantar distal phalanx of great toe</td><td>Posterior tibial a.</td><td>Tibial n. (S2, S3)</td><td>Flex great toe</td></tr><tr><td><b>Flexor digitorum longus</b></td><td>Medial part of posterior tibia</td><td>Plantar bases of distal phalanges of lateral 4 toes</td><td>Posterior tibial a.</td><td>Tibial n. (S2, S3)</td><td>Flex lateral 4 toes</td></tr><tr><td><b>Tibialis posterior</b></td><td>Posterior interosseous membrane + adjacent tibia & fibula</td><td>Tuberosity of navicular + medial cuneiform</td><td>Posterior tibial a.</td><td>Tibial n. (L4, L5)</td><td>Inversion + plantarflexion; support medial arch</td></tr><tr class="grp"><td colspan="6">Dorsum of foot (Deep fibular n. via lateral tarsal n.)</td></tr><tr><td><b>Extensor digitorum brevis</b></td><td>Superolateral calcaneus</td><td>Lateral sides of EDL tendons to toes II–IV</td><td>Lateral tarsal a. (from dorsalis pedis)</td><td>Deep fibular n. (S1, S2)</td><td>Extend toes II–IV</td></tr><tr><td><b>Extensor hallucis brevis</b></td><td>Superolateral calcaneus</td><td>Base of proximal phalanx of great toe</td><td>Lateral tarsal a. (from dorsalis pedis)</td><td>Deep fibular n. (S1, S2)</td><td>Extend MTP joint of great toe</td></tr><tr class="grp"><td colspan="6">Sole of foot — Layer 1</td></tr><tr><td><b>Abductor hallucis</b></td><td>Medial process of calcaneal tuberosity</td><td>Medial base of proximal phalanx of great toe</td><td>Medial plantar a.</td><td>Medial plantar n. (S1–S3)</td><td>Abduct + flex great toe</td></tr><tr><td><b>Flexor digitorum brevis</b></td><td>Medial process of calcaneal tuberosity + plantar aponeurosis</td><td>Middle phalanges of lateral 4 toes</td><td>Medial plantar a.</td><td>Medial plantar n. (S1–S3)</td><td>Flex lateral 4 toes at PIP joint</td></tr><tr><td><b>Abductor digiti minimi</b></td><td>Medial & lateral processes of calcaneal tuberosity</td><td>Lateral base of proximal phalanx of little toe</td><td>Lateral plantar a.†</td><td>Lateral plantar n. (S1–S3)</td><td>Abduct little toe</td></tr><tr class="grp"><td colspan="6">Sole of foot — Layer 2</td></tr><tr><td><b>Quadratus plantae</b></td><td>Medial surface + lateral process of calcaneus</td><td>Lateral side of FDL tendon</td><td>Lateral plantar a.†</td><td>Lateral plantar n. (S1–S3)</td><td>Assist FDL in flexing toes II–V</td></tr><tr><td><b>Lumbricals (4)</b></td><td>Tendons of FDL</td><td>Medial margins of extensor hoods of toes II–V</td><td>Plantar arch / plantar metatarsal aa.†</td><td>1st: medial plantar n.; 2nd–4th: lateral plantar n. (S2, S3)</td><td>Flex MTP + extend IP joints</td></tr><tr class="grp"><td colspan="6">Sole of foot — Layer 3</td></tr><tr><td><b>Flexor hallucis brevis</b></td><td>Cuboid, lateral cuneiform, tibialis posterior tendon</td><td>Both sides of base of proximal phalanx of great toe</td><td>Medial plantar a.†</td><td>Medial plantar n. (S1, S2)</td><td>Flex MTP joint of great toe</td></tr><tr><td><b>Adductor hallucis</b></td><td>Transverse head: MTP ligaments; oblique head: bases of MT II–IV</td><td>Lateral base of proximal phalanx of great toe</td><td>Plantar arch†</td><td>Lateral plantar n. (S2, S3)</td><td>Adduct great toe</td></tr><tr><td><b>Flexor digiti minimi brevis</b></td><td>Base of MT V + fibularis longus sheath</td><td>Lateral base of proximal phalanx of little toe</td><td>Lateral plantar a.†</td><td>Lateral plantar n. (S2, S3)</td><td>Flex little toe at MTP</td></tr><tr class="grp"><td colspan="6">Sole of foot — Layer 4</td></tr><tr><td><b>Dorsal interossei (4)</b></td><td>Sides of adjacent metatarsals</td><td>Extensor hoods + proximal phalanges of toes II–IV</td><td>Plantar arch / plantar metatarsal aa.†</td><td>Lateral plantar n. (S2, S3); 1st–2nd also deep fibular n.</td><td><b>DAB</b> — abduct toes II–IV</td></tr><tr><td><b>Plantar interossei (3)</b></td><td>Medial sides of MT III–V</td><td>Extensor hoods + proximal phalanges of toes III–V</td><td>Plantar arch / plantar metatarsal aa.†</td><td>Lateral plantar n. (S2, S3)</td><td><b>PAD</b> — adduct toes III–V</td></tr></table></div><p style="font-size:.82rem;color:var(--ink-soft)">† = สไลด์ไม่ได้ระบุ blood supply รายกล้ามเนื้อ เติมตามหลักตำรา (ในสไลด์ระบุเฉพาะ medial plantar a. → abductor hallucis, FDB) · MT = metatarsal</p></div></section><section class="panel" data-tab="leg" id="sum-leg-c"><div class="organism-head"><h2>🩺 T10 · โรค / อาการทางคลินิก</h2></div><div class="card"><div class="tw"><table class="cmp sum"><tr><th>โรค / อาการ</th><th>ส่วนที่เกี่ยวข้อง</th><th>กลไก / สาเหตุ</th><th>ลักษณะ / อาการ</th><th>ประเด็นสำคัญ / การรักษา</th></tr><tr><td><b>Tibial plateau fracture</b> (type I–VI)</td><td>Tibial plateau, <b>lateral condyle</b> ส่วนใหญ่</td><td>Direct trauma</td><td>หักเข้าข้อ (articular surface)</td><td>6 types: I split lat. plateau · II split + depression · III depression · IV comminuted medial + tibial spine · V bicondylar · VI + metaphyseal–diaphyseal separation; ต้อง stabilize</td></tr><tr><td><b>Tibial shaft fracture</b></td><td>Shaft of tibia (±fibula)</td><td>Trauma; tibia อยู่ใต้ผิวหนังตาม medial border</td><td>มักเป็น <b>open injury</b>; มักหักทั้ง tibia + fibula</td><td>Long bone fracture ที่พบบ่อยสุด; แบบ transverse / spiral / comminuted / segmental</td></tr><tr><td><b>Shin splints</b></td><td>Distal ⅔ ของ medial tibia; tibialis posterior; interosseous membrane</td><td>Traction ซ้ำจาก tibialis posterior ตอนวิ่ง (นักกีฬา)</td><td>ปวดตามขอบใน tibia: เริ่มหลังวิ่ง → ปวดตอนเดิน/ขึ้นบันได</td><td>เรื้อรัง → periostitis, bone remodeling, <b>stress fracture</b></td></tr><tr><td><b>Plantar fasciitis</b> (heel spur syndrome)</td><td>Plantar aponeurosis ที่เกาะ calcaneus; <b>medial calcaneal br. of tibial n.</b> รับความเจ็บปวด</td><td>อักเสบจากใช้งานซ้ำ (นักวิ่ง); พบมากในผู้หญิงและคนอ้วน</td><td>ปวดส้นเท้า (สาเหตุพบบ่อยสุดของ heel pain); อาจมี calcaneal spur</td><td>รักษา nonoperative: exercise + orthotics; หายใน 6–12 เดือน; heel counter ที่กระชับลดแรงกระแทก fat pad</td></tr><tr><td><b>Flat foot / High arch</b> (over-pronation / supination)</td><td>Medial longitudinal arch; spring lig.; tibialis posterior</td><td>Arch ยุบ (low) หรือสูงเกิน (high) ต่อ pronation/supination range</td><td>Low arch (flat foot), High arch</td><td>Spring lig. ต้านการยุบ medial arch; long plantar lig. แข็งแรงสุดสำหรับ lateral arch</td></tr><tr><td><b>ประเมิน circulation ขา</b> (Dorsalis pedis pulse)</td><td>Dorsalis pedis a. ระหว่าง EHL กับ EDL tendon ไป toe II</td><td>—</td><td>คลำชีพจรที่หลังเท้า</td><td>ใช้ประเมินการไหลเวียนเลือดของ lower limb</td></tr></table></div></div></section><section class="panel" data-tab="joint" id="sum-joint-j"><div class="organism-head"><h2>📊 T15 · ข้อต่อของ lower limb</h2></div><div class="card"><div class="tw"><table class="cmp"><tr><th>Joint</th><th>Type</th><th>Ligaments / structures</th><th>Blood supply</th><th>Innervation</th><th>Movement</th></tr><tr><td><b>Sacroiliac</b></td><td>Atypical synovial (plane)</td><td>Anterior, posterior, <b>interosseous SI</b> (กัน separation); sacrospinous + sacrotuberous (กัน nutation)</td><td>Iliolumbar, superior gluteal, lateral sacral aa.</td><td>S1–S2; superior gluteal n.</td><td>Slight gliding; nutation/nodding</td></tr><tr><td><b>Pubic symphysis</b></td><td>Cartilaginous (symphysis)</td><td>Superior, arcuate, anterior, posterior pubic ligs.</td><td>Pubic br. of obturator a., superficial external pudendal a., inferior epigastric a.</td><td>Iliohypogastric, ilioinguinal, pudendal nn.</td><td>แทบไม่เคลื่อนไหว; ขยายตอนคลอด</td></tr><tr><td><b>Hip</b></td><td>Ball-and-socket (multiaxial)</td><td><b>Iliofemoral</b> (แข็งแรงสุด, Y-shape, กัน hyperextension) · pubofemoral · <b>ischiofemoral</b> (อ่อนแอสุด, posterior); lig. of head of femur; acetabular labrum</td><td><b>Medial circumflex femoral a.</b> ★ · lateral circumflex femoral a. · artery of head of femur (obturator a.)</td><td>Femoral (ant.), obturator (inf.), sup. gluteal (sup.), n. to quadratus femoris (post.) — L2–S1</td><td>Flex/ext, abd/add, rotation, circumduction</td></tr><tr><td><b>Knee</b></td><td>Synovial hinge (+ plane at patellofemoral)</td><td>ACL, PCL, TCL (MCL), FCL (LCL), medial/lateral menisci, patellar lig., oblique/arcuate popliteal ligs.</td><td>Genicular anastomosis: genicular aa. จาก popliteal, descending genicular, recurrent anterior tibial</td><td>Femoral (ant.), tibial (post.), common fibular (lat.), obturator + saphenous (med.)</td><td>Flex/ext; rotation เมื่องอ; locking (medial rotation of femur)</td></tr><tr><td><b>Superior tibiofibular</b></td><td>Plane synovial</td><td>Anterior & posterior lig. of fibular head</td><td>Anterior/posterior tibial recurrent aa.</td><td>Common fibular n., n. to popliteus</td><td>Slight gliding</td></tr><tr><td><b>Inferior tibiofibular</b></td><td>Syndesmosis (fibrous)</td><td>Anterior, interosseous, posterior, transverse tibiofibular ligs.</td><td>Fibular a., lateral malleolar br.</td><td>Deep fibular, sural nn.</td><td>Slight gliding</td></tr><tr><td><b>Ankle (talocrural)</b></td><td>Synovial hinge (mortise & tenon)</td><td><b>Deltoid</b> (4 ส่วน) · lateral: <b>ATFL</b> (อ่อนแอสุด), CFL, PTFL</td><td>Malleolar br. of fibular a.; anterior & posterior tibial aa.</td><td>Tibial n., deep fibular n.</td><td>Plantarflexion 30–50°; dorsiflexion 10–20°</td></tr></table></div></div></section><section class="panel" data-tab="joint" id="sum-joint-m"><div class="organism-head"><h2>💪 T15 · กล้ามเนื้อที่เกี่ยวข้องกับข้อต่อ</h2></div><div class="card"><div class="tw"><table class="cmp"><tr><th>Joint / การเคลื่อนไหว</th><th>Muscles</th><th>Innervation / หมายเหตุ</th></tr><tr class="grp"><td colspan="3">Hip joint (จากสไลด์ 21)</td></tr><tr><td><b>Flexors</b></td><td>Iliopsoas, sartorius, TFL, rectus femoris, pectineus, adductor longus/brevis, adductor magnus (ant.), gracilis</td><td>สไลด์ไม่ระบุ nerve รายกล้ามเนื้อ</td></tr><tr><td><b>Extensors</b></td><td>Gluteus maximus, hamstrings (semitendinosus, semimembranosus, long head of biceps femoris), adductor magnus (post.)</td><td>—</td></tr><tr><td><b>Abductors</b></td><td>Gluteus medius, gluteus minimus, TFL</td><td>Abduction of femur on fixed pelvis = glut. med/min</td></tr><tr><td><b>Adductors</b></td><td>Pectineus, adductor longus/brevis/magnus, obturator externus, gracilis</td><td>—</td></tr><tr><td><b>Lateral rotators</b></td><td>Obturator externus/internus, piriformis, gemelli, quadratus femoris, gluteus maximus</td><td>—</td></tr><tr><td><b>Medial rotators</b></td><td>Gluteus medius + minimus (anterior parts), TFL</td><td>—</td></tr><tr class="grp"><td colspan="3">Knee / Ankle</td></tr><tr><td><b>Popliteus</b></td><td>Tendon เข้า capsule → lateral femoral condyle + lateral meniscus</td><td>หมุน femur ออกด้านนอกตอนเริ่ม flexion; ดึง lateral meniscus ไปหลัง</td></tr><tr><td><b>Plantarflexion</b> (30–50°)</td><td>Gastrocnemius, soleus</td><td>Tibial n. (ดูตารางกล้ามเนื้อ T10)</td></tr><tr><td><b>Dorsiflexion</b> (10–20°)</td><td>Tibialis anterior</td><td>Deep fibular n.</td></tr></table></div><p style="font-size:.82rem;color:var(--ink-soft)">สไลด์ T15 ไม่มี origin / insertion ของกล้ามเนื้อสะโพก-เข่า จึงไม่ได้ใส่ในตาราง</p></div></section><section class="panel" data-tab="joint" id="sum-joint-c"><div class="organism-head"><h2>🩺 T15 · โรค / การบาดเจ็บ</h2></div><div class="exam-note"><p>จุดที่สไลด์เขียนไม่ตรงตำรา เช่น patella "posterior part" ดูหมายเหตุท้ายไฟล์ T15 ต้นฉบับ</p></div><div class="card"><div class="tw"><table class="cmp sum"><tr><th>โรค / อาการ</th><th>ส่วนที่เกี่ยวข้อง</th><th>กลไก / สาเหตุ</th><th>ลักษณะ / อาการ</th><th>ประเด็นสำคัญ / การรักษา</th></tr><tr><td><b>Pelvic fracture</b> (iliac wing; vertical shear / Malgaigne)</td><td>Ilium, interosseous SI ligament</td><td>Direct blow; vertical shear</td><td>—</td><td>Vertical shear ฉีก interosseous SI lig.</td></tr><tr><td><b>Hip dislocation — posterior</b></td><td>Hip joint</td><td>เข่ากระแทก dashboard (อุบัติเหตุรถ)</td><td>Hip adduction + internal rotation + flexion; ปวด, ขยับขาไม่ได้, ชา, อ่อนแรง</td><td><b>Common fibular n. injury → foot drop</b></td></tr><tr><td><b>Hip dislocation — anterior</b></td><td>Hip joint</td><td>ถูกกระแทกจากด้านข้าง/หน้า</td><td>Hip abduction + external rotation + extension</td><td><b>Femoral n. injury → quadriceps weakness</b></td></tr><tr><td><b>Femoral neck fracture</b> (เสี่ยงเลือดไปเลี้ยงหัว femur)</td><td>Retinacular aa. ← medial/lateral circumflex femoral aa.</td><td>กระดูกหัก ทำลาย retinacular arteries</td><td>—</td><td>Medial circumflex femoral a. สำคัญสุดต่อ hip blood supply</td></tr><tr><td><b>ACL injury</b></td><td>Anterior cruciate lig.</td><td>แรงเกินความแข็งแรง lig.; twisting, hyperextension, direct blow</td><td>Tibia หมุนผิดปกติใต้ femur</td><td><b>Anterior drawer</b> + (>5 mm, flex 90°), <b>Lachman</b> + (>3 mm, flex 20–30°); รักษา ACL reconstruction</td></tr><tr><td><b>PCL injury</b></td><td>Posterior cruciate lig.</td><td>แรงดัน tibia ไปหลัง (dashboard injury)</td><td>Tibia เลื่อนไปหลัง</td><td><b>Posterior drawer</b> +, <b>posterior sag</b> +</td></tr><tr><td><b>Unhappy triad</b> ⭐</td><td>TCL + ACL + medial meniscus</td><td><b>Lateral blow</b> to knee</td><td>เข่าไม่มั่นคง</td><td>TCL ยึด medial meniscus จึงฉีกพร้อมกัน</td></tr><tr><td><b>Prepatellar bursitis</b> (housemaid's knee)</td><td>Subcutaneous prepatellar bursa</td><td>คุกเข่านาน</td><td>บวมนุ่ม กดเจ็บ fluctuant เหนือ patella</td><td>—</td></tr><tr><td><b>Suprapatellar bursitis</b></td><td>Suprapatellar bursa</td><td>อักเสบ/ติดเชื้อ</td><td>บวมเหนือเข่า</td><td>ติดต่อกับ synovial cavity ของเข่าโดยตรง จึงลามเข้าข้อได้</td></tr><tr><td><b>Patellar subluxation</b> (↑ Q-angle)</td><td>Patella; Q-angle ปกติ ♂12°, ♀16°</td><td>Q-angle มากขึ้น</td><td>Genu valgum (knock knee) = ↑Q</td><td>Genu varum (bow leg) = ↓Q</td></tr><tr><td><b>Pott fracture</b></td><td>Medial malleolus, fibula, posterior tibiofibular lig., deltoid lig.</td><td>แรงหมุน/บิดข้อเท้า</td><td>Fracture–dislocation ของข้อเท้า</td><td>—</td></tr><tr><td><b>Maisonneuve fracture</b></td><td>Proximal fibula + distal tibiofibular syndesmosis + medial ankle</td><td>แรงส่งผ่าน interosseous membrane</td><td>หักที่ fibula ส่วนต้น แต่เสียหายที่ข้อเท้า</td><td>—</td></tr><tr><td><b>Ankle sprain</b></td><td><b>ATFL</b> (lateral lig. ที่อ่อนแอสุด)</td><td>พลิกข้อเท้า (inversion)</td><td>ปวด/บวมด้านนอกข้อเท้า</td><td>ATFL ฉีกบ่อยสุด</td></tr></table></div></div></section><section class="panel" data-tab="tumor" id="tumor-g"><div class="organism-head"><h2>🧭 T12 · Tumor — วิธีตอบโจทย์ให้ถูกโรค</h2></div><div class="exam-note"><h3>🧭 อ่านโจทย์ tumor ยังไง (ไม่ต้องจำทุกโรค)</h3><p>โจทย์มักให้เบาะแสแค่ 3–4 อย่าง ให้ไล่ตามลำดับนี้:</p><ol><li><strong>อายุ</strong> — ตัดตัวเลือกออกได้เกินครึ่ง (ดูตารางข้างล่าง)</li><li><strong>ตำแหน่ง</strong> — เข่า / กระดูกสันหลัง / มือเท้า / retroperitoneum / หัว-คอ</li><li><strong>ลักษณะเด่น</strong> — แบบความปวด, X-ray, หน้าตา histology (เช่น onion-skin, herringbone)</li><li><strong>ยีน/translocation</strong> — ถ้าโจทย์ให้มา แทบแน่นอนว่าตอบได้ทันที</li></ol><p>ชื่อ <strong>-oma = ไม่ร้าย</strong>, <strong>-sarcoma = ร้าย</strong> · เนื้อเยื่อต้นกำเนิด: osteo = กระดูก, chondro = กระดูกอ่อน, lipo = ไขมัน, rhabdo = กล้ามเนื้อลาย, leiomyo = กล้ามเนื้อเรียบ</p></div><div class="card"><h3>1) แยกตามอายุ — ถ้าโจทย์ให้อายุมา นึกถึงโรคกลุ่มนี้ก่อน</h3><div class="tw"><table class="cmp sum"><tr><th>อายุ</th><th>โรคที่ต้องนึกถึง (พร้อมคีย์เวิร์ด)</th></tr><tr><td>ทารก / เด็กเล็ก</td><td><b>Hemangioma</b> (พบบ่อยสุดในทารก, ผิวหนังหน้า/หัว, หายเองได้) · <b>Lymphangioma</b> (cystic, คอ/รักแร้) · <b>Sacrococcygeal teratoma</b> (F:M 4:1, ~2 ปี) · mature teratoma (&lt;4 เดือน)</td></tr><tr><td>เด็ก–วัยรุ่น (&lt;20 ปี)</td><td><b>Osteosarcoma</b> (75% &lt;20, 50% รอบเข่า) · <b>Ewing</b> (10–15 ปี, onion-skin) · <b>Osteoid osteoma</b> (teens–20s) · <b>Rhabdomyosarcoma</b> (หัว-คอ/GU) · <b>Aneurysmal bone cyst</b> (&lt;20) · Fibrous dysplasia (ช่วงกระดูกโต) · Osteochondroma (หลายก้อน = วัยเด็ก)</td></tr><tr><td>20–40 ปี</td><td><b>Chondroma</b> (20s–40s, มือ-เท้า) · <b>Synovial sarcoma</b> (20s–40s, เข่า/ต้นขา) · <b>Myositis ossificans</b> (วัยรุ่น–หนุ่มสาว หลังบาดเจ็บ) · Osteochondroma ก้อนเดียว (late adolescence–early adult)</td></tr><tr><td>≥ 40 ปี</td><td><b>Chondrosarcoma</b> (40+) · <b>Liposarcoma</b> (40s–60s) · <b>Lipoma</b> (ผู้ใหญ่, พบบ่อยสุด) · Leiomyosarcoma · Osteoma (middle age, กะโหลก/หน้า)</td></tr><tr><td>กระดูกแพร่กระจาย (ผู้ใหญ่)</td><td>&gt;75% มาจาก <b>Thyroid, Kidney, Prostate, Lung, Breast</b> · เด็ก: neuroblastoma, Wilms, osteosarcoma, Ewing, rhabdomyosarcoma</td></tr></table></div></div><div class="card"><h3>2) คู่ที่สับสนง่าย — จุดตัดสินที่ใช้แยก</h3><div class="tw"><table class="cmp sum"><tr><th>คู่เทียบ</th><th>ตัวแรก</th><th>ตัวที่สอง</th></tr><tr><td>Osteoid osteoma <b>vs</b> Osteoblastoma</td><td>&lt;2 cm, cortex ของ femur/tibia, <b>ปวดกลางคืน หายด้วย aspirin</b> (PGE2)</td><td>&gt;2 cm, <b>กระดูกสันหลัง</b>, ปวดตื้อ <b>ไม่ตอบ aspirin</b></td></tr><tr><td>Osteochondroma <b>vs</b> Chondroma <b>vs</b> Chondrosarcoma</td><td><b>Osteochondroma</b>: ก้อนยื่นจากผิวกระดูก มี hyaline cartilage cap, EXT1/EXT2, benign พบบ่อยสุด</td><td><b>Chondroma</b>: อยู่ใน medullary (enchondroma), มือ-เท้า, &lt;3 cm, ไม่มีอาการ, IDH · <b>Chondrosarcoma</b>: 40+ ปี, spotty calcification, grade 1/2/3 → 5-yr survival 90/81/43%</td></tr><tr><td>Osteosarcoma <b>vs</b> Ewing</td><td>สร้าง <b>osteoid</b>, ก้อนใหญ่ gritty รอบเข่า, p53/RB</td><td><b>small round cell</b>, Homer-Wright rosettes, ไข้+WBC สูงเหมือนติดเชื้อ, <b>onion-skin</b>, t(11;22) EWS-FLI1</td></tr><tr><td>Nodular fasciitis <b>vs</b> Myositis ossificans</td><td>โตเร็ว ก้อนเดียว แขนท่อนล่าง/อก/หลัง; fibroblast + <b>myxoid stroma + RBC รั่ว</b>; trauma 10–15%</td><td><b>metaplastic bone</b>, ต้นแขน/ขา (proximal), <b>&gt;50% หลังบาดเจ็บ</b>, ระยะท้าย ossify หมด</td></tr><tr><td>Lipoma <b>vs</b> Liposarcoma</td><td>เนื้อนุ่ม เคลื่อนได้ ไม่เจ็บ, encapsulated, subcutis, ผ่าตัดหาย</td><td>เนื้อเยื่อลึก proximal extremity/retroperitoneum, 40s–60s, <b>lipoblast</b>, t(12;16)</td></tr><tr><td>Leiomyoma <b>vs</b> Leiomyosarcoma</td><td>มดลูก 77% ของผู้หญิง, เซลล์ <b>cigar-shaped</b> atypia น้อย, mitosis น้อย</td><td>cigar-shaped + <b>mitosis และ necrosis</b>, retroperitoneum ผ่าตัดไม่หมด</td></tr><tr><td>Fibrosarcoma <b>vs</b> MFH <b>vs</b> Synovial sarcoma</td><td><b>herringbone</b> + fish-flesh</td><td>MFH: <b>storiform</b>, pleomorphic, bizarre cells · Synovial: <b>biphasic</b> (epithelial+spindle), เข่า/ต้นขา, t(X;18) SYT-SSX</td></tr></table></div></div><div class="exam-note"><h3>⚠️ จุดที่สไลด์พิมพ์ไม่ชัด / ควรเช็คกับอาจารย์</h3><ul><li>Giant-cell tumor ของกระดูกถูกลิสต์ใน S43 แต่ <strong>ไม่มีสไลด์อธิบาย</strong> (มีแค่ caption รูปใน S51)</li><li>Chondroma: สไลด์พิมพ์ IDH1 สองครั้ง น่าจะหมายถึง IDH1 and IDH2</li><li>ตาราง gene ที่ S61 ออกสอบได้ง่ายมาก — ท่องจับคู่ tumor ↔ translocation</li></ul></div></section><section class="panel" data-tab="tumor" id="tumor-sum"><div class="organism-head"><h2>📊 T12 · ตารางสรุปทบทวน</h2></div><div class="card"><h3>ตัวเลข/อายุ/เพศที่ออกสอบง่าย</h3><div class="tw"><table class="cmp sum">
+<thead>
+<tr>
+<th>Tumor</th>
+<th>อายุ</th>
+<th>เพศ</th>
+<th>ตำแหน่ง</th>
+<th>จุดเด่น</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sacrococcygeal teratoma [S10]</td>
+<td>2 yr peak / late adolescence</td>
+<td><strong>F:M = 4:1</strong></td>
+<td>sacrococcygeal</td>
+<td>1 in 20,000–40,000 live births; 10% congenital anomalies</td>
+</tr>
+<tr>
+<td>Osteoid osteoma [S17]</td>
+<td>teens–20s</td>
+<td><strong>M:F = 2:1</strong></td>
+<td>femur/tibia 50%, cortex</td>
+<td><strong>&lt; 2 cm</strong>, nocturnal pain, <strong>aspirin relieves</strong>, PGE2</td>
+</tr>
+<tr>
+<td>Osteoblastoma [S18]</td>
+<td>—</td>
+<td>—</td>
+<td><strong>spine</strong></td>
+<td><strong>&gt; 2 cm</strong>, dull pain, <strong>no response to salicylates</strong></td>
+</tr>
+<tr>
+<td>Osteosarcoma [S20]</td>
+<td>75% &lt; 20 yr</td>
+<td><strong>M:F = 1.6:1</strong></td>
+<td>long bones, <strong>50% knee</strong></td>
+<td>osteoid; P53, RB; 90% metastasis at death</td>
+</tr>
+<tr>
+<td>Osteochondroma [S26]</td>
+<td>solitary: late adolescence/early adult; multiple: childhood</td>
+<td><strong>M:F = 3:1</strong></td>
+<td>long bones, knee</td>
+<td>most common benign bone tumor; <strong>EXT1/EXT2</strong></td>
+</tr>
+<tr>
+<td>Chondroma [S30]</td>
+<td>20s–40s</td>
+<td>—</td>
+<td>hands and feet</td>
+<td>most common intraosseous cartilage tumor; IDH1/(IDH2)</td>
+</tr>
+<tr>
+<td>Chondrosarcoma [S33]</td>
+<td>40s or older</td>
+<td><strong>M:F = 2:1</strong></td>
+<td>central (intramedullary)</td>
+<td>90% conventional central; EXT; 5-yr survival 90/81/43%</td>
+</tr>
+<tr>
+<td>Fibrous dysplasia [S39]</td>
+<td>during skeletal growth</td>
+<td>—</td>
+<td>—</td>
+<td><strong>GNAS</strong>; precocious puberty; Chinese-letter trabeculae</td>
+</tr>
+<tr>
+<td>Ewing/PNET [S44–45]</td>
+<td>10–15 yr avg, 80% &lt; 20</td>
+<td><strong>Boys &gt; girls</strong></td>
+<td>medullary cavity</td>
+<td><strong>t(11;22) EWS-FLI1</strong>; onion-skin; Homer-Wright rosettes</td>
+</tr>
+<tr>
+<td>Aneurysmal bone cyst [S49]</td>
+<td>&lt; 20 yr</td>
+<td>none</td>
+<td>metaphysis of long bones, posterior vertebral elements</td>
+<td><strong>17p13</strong>; blood-filled cystic spaces</td>
+</tr>
+<tr>
+<td>Tenosynovial GCT [S55–57]</td>
+<td>—</td>
+<td>—</td>
+<td><strong>knee 80%</strong></td>
+<td><strong>t(1;2)(p13;q37)</strong>; hemosiderin</td>
+</tr>
+<tr>
+<td>Lipoma [S64]</td>
+<td>adult</td>
+<td>—</td>
+<td>subcutis</td>
+<td>most common soft-tissue tumor of adulthood</td>
+</tr>
+<tr>
+<td>Liposarcoma [S68]</td>
+<td>40s–60s</td>
+<td>—</td>
+<td>proximal extremities, retroperitoneum</td>
+<td>lipoblasts; t(12;16) CHOP/TLS</td>
+</tr>
+<tr>
+<td>Nodular fasciitis [S71]</td>
+<td>adult</td>
+<td>—</td>
+<td>forearm, chest, back</td>
+<td>rapid growth; trauma 10–15%</td>
+</tr>
+<tr>
+<td>Myositis ossificans [S74]</td>
+<td>adolescent/young adult</td>
+<td>—</td>
+<td>proximal extremities</td>
+<td>&gt; 50% post-trauma; metaplastic bone</td>
+</tr>
+<tr>
+<td>Rhabdomyosarcoma [S84]</td>
+<td>&lt; 20 yr</td>
+<td>—</td>
+<td>head and neck, GU tract</td>
+<td>most common soft-tissue sarcoma of childhood; tadpole/strap cells</td>
+</tr>
+<tr>
+<td>Leiomyosarcoma [S89]</td>
+<td>adult</td>
+<td><strong>F &gt; M</strong></td>
+<td>skin, extremities, retroperitoneum</td>
+<td>10–20% of soft-tissue sarcomas; cigar-shaped nuclei</td>
+</tr>
+<tr>
+<td>Synovial sarcoma [S92]</td>
+<td>20s–40s</td>
+<td>—</td>
+<td>lower extremity (60–70%), knee/thigh</td>
+<td><strong>t(X;18) SYT-SSX</strong>; biphasic; 4th most common sarcoma</td>
+</tr>
+</tbody>
+</table></div>
+</div><div class="card"><h3>คำสำคัญ ↔ โรค</h3><div class="tw"><table class="cmp sum">
+<thead>
+<tr>
+<th>Keyword</th>
+<th>โรค</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nocturnal pain relieved by aspirin</td>
+<td>Osteoid osteoma</td>
+</tr>
+<tr>
+<td>Onion-skin periosteal reaction, Homer-Wright rosettes</td>
+<td>Ewing sarcoma</td>
+</tr>
+<tr>
+<td>Trabeculae mimic Chinese letters, GNAS, precocious puberty</td>
+<td>Fibrous dysplasia</td>
+</tr>
+<tr>
+<td>Cap of hyaline cartilage, EXT1/EXT2</td>
+<td>Osteochondroma</td>
+</tr>
+<tr>
+<td>Herringbone, fish-flesh</td>
+<td>Fibrosarcoma</td>
+</tr>
+<tr>
+<td>Cigar-shaped nuclei, intersect at right angles</td>
+<td>Leiomyoma / Leiomyosarcoma</td>
+</tr>
+<tr>
+<td>Lipoblasts</td>
+<td>Liposarcoma</td>
+</tr>
+<tr>
+<td>Tadpole / strap cells</td>
+<td>Rhabdomyosarcoma</td>
+</tr>
+<tr>
+<td>Biphasic (epithelial + spindle)</td>
+<td>Synovial sarcoma</td>
+</tr>
+<tr>
+<td>Blood-filled cystic spaces, 17p13</td>
+<td>Aneurysmal bone cyst</td>
+</tr>
+<tr>
+<td>Hemosiderin + multinucleated giant cells in synovium</td>
+<td>Tenosynovial giant-cell tumor</td>
+</tr>
+<tr>
+<td>Storiform architecture</td>
+<td>Malignant fibrous histiocytoma</td>
+</tr>
+<tr>
+<td>Myxoid stroma + extravasated RBC</td>
+<td>Nodular fasciitis</td>
+</tr>
+<tr>
+<td>Foreign material (paraffin/silicone/wax) + granulomas with clear vacuoles</td>
+<td>Paraffinoma</td>
+</tr>
+</tbody>
+</table></div>
+</div></section><section class="panel" data-tab="tumor" id="tumor-1"><div class="organism-head"><h2>Part 1: Tumors and Tumor-like Lesions of Infancy and Childhood</h2></div><details class="accordion" open><summary><span>Tumors and Tumor-like Lesions of Infancy and Childhood <span class="sl">สไลด์ 2</span></span></summary><div class="acc-body"><ul>
+<li><strong>2%</strong> of all malignant tumors occur in infancy and childhood</li>
+<li><strong>Benign &gt; cancers</strong> (เนื้องอกชนิดไม่ร้ายพบมากกว่ามะเร็ง)</li>
+<li>Most benign tumors are of little concern, but on occasion they cause serious complications by virtue of their <strong>location</strong> or <strong>rapid increase in size</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Benign Tumors and Tumor-like Lesions <span class="sl">สไลด์ 3</span></span></summary><div class="acc-body"><ul>
+<li>The most common are <strong>soft-tissue tumors</strong></li>
+<li>This contrasts with adults, in whom the most common tumors, benign or malignant, have an <strong>epithelial origin</strong></li>
+<li>Special mention:
+<ul>
+<li><strong>Hemangiomas</strong></li>
+<li><strong>Lymphangiomas</strong></li>
+<li><strong>Fibrous lesions</strong></li>
+<li><strong>Teratomas</strong></li>
+</ul>
+</li>
+</ul>
+<blockquote><p><strong>ไทย:</strong> เด็ก → ส่วนใหญ่เป็น soft-tissue tumor / ผู้ใหญ่ → ส่วนใหญ่เป็น epithelial origin</p></blockquote>
+</div></details><details class="accordion" open><summary><span>Hemangioma (Angioma) <span class="sl">สไลด์ 4</span></span></summary><div class="acc-body"><ul>
+<li>The <strong>most common tumors of infancy</strong></li>
+<li>Architecturally: do not differ from those occurring in adults</li>
+<li>In children, most are located in the <strong>skin, particularly on the face and scalp</strong></li>
+<li>Flat to elevated, irregular, <strong>red-blue masses</strong>; some of the flat, larger lesions</li>
+<li>May <strong>enlarge along with the growth of the child</strong></li>
+<li>But in many instances they <strong>spontaneously regress</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ (หัวข้อ hemangioma)</p>
+<blockquote><p><strong>ไทย:</strong> เนื้องอกหลอดเลือด พบบ่อยที่สุดในทารก มักอยู่ที่ผิวหนังหน้า/หนังศีรษะ โตตามเด็กได้ แต่หลายรายหายเอง</p></blockquote>
+</div></details><details class="accordion" open><summary><span>(รูปล้วน) Hemangioma <span class="sl">สไลด์ 5</span></span></summary><div class="acc-body"><p class="img">🖼️ ภาพถ่ายทางคลินิก มีคำบรรยายใต้ภาพ: <strong>&quot;Congenital capillary hemangioma at birth&quot;</strong> (ก้อนสีแดงขนาดใหญ่บริเวณแขน/ขาของทารก)</p>
+</div></details><details class="accordion" open><summary><span>Lymphatic Tumors — Lymphangioma <span class="sl">สไลด์ 6</span></span></summary><div class="acc-body"><ul>
+<li><strong>Lymphangioma</strong>
+<ul>
+<li>Characterized by <strong>cystic and cavernous spaces</strong></li>
+<li>More often encountered in the deeper regions of the <strong>neck, axilla, mediastinum, retroperitoneal tissue</strong>, and elsewhere, but may occur in the skin</li>
+<li>May <strong>encroach on vital structures</strong></li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Lymphangiectasis <span class="sl">สไลด์ 7</span></span></summary><div class="acc-body"><ul>
+<li><strong>Diffuse swelling</strong> of part or all of an extremity</li>
+<li><strong>Not progressive</strong>, and not extend</li>
+<li><strong>Cosmetic</strong> problems</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Teratomas <span class="sl">สไลด์ 8</span></span></summary><div class="acc-body"><div class="tw"><table class="cmp sum">
+<thead>
+<tr>
+<th></th>
+<th>Benign</th>
+<th>Malignant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td><strong>mature teratomas</strong></td>
+<td><strong>immature teratomas</strong></td>
+</tr>
+<tr>
+<td>Features</td>
+<td>well-differentiated cystic lesions</td>
+<td>immature neuroepithelial elements</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>in <strong>younger infants (&lt;4 months)</strong></td>
+<td>in <strong>older</strong> (ตามสไลด์ ข้อความตัดที่คำว่า &quot;in older&quot;)</td>
+</tr>
+</tbody>
+</table></div>
+<p class="img">🖼️ ภาพ histology ของ teratoma (มีทั้งต่อมคล้ายลำไส้และก้อนกระดูกอ่อน/cartilage)</p>
+</div></details><details class="accordion" open><summary><span>Teratomas — Proportions and Epidemiology <span class="sl">สไลด์ 9</span></span></summary><div class="acc-body"><ul>
+<li><strong>75%</strong> mature teratomas</li>
+<li><strong>13%</strong> immature teratomas</li>
+<li><strong>12%</strong> unequivocally malignant (admixed with another germ cell tumor)</li>
+<li>Most common teratomas of childhood: <strong>Sacrococcygeal teratomas</strong></li>
+<li>Exhibit <strong>two peaks</strong> in incidence:
+<ul>
+<li>the <strong>first at approximately 2 years of age</strong>: congenital neoplasms</li>
+<li>the <strong>second in late adolescence or early adulthood</strong>: more slowly growing</li>
+</ul>
+</li>
+<li>Other sites include: <strong>testis, ovaries</strong>, various midline locations: <strong>mediastinum, retroperitoneum, head and neck</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Sacrococcygeal Teratomas <span class="sl">สไลด์ 10</span></span></summary><div class="acc-body"><ul>
+<li>The <strong>most common teratomas of childhood</strong></li>
+<li><strong>40% or more</strong> of cases</li>
+<li><strong>1 in 20,000 to 40,000</strong> live births</li>
+<li><strong>Girls &gt; boys : 4:1</strong></li>
+<li><strong>10%</strong> associated with congenital anomalies: hindgut, cloacal region and midline defects (<strong>meningocele, spina bifida</strong>)</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+
+</div></details></section><section class="panel" data-tab="tumor" id="tumor-2"><div class="organism-head"><h2>Part 2: Bone Tumors and Tumor-like Lesions</h2></div><details class="accordion" open><summary><span>Bone Tumors and Tumor-Like Lesions <span class="sl">สไลด์ 11</span></span></summary><div class="acc-body"><ul>
+<li>Bone tumors: classified according to the <strong>normal cell or tissue type</strong></li>
+<li><strong>Rapidly fatal</strong></li>
+<li>The most common: <strong>Osteosarcoma</strong></li>
+<li>Followed by <strong>chondrosarcoma</strong> and <strong>Ewing sarcoma</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Classification of Major Primary Tumors Involving Bones (1/2) <span class="sl">สไลด์ 12</span></span></summary><div class="acc-body"><div class="tw"><table class="cmp sum">
+<thead>
+<tr>
+<th>Histologic Type</th>
+<th>Benign</th>
+<th>Malignant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hematopoietic (40%)</strong></td>
+<td>—</td>
+<td>Myeloma, lymphoma</td>
+</tr>
+<tr>
+<td><strong>Chondrogenic (22%)</strong></td>
+<td>Osteochondroma</td>
+<td>Chondrosarcoma</td>
+</tr>
+<tr>
+<td></td>
+<td>Chondroma</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Chondroblastoma</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Chondromyxoid fibroma</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Osteogenic (19%)</strong></td>
+<td>Osteoid osteoma</td>
+<td>Osteosarcoma</td>
+</tr>
+<tr>
+<td></td>
+<td>Osteoblastoma</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Fibrogenic</strong></td>
+<td>Fibroma</td>
+<td>Fibrosarcoma</td>
+</tr>
+<tr>
+<td></td>
+<td>Non-ossifying fibroma</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Fibrous histiocytoma</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Desmoplastic fibroma</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p class="img">🖼️ 2 รูป histology (ด้านขวา) / ตัวการ์ตูนหมอ</p>
+<blockquote><p><strong>ไทย:</strong> ท่องสัดส่วน <strong>Hematopoietic 40% &gt; Chondrogenic 22% &gt; Osteogenic 19%</strong></p></blockquote>
+</div></details><details class="accordion" open><summary><span>Classification of Major Primary Tumors Involving Bones (2/2) <span class="sl">สไลด์ 13</span></span></summary><div class="acc-body"><div class="tw"><table class="cmp sum">
+<thead>
+<tr>
+<th>Histologic Type</th>
+<th>Benign</th>
+<th>Malignant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unknown origin (10%)</strong></td>
+<td>Giant-cell tumor</td>
+<td>—</td>
+</tr>
+<tr>
+<td></td>
+<td>Unicameral cyst</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Aneurysmal bone cyst</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Neuroectodermal</strong></td>
+<td>—</td>
+<td>Ewing sarcoma</td>
+</tr>
+<tr>
+<td><strong>Notochordal</strong></td>
+<td>Benign notochordal cell tumor</td>
+<td>Chordoma</td>
+</tr>
+</tbody>
+</table></div>
+<p class="img">🖼️ 2 รูป histology เหมือน S12</p>
+</div></details><details class="accordion" open><summary><span>Osteoma <span class="sl">สไลด์ 14</span></span></summary><div class="acc-body"><ul>
+<li>Round-to-oval <strong>sessile</strong> tumors</li>
+<li>Project from the <strong>subperiosteal surface of the cortex</strong></li>
+<li>Most often at <strong>skull and facial bones</strong></li>
+<li>Usually <strong>solitary</strong></li>
+<li>Detected in <strong>middle age</strong></li>
+<li><strong>Morphology:</strong> consist of <strong>woven and lamellar bone</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Osteoma — Clinical <span class="sl">สไลด์ 15</span></span></summary><div class="acc-body"><ul>
+<li>Generally <strong>slow-growing</strong> tumors</li>
+<li><strong>Little clinical significance</strong></li>
+<li>Symptoms:
+<ul>
+<li>cause <strong>obstruction of a sinus cavity</strong></li>
+<li>impinge on / interfere with function of the <strong>oral cavity, brain or eye</strong></li>
+<li>produce <strong>cosmetic problems</strong></li>
+</ul>
+</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Osteoid Osteoma and Osteoblastoma <span class="sl">สไลด์ 16</span></span></summary><div class="acc-body"><ul>
+<li><strong>Benign bone tumors</strong></li>
+<li>Differ in <strong>size, sites of origin, and symptoms</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ (หัวข้อ osteoid osteoma)</p>
+</div></details><details class="accordion" open><summary><span>Osteoid Osteoma <span class="sl">สไลด์ 17</span></span></summary><div class="acc-body"><ul>
+<li><strong>&lt; 2 cm</strong> in greatest dimension</li>
+<li>In the <strong>teens and 20s</strong>, <strong>75% &lt; 25 years old</strong></li>
+<li><strong>Men : women = 2 : 1</strong></li>
+<li><strong>50% of cases: femur or tibia</strong></li>
+<li>Commonly arise in the <strong>cortex</strong></li>
+<li>Less frequently within the medullary cavity</li>
+<li><strong>Clinical:</strong>
+<ul>
+<li><strong>Severe nocturnal pain</strong></li>
+<li><strong>Relieved by aspirin</strong></li>
+<li>The pain is probably caused by excess <strong>prostaglandin E2 (PGE2)</strong> production by the proliferating osteoblasts</li>
+</ul>
+</li>
+</ul>
+<blockquote><p><strong>ไทย:</strong> ปวดตอนกลางคืนมาก + <strong>กินแอสไพรินดีขึ้น</strong> (PGE2) = จุดคลาสสิกของ osteoid osteoma</p></blockquote>
+</div></details><details class="accordion" open><summary><span>Osteoblastoma <span class="sl">สไลด์ 18</span></span></summary><div class="acc-body"><div class="tw"><table class="cmp sum">
+<thead>
+<tr>
+<th>Feature</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td><strong>&gt; 2 cm</strong></td>
+</tr>
+<tr>
+<td>Site</td>
+<td>more frequently <strong>spine</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Clinical:</strong>
+<ul>
+<li><strong>Dull pain</strong></li>
+<li><strong>Unresponsive to salicylates</strong></li>
+<li><strong>Malignant transformation is rare</strong>, except when treated by radiation</li>
+</ul>
+</li>
+</ul>
+<blockquote><p><strong>ไทย:</strong> เทียบกับ osteoid osteoma → ขนาดใหญ่กว่า 2 cm, อยู่ที่กระดูกสันหลังบ่อย, ปวดตื้อๆ และ <strong>ไม่ตอบสนองต่อ aspirin</strong></p></blockquote>
+</div></details><details class="accordion" open><summary><span>Morphology (Osteoid osteoma / Osteoblastoma) <span class="sl">สไลด์ 19</span></span></summary><div class="acc-body"><ul>
+<li>Round-to-oval masses</li>
+<li><strong>Well circumscribed</strong></li>
+<li>Composed of <strong>woven bone with osteoblasts rimmed</strong></li>
+<li><strong>Benign cytologic features</strong> of the neoplastic osteoblasts help distinguish these tumors from <strong>osteosarcoma</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Osteosarcoma <span class="sl">สไลด์ 20</span></span></summary><div class="acc-body"><ul>
+<li><strong>Malignant mesenchymal tumor</strong></li>
+<li>Cancerous cells produce <strong>bone matrix (osteoid)</strong></li>
+<li>The <strong>most common primary malignant tumor of bone</strong></li>
+<li><strong>20%</strong> of primary bone cancers</li>
+<li>Occurs in all age groups, <strong>75% in younger than 20 years old</strong></li>
+<li><strong>Men &gt; women (1.6 : 1)</strong></li>
+<li>Usually arise in <strong>long bones of the extremities</strong></li>
+<li><strong>50% occur about the knee</strong></li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Osteosarcoma — Pathogenesis <span class="sl">สไลด์ 21</span></span></summary><div class="acc-body"><ul>
+<li>Basic mechanisms: <strong>unknown</strong></li>
+<li><strong>70% genetic abnormalities</strong>
+<ul>
+<li><strong>P53, RB</strong> (the retinoblastoma gene)</li>
+</ul>
+</li>
+<li><strong>Preexisting:</strong> benign tumors, <strong>Paget disease, bone infarcts, previous irradiation</strong></li>
+</ul>
+<p class="img">🖼️ แผนภาพ tumor evolution: Normal cell → (carcinogen-induced mutation) → Initiated precursor with stem cell-like properties → Founding cancer cell → Additional driver mutations → Emergence of subclones → Diagnosis → Genetically heterogeneous cancer → Further genetic evolution. มีข้อความใต้ภาพว่า <strong>&quot;...accumulation of complementary driver mutations. The order in which various driver mutations occur is...&quot;</strong> (ข้อความตัดท้ายประโยคในสไลด์)</p>
+</div></details><details class="accordion" open><summary><span>Osteosarcoma — Morphology (Gross) <span class="sl">สไลด์ 22</span></span></summary><div class="acc-body"><ul>
+<li>Big <strong>bulky</strong> tumors</li>
+<li><strong>Gritty, gray-white</strong> with hemorrhage and cystic degeneration</li>
+<li>Spread extensively in the <strong>medullary canal, marrow</strong></li>
+<li>Infrequently, penetrate the <strong>epiphyseal plate</strong> or enter the joint</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Osteosarcoma — Morphology (Histology) <span class="sl">สไลด์ 23</span></span></summary><div class="acc-body"><ul>
+<li>The tumor cells <strong>vary in size and shape</strong></li>
+<li>Frequently have <strong>large hyperchromatic nuclei</strong></li>
+<li><strong>Bizarre tumor giant cells</strong> are common</li>
+<li><strong>Numerous mitoses</strong></li>
+<li>The <strong>formation of bone by the tumor cells is characteristic (osteoid)</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Osteosarcoma — Clinical Course <span class="sl">สไลด์ 24</span></span></summary><div class="acc-body"><ul>
+<li><strong>Painful, progressively enlarging masses</strong></li>
+<li>Sometimes a <strong>sudden fracture</strong> of the bone is the first symptom</li>
+<li><strong>10–20%</strong> have pulmonary metastases (at presentation)</li>
+<li>Die: <strong>90%</strong> have metastases to the <strong>lungs, bones, brain</strong>, and elsewhere</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Cartilage-forming Tumors <span class="sl">สไลด์ 25</span></span></summary><div class="acc-body"><ul>
+<li>Characterized by the formation of <strong>hyaline or myxoid cartilage</strong></li>
+<li><strong>Benign cartilage tumors are much more common than malignant ones</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Osteochondroma <span class="sl">สไลด์ 26</span></span></summary><div class="acc-body"><ul>
+<li>The <strong>most common benign bone tumor</strong></li>
+<li><strong>Solitary</strong> osteochondromas: late adolescence and early adulthood</li>
+<li><strong>Multiple</strong> osteochondromas: childhood</li>
+<li><strong>Men : women = 3 : 1</strong></li>
+<li>Common: <strong>long bones, knee</strong></li>
+<li><strong>Pathogenesis:</strong> germline <strong>loss-of-function mutations in either the EXT1 or EXT2 genes</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Osteochondroma — Morphology <span class="sl">สไลด์ 27</span></span></summary><div class="acc-body"><ul>
+<li><strong>Sessile or mushroom shaped</strong></li>
+<li>Range in size from <strong>1–20 cm</strong></li>
+<li>The <strong>cap</strong>: composed of <strong>benign hyaline cartilage</strong> varying in thickness and covered by <strong>perichondrium</strong></li>
+<li>The cartilage: <strong>disorganized growth plate</strong>; undergoes <strong>enchondral ossification</strong> with the newly made bone forming the head and stalk</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Osteochondroma — Morphology (รูปล้วน) <span class="sl">สไลด์ 28</span></span></summary><div class="acc-body"><p class="img">🖼️ ภาพ gross + ภาพ histology ของ osteochondroma และ <strong>แผนภาพ 4 ขั้น</strong> แสดงการเกิดก้อน (ปลายกระดูกยื่นออกมาเป็นก้อนมี cap) พร้อม legend: <strong>Cartilage / Bone / Marrow</strong></p>
+</div></details><details class="accordion" open><summary><span>Osteochondroma — Clinical Features <span class="sl">สไลด์ 29</span></span></summary><div class="acc-body"><ul>
+<li><strong>Slow-growing</strong> masses</li>
+<li>Can be <strong>painful</strong> if:
+<ul>
+<li>impinge on a nerve</li>
+<li>the stalk is fractured</li>
+</ul>
+</li>
+<li>Can give rise to a <strong>chondrosarcoma</strong> or some other type of sarcoma</li>
+<li><strong>Caption (รูป B):</strong> the cartilage cap has the histologic appearance of <strong>disorganized growth plate-like cartilage</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Chondroma <span class="sl">สไลด์ 30</span></span></summary><div class="acc-body"><ul>
+<li><strong>Benign tumors of hyaline cartilage</strong></li>
+<li><strong>Enchondromas:</strong> arise <strong>within the medullary cavity</strong></li>
+<li><strong>Subperiosteal or juxtacortical chondromas:</strong> arise <strong>on the surface of bone</strong></li>
+<li>The <strong>most common of the intraosseous cartilage tumors</strong></li>
+<li>In <strong>20s–40s</strong></li>
+<li><strong>Solitary metaphyseal lesions of tubular bones; hands and feet</strong></li>
+<li><strong>Pathogenesis:</strong> <strong>IDH1 and IDH1 mutation</strong> (ตามสไลด์พิมพ์ว่า IDH1 ซ้ำสองครั้ง น่าจะหมายถึง <strong>IDH1 and IDH2</strong>)</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Chondroma — Morphology <span class="sl">สไลด์ 31</span></span></summary><div class="acc-body"><ul>
+<li><strong>Gross:</strong>
+<ul>
+<li>Usually <strong>&lt; 3 cm</strong></li>
+<li><strong>Well-circumscribed nodules</strong></li>
+<li><strong>Gray-blue and translucent</strong></li>
+</ul>
+</li>
+<li><strong>Histology:</strong> cytologically <strong>benign hyaline cartilage</strong></li>
+</ul>
+<p class="img">🖼️ ภาพ + คำบรรยาย: <strong>&quot;Enchondroma with a nodule of hyaline cartilage encased by a thin layer of reactive bone&quot;</strong></p>
+</div></details><details class="accordion" open><summary><span>Chondroma — Clinical Features <span class="sl">สไลด์ 32</span></span></summary><div class="acc-body"><ul>
+<li><strong>Asymptomatic</strong> and detected <strong>incidentally</strong></li>
+<li>Occasionally painful</li>
+<li>Cause <strong>pathologic fracture</strong> or deformities</li>
+<li><strong>Growth potential limited</strong>, and most remain stable</li>
+<li><strong>Treatment:</strong> observation or <strong>curettage</strong></li>
+<li><strong>Malignant transformation is rare</strong></li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Chondrosarcoma <span class="sl">สไลด์ 33</span></span></summary><div class="acc-body"><ul>
+<li><strong>Neoplastic cartilage</strong></li>
+<li>Site: <strong>central (intramedullary)</strong> and <strong>peripheral (juxtacortical and surface)</strong></li>
+<li>Histologically: <strong>conventional (hyaline and/or myxoid), clear cell, dedifferentiated, and mesenchymal</strong> variants</li>
+<li><strong>90%</strong> of chondrosarcoma: <strong>conventional central tumors</strong></li>
+<li><strong>15%</strong> of conventional type arise from a preexisting <strong>enchondroma or osteochondroma</strong></li>
+<li>Usually in <strong>40s or older</strong></li>
+<li><strong>Men : women = 2 : 1</strong></li>
+<li><strong>Pathogenesis:</strong> mutation in <strong>EXT gene</strong></li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Chondrosarcoma — Morphology <span class="sl">สไลด์ 34</span></span></summary><div class="acc-body"><ul>
+<li>Composed of <strong>malignant hyaline and myxoid cartilage</strong></li>
+<li>Nodules of <strong>gray-white, translucent, glistening</strong> tissue</li>
+<li><strong>Spotty calcifications</strong> are typically present</li>
+<li><strong>Central necrosis</strong> may create cystic spaces</li>
+<li>The adjacent cortex is <strong>thickened or eroded</strong>, grows with <strong>pushing fronts</strong> into the surrounding soft tissue</li>
+<li>Vary in degree of <strong>cellularity, cytologic atypia, and mitotic activity</strong></li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Chondrosarcoma — Morphology (รูปล้วน) <span class="sl">สไลด์ 35</span></span></summary><div class="acc-body"><p class="img">🖼️ ภาพ gross (ก้อนเนื้อ) และภาพ histology (เซลล์) จาก Robbins &amp; Cotran Pathologic Basis of Disease, 8th Edition</p>
+</div></details><details class="accordion" open><summary><span>Chondrosarcoma — Grading <span class="sl">สไลด์ 36</span></span></summary><div class="acc-body"><div class="tw"><table class="cmp sum">
+<thead>
+<tr>
+<th>Grade</th>
+<th>Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Low-grade / Grade 1</strong></td>
+<td>Mild hypercellularity; chondrocytes have <strong>plump vesicular nuclei with small nucleoli</strong>; <strong>binucleate cells are sparse</strong>; few mitotic figures</td>
+</tr>
+<tr>
+<td><strong>Grade 2</strong></td>
+<td>Between grade 1 and 3</td>
+</tr>
+<tr>
+<td><strong>Grade 3</strong></td>
+<td><strong>Marked hypercellularity</strong>; <strong>extreme pleomorphism</strong> with <strong>bizarre tumor giant cells</strong> and mitoses; <strong>pure grade 3 chondrosarcomas are uncommon</strong></td>
+</tr>
+</tbody>
+</table></div>
+</div></details><details class="accordion" open><summary><span>Chondrosarcoma — Clinical Features <span class="sl">สไลด์ 37</span></span></summary><div class="acc-body"><ul>
+<li>Most conventional chondrosarcomas: <strong>grade 1 and grade 2</strong></li>
+<li><strong>5-year survival rates:</strong></li>
+</ul>
+<div class="tw"><table class="cmp sum">
+<thead>
+<tr>
+<th>Grade</th>
+<th>5-year survival</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grade 1</td>
+<td><strong>90%</strong></td>
+</tr>
+<tr>
+<td>Grade 2</td>
+<td><strong>81%</strong></td>
+</tr>
+<tr>
+<td>Grade 3</td>
+<td><strong>43%</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Grade 1:</strong> none of the tumors metastasized</li>
+<li><strong>Grade 3:</strong> <strong>70% disseminated</strong></li>
+<li>Spread to the <strong>lungs and skeleton</strong></li>
+<li><strong>Treatment:</strong> <strong>wide surgical excision</strong> or with chemotherapy</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Fibrous and Fibro-osseous Tumors <span class="sl">สไลด์ 38</span></span></summary><div class="acc-body"><ul>
+<li>Tumors composed <strong>solely or predominantly of fibrous elements</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Fibrous Dysplasia <span class="sl">สไลด์ 39</span></span></summary><div class="acc-body"><ul>
+<li><strong>Benign tumor</strong></li>
+<li>The components of <strong>normal bone are present</strong></li>
+<li>The lesions arise during <strong>skeletal growth and development</strong></li>
+<li>Associated with <strong>endocrine abnormalities, especially precocious puberty</strong></li>
+<li><strong>Pathogenesis:</strong> mutation occurring during <strong>embryogenesis</strong> in the <strong>GNAS gene</strong></li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Fibrous Dysplasia — Morphology <span class="sl">สไลด์ 40</span></span></summary><div class="acc-body"><ul>
+<li><strong>Well circumscribed, intramedullary</strong></li>
+<li>Vary greatly in size; <strong>tan-white and gritty</strong></li>
+<li>Composed of <strong>curvilinear trabeculae of woven bone</strong> surrounded by a moderately cellular <strong>fibroblastic proliferation</strong></li>
+<li>The shapes of the trabeculae <strong>mimic Chinese letters</strong></li>
+<li>The bone <strong>lacks prominent osteoblastic rimming</strong></li>
+<li><strong>Cystic degeneration, hemorrhage, and foamy macrophages</strong> are other common findings</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ (histology)</p>
+<blockquote><p><strong>ไทย:</strong> ลักษณะเด่น = trabeculae รูปร่างเหมือน <strong>ตัวอักษรจีน</strong> และไม่มี osteoblast rimming</p></blockquote>
+</div></details><details class="accordion" open><summary><span>Fibrous Dysplasia — Morphology (รูปล้วน) <span class="sl">สไลด์ 41</span></span></summary><div class="acc-body"><p class="img">🖼️ ภาพ histology 2 ภาพ มีคำบรรยาย: <strong>&quot;Fibrous dysplasia composed of curvilinear trabeculae of woven bone that lack conspicuous osteoblastic rimming and arise in a background of fibrous tissue.&quot;</strong> (ที่มา Kumar et al: Robbins &amp; Cotran)</p>
+</div></details><details class="accordion" open><summary><span>Fibrous Dysplasia — Clinical Features <span class="sl">สไลด์ 42</span></span></summary><div class="acc-body"><ul>
+<li>Variable and depends on the <strong>extent of skeletal involvement</strong></li>
+<li>Usually have <strong>minimal symptoms</strong></li>
+<li>Can be <strong>bone pain</strong></li>
+<li>A rare complication: <strong>malignant transformation</strong> of a lesion into a <strong>sarcoma</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Miscellaneous Tumors <span class="sl">สไลด์ 43</span></span></summary><div class="acc-body"><ul>
+<li><strong>Ewing sarcoma / Primitive neuroectodermal tumor (PNET)</strong></li>
+<li><strong>Giant-cell tumor</strong></li>
+<li><strong>Aneurysmal bone cyst</strong></li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Ewing Sarcoma / PNET (1/2) <span class="sl">สไลด์ 44</span></span></summary><div class="acc-body"><ul>
+<li><strong>Primary malignant small round-cell tumors</strong></li>
+<li>Ewing sarcoma and PNET: <strong>similar neural phenotype</strong></li>
+<li><strong>6–10%</strong> of primary malignant bone tumors and follow osteosarcoma</li>
+<li>The <strong>second most common group of bone sarcomas in children</strong></li>
+<li><strong>Boys &gt; girls</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Ewing Sarcoma / PNET (2/2) — Epidemiology and Pathogenesis <span class="sl">สไลด์ 45</span></span></summary><div class="acc-body"><ul>
+<li>Youngest average age: <strong>10–15 years old</strong></li>
+<li><strong>80% younger than 20 years</strong></li>
+<li><strong>Pathogenesis:</strong> <strong>translocation EWS gene on chromosome 22</strong>
+<ul>
+<li>Gene encoding an <strong>ETS family transcription factor</strong></li>
+<li>The most commonly involved ETS gene is <strong>FLI1</strong>, as part of a <strong>t(11;22)(q24;q12)</strong> translocation</li>
+</ul>
+</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Ewing Sarcoma — Morphology <span class="sl">สไลด์ 46</span></span></summary><div class="acc-body"><ul>
+<li>Arising in the <strong>medullary cavity</strong>, usually invade the cortex, periosteum, and soft tissue</li>
+<li><strong>Soft, tan-white</strong>, and frequently contains areas of hemorrhage and necrosis</li>
+<li>Composed of <strong>sheets of uniform small, round cells</strong> that are <strong>slightly larger than lymphocytes</strong></li>
+<li><strong>Scant cytoplasm</strong>, which may appear <strong>clear because it is rich in glycogen</strong></li>
+<li>The presence of <strong>Homer-Wright rosettes</strong></li>
+<li>Necrosis may be prominent, <strong>few mitotic figures</strong></li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Ewing Sarcoma — Morphology (รูป) <span class="sl">สไลด์ 47</span></span></summary><div class="acc-body"><ul>
+<li><strong>Caption:</strong> Ewing sarcoma composed of <strong>sheets of small round cells with small amounts of clear cytoplasm</strong></li>
+</ul>
+<p class="img">🖼️ ภาพ histology</p>
+</div></details><details class="accordion" open><summary><span>Ewing Sarcoma — Clinical Features <span class="sl">สไลด์ 48</span></span></summary><div class="acc-body"><ul>
+<li><strong>Painful enlarging masses</strong></li>
+<li>The affected site is frequently <strong>tender, warm, and swollen</strong></li>
+<li>Some have <strong>systemic findings: fever, anemia, and leukocytosis</strong>, which <strong>mimic infection</strong></li>
+<li><strong>Periosteal reaction: onion-skin fashion</strong></li>
+<li><strong>Treatment:</strong> <strong>chemotherapy and surgical excision</strong> with or without irradiation</li>
+</ul>
+<blockquote><p><strong>ไทย:</strong> อาการคล้ายติดเชื้อ (osteomyelitis) + X-ray เห็น <strong>onion-skin</strong></p></blockquote>
+</div></details><details class="accordion" open><summary><span>Aneurysmal Bone Cyst <span class="sl">สไลด์ 49</span></span></summary><div class="acc-body"><ul>
+<li><strong>Benign tumor of bone</strong></li>
+<li>Characterized by <strong>multiloculated blood-filled cystic spaces</strong></li>
+<li>May present as a <strong>rapidly growing expansile tumor</strong></li>
+<li>Radiographic appearance (มีรูปประกอบ ดู S51)</li>
+<li>Affects all age groups, <strong>more in &lt; 20 years old</strong> (สไลด์พิมพ์ &quot;more in 20 years old&quot;)</li>
+<li><strong>No sex predilection</strong></li>
+<li><strong>Pathogenesis:</strong> associated with distinctive <strong>17p13 translocations</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ (radiographic appearance)</p>
+</div></details><details class="accordion" open><summary><span>Aneurysmal Bone Cyst — Morphology <span class="sl">สไลด์ 50</span></span></summary><div class="acc-body"><ul>
+<li><strong>Multiple blood-filled cystic spaces</strong></li>
+<li><strong>Thin, tan-white septa</strong></li>
+<li>The walls are composed of:
+<ul>
+<li><strong>plump uniform fibroblasts</strong></li>
+<li><strong>multinucleated osteoclast-like giant cells</strong></li>
+<li><strong>woven bone</strong></li>
+</ul>
+</li>
+<li>The bone is lined by <strong>osteoblasts</strong></li>
+<li><strong>Necrosis is uncommon</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Morphology (รูปล้วน) <span class="sl">สไลด์ 51</span></span></summary><div class="acc-body"><p class="img">🖼️ 3 ภาพ: CT ของเข่า (ก้อนที่กระดูก), ภาพ histology (ช่องเลือด/blood-filled cystic space), และ X-ray ด้านข้างของเข่า/ขาท่อนล่าง</p>
+<ul>
+<li><strong>Caption:</strong> <strong>&quot;Fig. 21.25 Radiographically, giant cell tumor of the proximal fibula is predominantly lytic, expansile with destruction of the cortex. A pathologic fracture is also present.&quot;</strong></li>
+<li>ที่มา Robbins &amp; Cotran Pathologic Basis of Disease, 8th Edition</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Aneurysmal Bone Cyst — Clinical Features <span class="sl">สไลด์ 52</span></span></summary><div class="acc-body"><ul>
+<li>Most frequently develops in the <strong>metaphyses of long bones</strong> and the <strong>posterior elements of vertebral bodies</strong></li>
+<li><strong>Pain and swelling</strong></li>
+<li>Vertebrae involved: <strong>compress nerves and cause neurologic symptoms</strong></li>
+<li>Rarely, <strong>pathologic fractures</strong> occur</li>
+<li><strong>Treatment:</strong> <strong>surgical, curettage</strong></li>
+</ul>
+
+</div></details></section><section class="panel" data-tab="tumor" id="tumor-3"><div class="organism-head"><h2>Part 3: Metastatic Disease (Bone)</h2></div><details class="accordion" open><summary><span>Metastatic Disease <span class="sl">สไลด์ 53</span></span></summary><div class="acc-body"><ul>
+<li>The pathways of spread include:
+<ul>
+<li><strong>direct extension</strong></li>
+<li><strong>lymphatic or hematogenous dissemination</strong></li>
+<li><strong>intraspinal seeding</strong></li>
+</ul>
+</li>
+<li><strong>In adults: &gt; 75%</strong> of skeletal metastases from <strong>Thyroid, Kidney, Prostate, Lung, and Breast</strong></li>
+<li><strong>In children:</strong> metastases from <strong>neuroblastoma, Wilms tumor, osteosarcoma, Ewing sarcoma, and rhabdomyosarcoma</strong></li>
+</ul>
+
+</div></details></section><section class="panel" data-tab="tumor" id="tumor-4"><div class="organism-head"><h2>Part 4: Tumors and Tumor-like Lesions of Joint</h2></div><details class="accordion" open><summary><span>Tumors and Tumor-Like Lesions of Joint <span class="sl">สไลด์ 54</span></span></summary><div class="acc-body"><p>(หน้าหัวข้อ)</p>
+</div></details><details class="accordion" open><summary><span>Tenosynovial Giant-Cell Tumor (Localized and Diffuse) <span class="sl">สไลด์ 55</span></span></summary><div class="acc-body"><ul>
+<li><strong>Benign neoplasms</strong> that develop in the <strong>synovial lining of joints, tendon sheaths, and bursae</strong></li>
+<li><strong>Pathogenesis:</strong> chromosomal translocation <strong>t(1;2)(p13;q37)</strong></li>
+<li><strong>Morphology:</strong>
+<ul>
+<li>Grossly: <strong>red-brown to mottled orange-yellow</strong></li>
+<li><strong>Red-brown folds, finger-like projections, and nodules</strong></li>
+<li>Heavily infiltrated by <strong>macrophages</strong>, which may contain <strong>hemosiderin and lipid-filled vacuoles</strong>, or coalesce into <strong>multinucleated giant cells</strong></li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Tenosynovial Giant-Cell Tumor — Morphology (รูปล้วน) <span class="sl">สไลด์ 56</span></span></summary><div class="acc-body"><p class="img">🖼️ ภาพ histology และภาพ gross (สีส้ม-น้ำตาลแดง มีลูกศรชี้) จาก Robbins &amp; Cotran 8th Edition</p>
+</div></details><details class="accordion" open><summary><span>Tenosynovial Giant-Cell Tumor — Clinical Features <span class="sl">สไลด์ 57</span></span></summary><div class="acc-body"><ul>
+<li><strong>80% in the knee</strong>, followed by the <strong>hip, ankle</strong></li>
+<li><strong>Pain, locking, and recurrent swelling</strong></li>
+<li>Limits the range of movement of the joint, become stiff</li>
+<li>Sometimes a <strong>palpable mass</strong></li>
+<li><strong>Aggressive tumors erode into adjacent bones and soft tissues</strong></li>
+<li><strong>Treatment:</strong> <strong>Surgery</strong></li>
+</ul>
+
+</div></details></section><section class="panel" data-tab="tumor" id="tumor-5"><div class="organism-head"><h2>Part 5: Soft-tissue Tumors and Tumor-like Lesions</h2></div><details class="accordion" open><summary><span>Soft-tissue Tumors and Tumor-like Lesions — Classification (1/3) <span class="sl">สไลด์ 58</span></span></summary><div class="acc-body"><ul>
+<li><strong>Tumors of adipose tissue</strong>
+<ul>
+<li>Lipomas</li>
+<li>Liposarcoma</li>
+</ul>
+</li>
+<li><strong>Tumors and tumor-like lesions of fibrous tissue</strong>
+<ul>
+<li>Nodular fasciitis</li>
+<li>Fibromatoses
+<ul>
+<li>Superficial fibromatoses</li>
+<li>Deep fibromatoses</li>
+</ul>
+</li>
+<li>Fibrosarcoma</li>
+</ul>
+</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Soft-tissue Tumors and Tumor-like Lesions — Classification (2/3) <span class="sl">สไลด์ 59</span></span></summary><div class="acc-body"><ul>
+<li><strong>Fibrohistiocytic tumors</strong>
+<ul>
+<li>Fibrous histiocytoma</li>
+<li>Dermatofibrosarcoma protuberans</li>
+<li>Malignant fibrous histiocytoma</li>
+</ul>
+</li>
+<li><strong>Tumors of skeletal muscle</strong>
+<ul>
+<li>Rhabdomyoma</li>
+<li>Rhabdomyosarcoma</li>
+</ul>
+</li>
+<li><strong>Tumors of smooth muscle</strong>
+<ul>
+<li>Leiomyoma</li>
+<li>Leiomyosarcoma</li>
+</ul>
+</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Soft-tissue Tumors and Tumor-like Lesions — Classification (3/3) <span class="sl">สไลด์ 60</span></span></summary><div class="acc-body"><ul>
+<li><strong>Vascular tumors</strong>
+<ul>
+<li>Lymphangioma</li>
+<li>Hemangioma</li>
+<li>Hemangioendothelioma</li>
+<li>Angiosarcoma</li>
+</ul>
+</li>
+<li><strong>Peripheral nerve tumors</strong>
+<ul>
+<li>Neurofibroma</li>
+<li>Schwannoma</li>
+<li>Granular cell tumor</li>
+<li>Malignant peripheral nerve sheath tumors</li>
+</ul>
+</li>
+<li><strong>Tumors of uncertain histogenesis</strong>
+<ul>
+<li>Synovial sarcoma</li>
+<li>Alveolar soft-part sarcoma</li>
+<li>Epithelioid sarcoma</li>
+</ul>
+</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Pathogenesis (ตารางในสไลด์: Cytogenetic / Genetic abnormality) <span class="sl">สไลด์ 61</span></span></summary><div class="acc-body"><div class="tw"><table class="cmp sum">
+<thead>
+<tr>
+<th>Tumor</th>
+<th>Cytogenetic Abnormality</th>
+<th>Genetic Abnormality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ewing/PNET</strong></td>
+<td><strong>t(11;22)(q24;q12)</strong></td>
+<td><strong>FLI1-EWS</strong> fusion gene</td>
+</tr>
+<tr>
+<td></td>
+<td>t(21;22)(q22;q12)</td>
+<td><strong>ERG-EWS</strong> fusion gene</td>
+</tr>
+<tr>
+<td></td>
+<td>t(7;22)(q22;q12)</td>
+<td><strong>ETV1-EWS</strong> fusion gene</td>
+</tr>
+<tr>
+<td><strong>Liposarcoma</strong></td>
+<td><strong>t(12;16)(q13;p11)</strong></td>
+<td><strong>CHOP/TLS</strong> fusion gene</td>
+</tr>
+<tr>
+<td><strong>Synovial sarcoma</strong></td>
+<td><strong>t(X;18)(p11;q11)</strong></td>
+<td><strong>SYT-SSX</strong> fusion gene</td>
+</tr>
+<tr>
+<td><strong>Rhabdomyosarcoma — alveolar type</strong></td>
+<td><strong>t(2;13)(q35;q14)</strong></td>
+<td><strong>PAX3-FKHR</strong> fusion gene</td>
+</tr>
+<tr>
+<td></td>
+<td>t(1;13)(p36;q14)</td>
+<td><strong>PAX7-FKHR</strong> fusion gene</td>
+</tr>
+<tr>
+<td><strong>Extraskeletal myxoid chondrosarcoma</strong></td>
+<td><strong>t(9;22)(q22;q12)</strong></td>
+<td><strong>CHN-EWS</strong> fusion gene</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote><p><strong>ไทย:</strong> ตารางนี้ออกสอบได้ง่าย (จับคู่ tumor ↔ translocation ↔ fusion gene) — Ewing = <strong>EWS</strong> ตลอด, Synovial sarcoma = <strong>SYT-SSX</strong>, Alveolar RMS = <strong>PAX-FKHR</strong>, Liposarcoma = <strong>CHOP/TLS</strong></p></blockquote>
+</div></details><details class="accordion" open><summary><span>Morphology of Cells in Soft Tissue Tumors <span class="sl">สไลด์ 62</span></span></summary><div class="acc-body"><div class="tw"><table class="cmp sum">
+<thead>
+<tr>
+<th>Cell Type</th>
+<th>Tumor Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Spindle cell</strong></td>
+<td>Fibrous, fibrohistiocytic, smooth muscle, Schwann cell</td>
+</tr>
+<tr>
+<td><strong>Small round cell</strong></td>
+<td>Rhabdomyosarcoma, PNET</td>
+</tr>
+<tr>
+<td><strong>Epithelioid</strong></td>
+<td>Smooth muscle, Schwann cell, endothelial, epithelioid sarcoma</td>
+</tr>
+</tbody>
+</table></div>
+<p class="img">🖼️ 3 ภาพ histology ติดป้ายชื่อ: <strong>Spindle cell / Small round cell / Epithelioid</strong></p>
+</div></details><details class="accordion" open><summary><span>Fatty Tumors <span class="sl">สไลด์ 63</span></span></summary><div class="acc-body"><p>(หน้าหัวข้อ) 🖼️ 3 รูป: histology ของเนื้อเยื่อไขมัน, ภาพผิวหนัง/ก้อน, และภาพ gross</p>
+</div></details><details class="accordion" open><summary><span>Lipoma <span class="sl">สไลด์ 64</span></span></summary><div class="acc-body"><ul>
+<li><strong>Benign tumors of fat</strong></li>
+<li>The <strong>most common soft-tissue tumor of adulthood</strong></li>
+<li>Subclassified: <strong>lipoma, fibrolipoma, angiolipoma, spindle cell lipoma, myelolipoma, and pleomorphic lipoma</strong></li>
+<li><strong>Pathogenesis:</strong> <strong>rearrangements of gene</strong> (สไลด์ไม่ระบุชื่อยีน)</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Lipoma — Morphology <span class="sl">สไลด์ 65</span></span></summary><div class="acc-body"><ul>
+<li><strong>Well-encapsulated mass of mature adipocytes</strong></li>
+<li>Varies in size</li>
+<li>Arises in the <strong>subcutis</strong></li>
+<li>Infrequently, lipomas are <strong>large, intramuscular, and poorly circumscribed</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Lipoma — Morphology (รูป) <span class="sl">สไลด์ 66</span></span></summary><div class="acc-body"><ul>
+<li>Label ในรูป: <strong>&quot;mass of mature adipocytes&quot;</strong></li>
+</ul>
+<p class="img">🖼️ ภาพ histology ของ lipoma</p>
+</div></details><details class="accordion" open><summary><span>Lipoma — Clinical Course <span class="sl">สไลด์ 67</span></span></summary><div class="acc-body"><ul>
+<li><strong>Soft, mobile, and painless</strong> (except <strong>angiolipoma</strong>)</li>
+<li>Usually <strong>cured by simple excision</strong></li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Liposarcoma <span class="sl">สไลด์ 68</span></span></summary><div class="acc-body"><ul>
+<li>One of the <strong>most common sarcomas of adulthood</strong></li>
+<li><strong>40s–60s</strong>, <strong>rare in children</strong></li>
+<li>Arise in the <strong>deep soft tissues</strong> of the <strong>proximal extremities</strong> and <strong>retroperitoneum</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Liposarcoma — Morphology <span class="sl">สไลด์ 69</span></span></summary><div class="acc-body"><ul>
+<li>Histologically: <strong>well-differentiated, myxoid/round cell, and pleomorphic</strong> variants</li>
+<li><strong>Lipoblasts:</strong> mimic fetal fat cells and contain <strong>round clear cytoplasmic vacuoles of lipid that scallop the nucleus</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Fibrous Tumors and Tumor-Like Lesions <span class="sl">สไลด์ 70</span></span></summary><div class="acc-body"><p>(หน้าหัวข้อ)</p>
+</div></details><details class="accordion" open><summary><span>Nodular Fasciitis <span class="sl">สไลด์ 71</span></span></summary><div class="acc-body"><ul>
+<li>Also called <strong>infiltrative or pseudosarcomatous fasciitis</strong></li>
+<li>The <strong>most common of the reactive pseudosarcoma</strong></li>
+<li>Most often in <strong>adults</strong> on the <strong>forearm, chest and back</strong></li>
+<li><strong>Solitary, rapidly growing mass</strong></li>
+<li>Sometimes painful</li>
+<li>Arises in the <strong>deep dermis, subcutis, or muscle</strong></li>
+<li><strong>Preceding trauma: 10–15%</strong> of cases</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Nodular Fasciitis — Morphology <span class="sl">สไลด์ 72</span></span></summary><div class="acc-body"><ul>
+<li><strong>Grossly:</strong>
+<ul>
+<li>Nodular in configuration</li>
+<li>Several centimeters in greatest dimension</li>
+<li><strong>Poorly defined margins</strong></li>
+</ul>
+</li>
+<li><strong>Histology:</strong>
+<ul>
+<li><strong>Richly cellular</strong></li>
+<li><strong>Plump, immature fibroblasts and myofibroblasts arranged in fascicles</strong></li>
+<li>The cells vary in size and shape (<strong>spindle to stellate</strong>) and have <strong>conspicuous nucleoli</strong></li>
+<li><strong>Mitotic figures are abundant</strong></li>
+<li><strong>Myxoid stroma</strong> with lymphocytes and <strong>extravasated red blood cells</strong></li>
+<li><strong>Rarely recurs after excision</strong></li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Nodular Fasciitis — Morphology (รูป) <span class="sl">สไลด์ 73</span></span></summary><div class="acc-body"><ul>
+<li><strong>Caption:</strong> Nodular fasciitis with <strong>plump, randomly oriented spindle cells surrounded by myxoid stroma</strong>. Note the <strong>mitotic activity (arrowheads)</strong> and <strong>extravasated red blood cells</strong>.</li>
+</ul>
+<p class="img">🖼️ ภาพ histology</p>
+</div></details><details class="accordion" open><summary><span>Myositis Ossificans <span class="sl">สไลด์ 74</span></span></summary><div class="acc-body"><ul>
+<li>Presence of <strong>metaplastic bone</strong></li>
+<li>In <strong>adolescents and young adults</strong></li>
+<li><strong>&gt; 50% of cases follow trauma</strong></li>
+<li>Arises in the musculature of the <strong>proximal extremities</strong></li>
+<li>The clinical findings are related to its <strong>stage of development</strong>:
+<ul>
+<li><strong>Early phase:</strong> swollen and painful</li>
+<li><strong>Several weeks:</strong> circumscribed and firm</li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Myositis Ossificans — Morphology <span class="sl">สไลด์ 75</span></span></summary><div class="acc-body"><ul>
+<li><strong>Grossly:</strong> <strong>3–6 cm</strong> in greatest dimension and <strong>well-demarcated</strong> mass</li>
+<li><strong>Histology:</strong>
+<ul>
+<li>Plump, elongated <strong>fibroblast and myofibroblast-like cells simulating nodular fasciitis</strong></li>
+<li>These cells are surrounded by:
+<ul>
+<li><strong>Osteoblasts</strong></li>
+<li><strong>Trabeculae of woven bone</strong></li>
+<li><strong>Cancellous bone</strong></li>
+<li><strong>The bone marrow</strong></li>
+</ul>
+</li>
+<li>The <strong>mature lesion is completely ossified</strong></li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Fibromatoses <span class="sl">สไลด์ 76</span></span></summary><div class="acc-body"><ul>
+<li><strong>Superficial Fibromatosis (Palmar, Plantar, and Penile Fibromatoses):</strong>
+<ul>
+<li>Characterized by <strong>nodular or poorly defined broad fascicles of fibroblasts and myofibroblasts surrounded by abundant dense collagen</strong></li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+<blockquote><p><strong>ไทย:</strong> palmar = Dupuytren, plantar = Ledderhose, penile = Peyronie (ชื่อเหล่านี้ไม่ได้อยู่ในสไลด์ เพิ่มให้เพื่อช่วยจำ)</p></blockquote>
+</div></details><details class="accordion" open><summary><span>Fibromatoses — Morphology <span class="sl">สไลด์ 77</span></span></summary><div class="acc-body"><ul>
+<li><strong>Grossly:</strong>
+<ul>
+<li><strong>Gray-white, firm, poorly demarcated</strong> masses, varying from <strong>1–15 cm</strong> in greatest dimension</li>
+<li><strong>Rubbery</strong>, and <strong>infiltrate surrounding structures</strong></li>
+</ul>
+</li>
+<li><strong>Histologically:</strong>
+<ul>
+<li><strong>Plump fibroblasts arranged in fascicles</strong></li>
+<li><strong>Mitoses may be frequent</strong></li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Fibromatoses — Morphology (รูป) <span class="sl">สไลด์ 78</span></span></summary><div class="acc-body"><ul>
+<li><strong>Histologically:</strong> plump fibroblasts arranged in fascicles; mitoses may be frequent</li>
+<li><strong>Caption:</strong> <strong>&quot;Fibromatosis infiltrating between skeletal muscle cells&quot;</strong></li>
+</ul>
+<p class="img">🖼️ ภาพ histology</p>
+</div></details><details class="accordion" open><summary><span>Fibrosarcoma <span class="sl">สไลด์ 79</span></span></summary><div class="acc-body"><ul>
+<li>Occur <strong>anywhere in the body</strong></li>
+<li>Most common in the <strong>deep soft tissues of the extremities</strong></li>
+<li><strong>Gross:</strong> <strong>infiltrative, soft, fish-flesh masses</strong>, often having areas of <strong>hemorrhage and necrosis</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Fibrosarcoma — Morphology <span class="sl">สไลด์ 80</span></span></summary><div class="acc-body"><ul>
+<li><strong>Histology:</strong>
+<ul>
+<li><strong>Spindled cells growing in a herringbone fashion</strong></li>
+<li><strong>Pleomorphism</strong></li>
+<li><strong>Frequent mitoses</strong></li>
+<li><strong>Necrosis</strong></li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+<blockquote><p><strong>ไทย:</strong> คำสำคัญ = <strong>herringbone</strong> + <strong>fish-flesh</strong></p></blockquote>
+</div></details><details class="accordion" open><summary><span>Benign Fibrous Histiocytoma (Dermatofibroma) <span class="sl">สไลด์ 81</span></span></summary><div class="acc-body"><ul>
+<li>Occurs in the <strong>dermis and subcutis</strong></li>
+<li><strong>Mid-adult life</strong></li>
+<li><strong>Painless and slow growing</strong></li>
+<li><strong>Firm, small (≤ 1 cm) mobile nodule</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Malignant Fibrous Histiocytoma <span class="sl">สไลด์ 82</span></span></summary><div class="acc-body"><ul>
+<li><strong>Once considered the most common sarcoma of adults</strong></li>
+<li>A group of soft-tissue tumors characterized by:
+<ul>
+<li><strong>cytologic pleomorphism</strong></li>
+<li><strong>bizarre multinucleate cells</strong></li>
+<li><strong>storiform architecture</strong></li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Tumors of Skeletal Muscle / Smooth Muscle (หน้าหัวข้อ) <span class="sl">สไลด์ 83</span></span></summary><div class="acc-body"><ul>
+<li><strong>Tumors of Skeletal Muscle</strong>
+<ul>
+<li>Rhabdomyoma</li>
+<li>Rhabdomyosarcoma</li>
+</ul>
+</li>
+<li><strong>Tumors of Smooth Muscle</strong>
+<ul>
+<li>Leiomyoma</li>
+<li>Leiomyosarcoma</li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Rhabdomyosarcoma <span class="sl">สไลด์ 84</span></span></summary><div class="acc-body"><ul>
+<li>The <strong>most common soft-tissue sarcoma of childhood and adolescence</strong>, usually <strong>before age 20</strong></li>
+<li>Most in the <strong>head and neck</strong> or <strong>genitourinary tract</strong></li>
+<li>Subclassified:
+<ul>
+<li><strong>Embryonal</strong> rhabdomyosarcoma</li>
+<li><strong>Alveolar</strong> rhabdomyosarcoma</li>
+<li><strong>Pleomorphic</strong> rhabdomyosarcoma</li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Rhabdomyosarcoma — Morphology <span class="sl">สไลด์ 85</span></span></summary><div class="acc-body"><ul>
+<li><strong>Rhabdomyoblast: the diagnostic cell</strong>
+<ul>
+<li>Known as <strong>tadpole or strap cells</strong></li>
+<li>Round or elongate</li>
+<li>Contain <strong>cross-striations</strong>, rich in thick and thin filaments</li>
+<li><strong>Eccentric eosinophilic granular cytoplasm</strong></li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Leiomyomas <span class="sl">สไลด์ 86</span></span></summary><div class="acc-body"><ul>
+<li><strong>Benign smooth muscle tumors</strong></li>
+<li>Often arise in the <strong>uterus</strong>
+<ul>
+<li><strong>77% of women</strong>; depending on their number, size, and location, may cause a variety of symptoms including <strong>infertility</strong></li>
+</ul>
+</li>
+<li>May occur in <strong>skin, nipples, scrotum, and labia</strong>, and less commonly the gut</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Leiomyoma — Morphology <span class="sl">สไลด์ 87</span></span></summary><div class="acc-body"><ul>
+<li>Usually <strong>not larger than 1–2 cm</strong> in greatest dimension (สไลด์ระบุตามนี้)</li>
+<li>Composed of <strong>fascicles of spindle cells that tend to intersect each other at right angles</strong></li>
+<li>Tumor cells: <strong>blunt-ended, elongated nuclei (cigar-shaped)</strong> with <strong>minimal atypia and few mitotic figures</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Leiomyoma — Clinical <span class="sl">สไลด์ 88</span></span></summary><div class="acc-body"><ul>
+<li><strong>Solitary lesions are easily cured</strong></li>
+<li><strong>Multiple tumors</strong> may be so numerous that complete surgical removal is impractical</li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Leiomyosarcoma <span class="sl">สไลด์ 89</span></span></summary><div class="acc-body"><ul>
+<li>Account for <strong>10–20%</strong> of soft-tissue sarcomas</li>
+<li>Occur in <strong>adults</strong></li>
+<li><strong>Women &gt; men</strong></li>
+<li>Most in <strong>skin and deep soft tissues of the extremities and retroperitoneum</strong></li>
+<li><strong>Caption (รูป):</strong> a large hemorrhagic tumor mass distends the lower corpus and is flanked by two leiomyomas</li>
+</ul>
+<p class="img">🖼️ ภาพ gross ของมดลูกที่มี leiomyosarcoma ข้างๆ leiomyoma 2 ก้อน</p>
+</div></details><details class="accordion" open><summary><span>Leiomyosarcoma — Morphology <span class="sl">สไลด์ 90</span></span></summary><div class="acc-body"><ul>
+<li>Histologically: consist of <strong>malignant spindle cells with cigar-shaped nuclei arranged in interweaving fascicles</strong></li>
+<li><strong>Mitosis and necrosis are present</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Leiomyosarcoma — Clinical <span class="sl">สไลด์ 91</span></span></summary><div class="acc-body"><ul>
+<li><strong>Painless firm masses</strong></li>
+<li><strong>Retroperitoneal</strong> tumors may be large and bulky and cause abdominal symptoms</li>
+<li><strong>Superficial or cutaneous</strong> leiomyosarcomas are usually small and have a <strong>good prognosis</strong></li>
+<li>The <strong>retroperitoneal</strong> ones are large, cannot be entirely excised, and cause death by both <strong>local extension and metastatic spread</strong></li>
+<li><strong>Treatment:</strong> depends on the <strong>size, location, and grade</strong></li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Synovial Sarcoma <span class="sl">สไลด์ 92</span></span></summary><div class="acc-body"><ul>
+<li>Believed to recapitulate synovium, but the <strong>cell of origin is still unclear</strong></li>
+<li><strong>10%</strong> of all soft-tissue sarcomas</li>
+<li>The <strong>fourth most common sarcoma</strong></li>
+<li>Most occur in the <strong>20s–40s</strong></li>
+<li><strong>Deep soft tissue</strong>; about <strong>60–70%</strong> involve the <strong>lower extremity</strong>, especially around the <strong>knee and thigh</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Synovial Sarcoma — Morphology <span class="sl">สไลด์ 93</span></span></summary><div class="acc-body"><ul>
+<li><strong>Biphasic or monophasic: epithelial-like and mesenchymal-like</strong></li>
+<li><strong>Epithelial cells:</strong> cuboidal to columnar and form <strong>glands</strong> or grow in <strong>solid cords or aggregates</strong></li>
+<li><strong>Spindle cells:</strong> arranged in <strong>densely cellular fascicles</strong></li>
+<li>Many are <strong>monophasic</strong></li>
+<li><strong>Monophasic</strong> very rarely (ตามสไลด์: &quot;Monophasic very rarely&quot;)</li>
+<li><strong>Easily mistaken for fibrosarcomas or malignant peripheral nerve sheath tumors</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ (histology)</p>
+</div></details><details class="accordion" open><summary><span>Synovial Sarcoma — Clinical <span class="sl">สไลด์ 94</span></span></summary><div class="acc-body"><ul>
+<li><strong>5-year survival varies from 25% to 62%</strong></li>
+<li>Only <strong>11–30%</strong> live for <strong>10 years or longer</strong></li>
+<li>Common sites of metastases: <strong>lung, skeleton</strong>, and occasionally <strong>regional lymph nodes</strong></li>
+<li>Treated aggressively with <strong>limb-sparing therapy</strong> and frequently <strong>chemotherapy</strong></li>
+</ul>
+
+</div></details></section><section class="panel" data-tab="tumor" id="tumor-6"><div class="organism-head"><h2>Part 6: Paraffinoma</h2></div><details class="accordion" open><summary><span>Paraffinoma <span class="sl">สไลด์ 95</span></span></summary><div class="acc-body"><ul>
+<li><strong>Implant foreign material</strong> (<strong>paraffin, silicone, or wax</strong>) <strong>under the skin</strong>: penis, breast, face, body</li>
+<li>Material causes a <strong>foreign body reaction</strong> that may need <strong>surgical resection</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+</div></details><details class="accordion" open><summary><span>Paraffinoma — Morphology <span class="sl">สไลด์ 96</span></span></summary><div class="acc-body"><ul>
+<li><strong>Granulomatous reaction</strong></li>
+<li>The granulomas contain <strong>numerous clear vacuolated droplets</strong> together with <strong>inflammatory cell infiltration</strong></li>
+</ul>
+<p class="img">🖼️ มีรูปประกอบ</p>
+
+</div></details></section><section class="panel" data-tab="tumor" id="tumor-7"><div class="organism-head"><h2>Part 7: ข้อสอบท้ายสไลด์ (เป็นรูปภาพ ไม่มีเฉลยในสไลด์)</h2></div><details class="accordion" open><summary><span>ข้อสอบ <span class="sl">สไลด์ 97</span></span></summary><div class="acc-body"><p><strong>2. Newborn presents with multiple fractures. PE: blue sclerae. What is abnormality?</strong></p>
+<ul>
+<li>a) Calcium accretion</li>
+<li>b) Magnesium accretion</li>
+<li>c) Phosphate deposit</li>
+<li>d) Vitamin D hydroxylation</li>
+<li>e) Collagen bone matrix synthesis</li>
+</ul>
+<p class="img">🖼️ ภาพข้อสอบ (ลายน้ำ SMST) + รูปแพทย์/ผู้ป่วย 2 รูป</p>
+</div></details><details class="accordion" open><summary><span>ข้อสอบ — B5 Musculoskeletal system <span class="sl">สไลด์ 98</span></span></summary><div class="acc-body"><p><strong>1. ชายอายุ 40 ปี ปวด บวม ข้อเข่าขวา limit range of motion / narrowing of joint space Hx: เป็นมา 2 week</strong></p>
+<ul>
+<li>a) Osteoporosis</li>
+<li>b) OA</li>
+<li>c) RA</li>
+<li>d) Gout</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>ข้อสอบ <span class="sl">สไลด์ 99</span></span></summary><div class="acc-body"><p><strong>13. ชายอายุ 70 ปี มาด้วยอาการปวดบวมที่ข้อเข่าขวา 2 wks, Limit range of motion, narrowing of joint space BMI = 30 ถามว่าคนไข้คนนี้เป็นไร</strong></p>
+<ul>
+<li>a) Osteoporosis</li>
+<li>b) Osteoarthritis</li>
+<li>c) Tendinitis</li>
+<li>d) Rheumatoid Arthritis</li>
+</ul>
+<p><strong>14. Which cell is healing fracture in first week</strong></p>
+<p>(ไม่มีตัวเลือกในสไลด์)</p>
+</div></details><details class="accordion" open><summary><span>จบการนำเสนอ <span class="sl">สไลด์ 100</span></span></summary><div class="acc-body"><p>(สไลด์สุดท้าย: &quot;จบการนำเสนอ&quot;)</p>
+
+</div></details><div class="exam-note"><h3>✍️ ลองตอบ (สไลด์ไม่มีเฉลย — เหตุผลของผู้สรุป ควรเช็คกับอาจารย์)</h3><ul><li><strong>ข้อ 2 (blue sclerae + หักหลายที่):</strong> ตอบ <b>e) Collagen bone matrix synthesis</b> (osteogenesis imperfecta — เรื่องนี้ไม่อยู่ใน T12/T13 เป็นความรู้ทั่วไป)</li><li><strong>ข้อ 13 (70 ปี, BMI 30, เข่า, joint space แคบ):</strong> ตอบ <b>b) Osteoarthritis</b> — อายุมาก + อ้วน + เข่า (ดูแท็บ T13)</li><li><strong>ข้อ 1 (40 ปี, เข่า 2 สัปดาห์, joint space แคบ):</strong> choice ที่ตรงคีย์เวิร์ด joint space narrowing คือ <b>OA</b> แต่ระยะเวลา 2 สัปดาห์/กำเริบฉับพลันก็ชวนนึกถึง gout — ถามอาจารย์อีกที</li></ul></div></section><section class="panel" data-tab="meta" id="meta-g"><div class="organism-head"><h2>🧭 T13 · ข้ออักเสบ/ข้อเสื่อม — วิธีตอบโจทย์</h2></div><div class="exam-note"><h3>🧭 อ่านโจทย์ข้ออักเสบ/ข้อเสื่อมยังไง</h3><p>ถามตัวเอง 3 ข้อตามลำดับ: <b>① ข้อไหน</b> (มือเล็ก / นิ้วโป้งเท้า / เข่า / กระดูกสันหลัง) → <b>② ใครเป็น</b> (อายุ เพศ โรคร่วม เช่น psoriasis, อ้วน) → <b>③ เห็นอะไรใน specimen/ผลึก</b> (pannus, rice body, needle crystal, tophus, eburnation)</p></div><div class="card"><h3>1) โจทย์ให้เบาะแสนี้ → ตอบโรคนี้</h3><div class="tw"><table class="cmp sum"><tr><th>เบาะแสในโจทย์</th><th>ตอบ</th><th>ทำไม (จากสไลด์)</th></tr><tr><td>ข้อเล็กมือ <b>MCP, PIP</b> สมมาตร + เท้า; <b>rice bodies</b>, <b>pannus</b>, nodule ใต้ผิวหนัง (palisaded histiocytes)</td><td><b>Rheumatoid arthritis</b></td><td>autoimmune, CD4+ T cell, citrullination; nodule พบ 25%; ระยะท้ายข้อติดแข็ง (ankylosis)</td></tr><tr><td>ปวดหลังล่างเรื้อรัง ชาย 20–30 ปี, vertebrae เชื่อมกัน (fusion), อักเสบที่ enthesis</td><td><b>Ankylosing spondyloarthritis</b></td><td>ชาย:หญิง 2–3:1; 1/3 ข้อรอบนอก (สะโพก เข่า ไหล่); ภาวะแทรกซ้อน: กระดูกสันหลังหัก</td></tr><tr><td>ข้อ <b>DIP</b> + ผื่น psoriasis (ที่เข่า/ศอก/นิ้ว)</td><td><b>Psoriatic arthritis</b></td><td>&gt;10% ของผู้ป่วย psoriasis; sacroiliac/spine 20–40%</td></tr><tr><td>นิ้วโป้งเท้า (<b>1st MTP</b>) ปวดรุนแรงฉับพลัน แดงร้อน; ผลึก <b>needle</b>; ก้อน <b>tophi</b>; urate &gt;6.8</td><td><b>Gout</b></td><td>tophi = pathognomonic; 90% reduced excretion; 4 stages</td></tr><tr><td>เข่า (บ่อยสุด) / ข้อมือ อายุ &gt;50 ปี; ผลึกรูปเหลี่ยม 0.5–5 μm, chalky white; hemochromatosis/hyperparathyroidism</td><td><b>Pseudo-gout (CPPD)</b></td><td>ANKH mutation (AD); เพศ/เชื้อชาติเท่ากัน; 30–60% ในผู้ ≥85 ปี</td></tr><tr><td>ก้อนกลมเล็ก 1–1.5 cm ที่ <b>ข้อมือ</b>, ผนังไม่มี cell lining, น้ำคล้าย synovial fluid</td><td><b>Ganglion cyst</b></td><td>myxoid degeneration ของ connective tissue</td></tr><tr><td>สูงอายุ/อ้วน, เข่า(หญิง) <b>สะโพก(ชาย)</b>, ปวดมากขึ้นเมื่อใช้, crepitus, <b>eburnation, osteophyte, fibrillation</b></td><td><b>Osteoarthritis</b></td><td>chondrocyte injury; secondary OA 5% (บาดเจ็บ เบาหวาน hemochromatosis อ้วน)</td></tr><tr><td>กระดูกพรุน มวลกระดูกลด หักง่าย; วัยทอง/สูงอายุ</td><td><b>Osteoporosis</b></td><td>senile + postmenopausal พบบ่อยสุด</td></tr></table></div></div><div class="card"><h3>2) คู่ที่สับสนง่าย</h3><div class="tw"><table class="cmp sum"><tr><th>คู่เทียบ</th><th>จุดแยก</th></tr><tr><td>RA <b>vs</b> OA</td><td>RA: inflammation, <b>pannus</b>, eroding cartilage, <b>fibrous/bony ankylosis</b> · OA: <b>ไม่มี ankylosis</b>, osteophyte, subchondral sclerosis + cyst, cartilage บาง/fibrillated (รูป Fig 21.35 ที่สไลด์ 11)</td></tr><tr><td>RA <b>vs</b> Psoriatic arthritis</td><td>RA: MCP/PIP สมมาตร · PsA: <b>DIP</b> + ผื่น psoriasis</td></tr><tr><td>RA <b>vs</b> Ankylosing</td><td>RA: ข้อเล็กมือเท้า · AS: กระดูกสันหลัง + enthesis</td></tr><tr><td>Gout <b>vs</b> Pseudo-gout</td><td>Gout: <b>1st MTP</b>, needle/urate, tophi, ยูเรตสูง · Pseudo-gout: <b>เข่า</b>, ผลึกเหลี่ยม CPPD, ANKH, อายุ &gt;50</td></tr><tr><td>Acute gout <b>vs</b> Chronic tophaceous</td><td>Acute: neutrophil infiltrate, monoarticular · Chronic: synovium หนา fibrotic + pannus, polyarticular, เฉลี่ย ~12 ปี</td></tr></table></div></div><div class="exam-note"><h3>⚠️ จุดที่สไลด์สับสน</h3><ul><li>สไลด์ 26 บอก gout มี <b>4 stages</b> (asymptomatic hyperuricemia → acute → intercritical → chronic tophaceous) แต่สไลด์ 28 ใส่เลข “3” ให้ chronic และไม่มีสไลด์ intercritical — <b>ยึด 4 stages</b></li><li>สไลด์ 21 บรรทัด “long, slender, needle shaped” ไม่มีประธาน = ผลึก urate</li><li>สไลด์ 41 ข้อความตกหล่น (OA อาการเริ่มช่วงอายุ 50s)</li></ul></div></section><section class="panel" data-tab="meta" id="meta-sum"><div class="organism-head"><h2>📊 T13 · ตารางสรุปเทียบเร็ว</h2></div><div class="card"><div class="tw"><table class="cmp sum">
+<thead>
+<tr>
+<th>โรค</th>
+<th>ข้อที่ชอบเป็น</th>
+<th>ตัวเลข/จุดจำ (ตามสไลด์)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RA</strong></td>
+<td><strong>MCP, PIP</strong> ของมือ + เท้า → ข้อมือ ข้อเท้า ศอก เข่า; <strong>สมมาตร, ข้อเล็ก</strong></td>
+<td>Rheumatoid nodules ใน <strong>25%</strong>; <strong>Rice bodies</strong>, <strong>Pannus</strong>; CD4+ T cells</td>
+</tr>
+<tr>
+<td><strong>Ankylosing spondyloarthritis</strong></td>
+<td>กระดูกสันหลัง (+ 1/3 ข้อรอบนอก: สะโพก เข่า ไหล่)</td>
+<td>อายุ <strong>20-30 ปี</strong>; ชาย:หญิง <strong>2-3:1</strong>; vertebral fusion</td>
+</tr>
+<tr>
+<td><strong>Psoriatic arthritis</strong></td>
+<td><strong>DIP</strong> ของมือและเท้า; ข้อใหญ่ได้</td>
+<td><strong>&gt; 50%</strong> peripheral+axial; sacroiliac/spine <strong>20-40%</strong>; <strong>&gt; 10%</strong> ของผู้ป่วย psoriasis</td>
+</tr>
+<tr>
+<td><strong>Gout</strong></td>
+<td><strong>1st MTP 50%</strong>; 90% ที่ instep, ข้อเท้า ส้นเท้า เข่า ข้อมือ นิ้ว ศอก</td>
+<td>Urate &gt; <strong>6.8 mg/dL</strong>; reduced excretion <strong>90%</strong> / overproduction <strong>10%</strong>; <strong>Tophi = pathognomonic</strong>; chronic tophaceous เฉลี่ย <strong>~12 ปี</strong></td>
+</tr>
+<tr>
+<td><strong>Pseudo-gout (CPPD)</strong></td>
+<td><strong>เข่า</strong> &gt; ข้อมือ ศอก ไหล่ ข้อเท้า</td>
+<td>อายุ <strong>&gt; 50</strong>; <strong>30-60%</strong> ที่ ≥ 85 ปี; <strong>ANKH</strong> gene (AD); ผลึก <strong>0.5-5 μm</strong></td>
+</tr>
+<tr>
+<td><strong>Ganglion cyst</strong></td>
+<td>ข้อมือ (บ่อยสุด)</td>
+<td><strong>1-1.5 cm</strong>; <strong>cyst wall ไม่มี cell lining</strong></td>
+</tr>
+<tr>
+<td><strong>OA</strong></td>
+<td>หญิง: เข่า+มือ; ชาย: <strong>สะโพก</strong></td>
+<td>secondary OA <strong>5%</strong>; <strong>eburnation, osteophyte, fibrillation</strong>; <strong>crepitus, morning stiffness</strong></td>
+</tr>
+<tr>
+<td><strong>Osteoporosis</strong></td>
+<td>—</td>
+<td>porous bone, reduced bone mass; <strong>senile &amp; postmenopausal</strong> พบบ่อยสุด</td>
+</tr>
+</tbody>
+</table></div>
+</div></section><section class="panel" data-tab="meta" id="meta-0"><div class="organism-head"><h2>หน้าปก + Joints (กายวิภาคข้อ)</h2></div><details class="accordion" open><summary><span>หน้าปก <span class="sl">สไลด์ 1</span></span></summary><div class="acc-body"><ul>
+<li>Metabolic and regulatory disorders</li>
+<li>Others disease</li>
+</ul>
+<p class="img">🖼️ รูปประกอบ: ภาพมือที่ข้อนิ้วอักเสบ (วงกลมสีแดงที่ข้อ), กระดูกสันหลัง/กระดูกชิ้นหนึ่งพื้นดำ, ภาพผิวหนังที่เท้าแดง, แผนภาพ &quot;Accessory Structures of a Knee Joint&quot; (มี label <em>Ligaments</em> ฯลฯ — ตัวเล็กอ่านยาก)</p>
+</div></details><details class="accordion" open><summary><span>JOINTS ข้อต่อ <span class="sl">สไลด์ 2</span></span></summary><div class="acc-body"><p class="img">🖼️ แผนภาพกายวิภาคของข้อ พร้อม label:
+<strong>Muscle, Synovial cavity, Bursa, Joint capsule and synovial lining, Tendon, Enthesis (ปรากฏ 2 จุด: บนและล่าง), Epiphyseal bone, Articular cartilage, Ligament</strong></p>
+<blockquote><p>💡 <em>Enthesis</em> = จุดที่เอ็น/เอ็นยึดข้อเกาะกับกระดูก (เกี่ยวกับ Ankylosing spondyloarthritis ใน slide 12)</p></blockquote>
+</div></details></section><section class="panel" data-tab="meta" id="meta-1"><div class="organism-head"><h2>RHEUMATOID ARTHRITIS (RA) — โรครูมาตอยด์</h2></div><details class="accordion" open><summary><span>RHEUMATOID ARTHRITIS โรครูมาตอยด์ <span class="sl">สไลด์ 3</span></span></summary><div class="acc-body"><ul>
+<li>A <strong>chronic systemic inflammatory disorder</strong></li>
+<li>Affect many tissues and organs : <strong>skin, blood vessels, heart, lungs, and muscles</strong></li>
+<li><strong>Principally attacks the joints</strong></li>
+<li>Producing a <strong>nonsuppurative proliferative and inflammatory synovitis</strong></li>
+<li>Progresses to destruction of the <strong>articular cartilage</strong> and <strong>ankylosis</strong> of the joints</li>
+<li>The cause of rheumatoid arthritis remains <strong>unknown</strong>
+<ul>
+<li><strong>autoimmunity</strong></li>
+<li><strong>genetic predisposition</strong></li>
+<li><strong>environment</strong></li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ ภาพมือทั้งสองข้างที่ข้อนิ้วบวมผิดรูป</p>
+<blockquote><p>💡 โรคอักเสบเรื้อรังทั้งระบบ แต่โจมตีข้อเป็นหลัก synovitis แบบ <em>nonsuppurative</em> = ไม่เป็นหนอง; <em>ankylosis</em> = ข้อติดแข็ง</p></blockquote>
+</div></details><details class="accordion" open><summary><span>Pathogenesis <span class="sl">สไลด์ 4</span></span></summary><div class="acc-body"><ul>
+<li><strong>Uncertain</strong></li>
+<li>Believed that
+<ul>
+<li><strong>autoimmune reaction</strong></li>
+<li><strong>genetically susceptible host</strong> to an <strong>arthritogenic antigen</strong></li>
+<li>resulting in a <strong>breakdown of immunological self-tolerance</strong></li>
+</ul>
+</li>
+<li><strong>chronic inflammatory reaction</strong></li>
+<li>The activation of <strong>CD4+ helper T cells</strong>, and the local release of <strong>inflammatory mediators and cytokines</strong> that ultimately destroys the joint</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Major processes involved in the pathogenesis of rheumatoid arthritis <span class="sl">สไลด์ 5</span></span></summary><div class="acc-body"><p><em>(สไลด์นี้เป็นรูปล้วน ไม่มี text layer — จดจากรูป)</em></p>
+<p class="img">🖼️ <strong>รูปซ้าย (A):</strong> เปรียบเทียบ <strong>NORMAL JOINT</strong> กับ <strong>RHEUMATOID JOINT</strong></p>
+<ul>
+<li>Label: Synovial membrane, Cartilage (ข้อปกติ)</li>
+<li>Label: Pannus, Macrophage, Plasma cell, Immune complexes, Neutrophil, Dendritic cell, Lymphocyte (ข้อ RA)</li>
+<li>ที่มา: Kumar et al: Robbins &amp; Cotran Pathologic Basis of Disease, 8th Edition</li>
+</ul>
+<p class="img">🖼️ <strong>รูปขวา (flowchart):</strong></p>
+<ol>
+<li><strong>Susceptibility genes (HLA, other)</strong> → <strong>Failure of tolerance, unregulated lymphocyte activation</strong></li>
+<li><strong>Environmental factors (e.g., infection, smoking)</strong> → <strong>Enzymatic modification (e.g., citrullination) of self protein</strong></li>
+<li>ทั้งสองทาง → <strong>T and B cell responses to self antigens (including antigens in joint tissues)</strong></li>
+<li>→ <strong>T<sub>H</sub>17 cell</strong>, <strong>T<sub>H</sub>1 cell</strong>, <strong>Antibodies</strong></li>
+<li>→ <strong>Lymphocytes, antibodies and immune complexes enter joint</strong></li>
+<li>→ <strong>Release of proteases and cytokines</strong> / <strong>Fibroblasts, Chondrocytes, Synovial cells</strong> → <strong>Activation</strong> / <strong>Proliferation</strong></li>
+<li>→ <strong>Pannus formation, Destruction of bone and cartilage</strong></li>
+</ol>
+<blockquote><p>💡 จุดน่าสังเกต: <strong>citrullination</strong> ของ self protein จากปัจจัยสิ่งแวดล้อม (เช่น การติดเชื้อ, <strong>smoking</strong>)</p></blockquote>
+</div></details><details class="accordion" open><summary><span>Morphology รูปร่างลักษณะ <span class="sl">สไลด์ 6</span></span></summary><div class="acc-body"><p><strong>Joints.</strong></p>
+<ul>
+<li><strong>Edematous thickened, and hyperplastic synovium</strong></li>
+<li>The characteristic histologic features include
+<ol>
+<li><strong>infiltration of synovial stroma by a dense perivascular inflammatory infiltrate</strong> composed of <strong>lymphoid aggregates, B cells, plasma cells, dendritic cells, and macrophages</strong></li>
+<li><strong>increased vascularity</strong> due to <strong>vasodilation and angiogenesis</strong>, with superficial <strong>hemosiderin deposits</strong></li>
+</ol>
+</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Morphology รูปร่างลักษณะ (ต่อ) <span class="sl">สไลด์ 7</span></span></summary><div class="acc-body"><ol start="3">
+<li><strong>Rice bodies</strong> : aggregation of <strong>organizing fibrin</strong> covering portions of the synovium and <strong>floating in the joint space</strong></li>
+<li>accumulation of <strong>neutrophils</strong> in the synovial fluid and along the surface of synovium</li>
+<li><strong>osteoclastic activity</strong> in underlying bone, cause <strong>erosions, subchondral cysts, and osteoporosis</strong></li>
+<li><strong>Pannus formation</strong> : inflammatory cells, granulation tissue, and fibroblasts</li>
+<li>Inflammation in the <strong>tendons, ligaments, and the adjacent skeletal muscle</strong></li>
+</ol>
+<p class="img">🖼️ ภาพข้อที่ผ่าเปิดเห็น rice bodies สีขาวๆ อยู่ในข้อ + ภาพก้อน rice bodies ที่เก็บออกมา วางบนไม้บรรทัด</p>
+</div></details><details class="accordion" open><summary><span>(ภาพ histology) <span class="sl">สไลด์ 8</span></span></summary><div class="acc-body"><p><em>(สไลด์นี้เป็นรูปล้วน)</em></p>
+<p class="img">🖼️ ภาพ H&amp;E 2 ภาพ: ซ้าย = กำลังขยายต่ำ เห็นเนื้อเยื่อ synovium มีเซลล์อักเสบหนาแน่น; ขวา = กำลังขยายสูง</p>
+<ul>
+<li><strong>Caption (ในกล่องเหลือง):</strong> &quot;<strong>Rheumatoid arthritis. C,</strong> At higher magnification, subsynovial tissue containing a <strong>dense lymphoid aggregate</strong> is seen&quot;</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Skin / Rheumatoid nodules <span class="sl">สไลด์ 9</span></span></summary><div class="acc-body"><p><strong>Skin.</strong></p>
+<ul>
+<li><strong>25%</strong> of affected individuals</li>
+<li>Usually those with <strong>severe disease</strong></li>
+<li>Arise in <strong>forearm, elbows, occiput, and lumbosacral area</strong></li>
+<li>Less commonly they form in the <strong>lungs, spleen, heart, aorta, and other viscera</strong></li>
+</ul>
+<p><strong>Rheumatoid nodules :</strong></p>
+<ul>
+<li>arise in the <strong>subcutaneous tissue and in the skin</strong></li>
+<li><strong>firm, nontender, and round to oval</strong></li>
+<li>Microscopically : <strong>central zone of fibrinoid necrosis</strong> surrounded by a prominent rim of <strong>epithelioid histiocytes</strong> and numerous <strong>lymphocytes and plasma cells</strong></li>
+</ul>
+<p class="img">🖼️ X-ray มือ — caption: &quot;<strong>Diffuse osteopenia, marked loss of the joint spaces</strong>&quot;
+🖼️ ภาพ H&amp;E — caption: &quot;<strong>Nodule composed of central necrosis rimmed by palisaded histiocytes</strong>&quot;</p>
+</div></details><details class="accordion" open><summary><span>Clinical Course <span class="sl">สไลด์ 10</span></span></summary><div class="acc-body"><ul>
+<li><strong>Malaise, fatigue, generalized musculoskeletal pain</strong></li>
+<li>After <strong>several weeks to months</strong> do the joints become involved</li>
+<li>Symptoms usually develop in the <strong>hands (metacarpophalangeal and proximal interphalangeal joints)</strong> and <strong>feet</strong>, followed by the <strong>wrists, ankles, elbows, and knees</strong></li>
+<li><strong>Symmetrical</strong> and the <strong>small joints</strong></li>
+<li>Uncommonly the <strong>upper spine, hips</strong></li>
+</ul>
+<blockquote><p>💡 RA: เริ่มที่ MCP + PIP (ไม่ใช่ DIP) และเป็นแบบสมมาตร เทียบกับ Psoriatic arthritis ที่ชอบ <strong>DIP</strong> (slide 14)</p></blockquote>
+</div></details><details class="accordion" open><summary><span>Clinical Course (รูปเปรียบเทียบ OA vs RA) <span class="sl">สไลด์ 11</span></span></summary><div class="acc-body"><p><em>(สไลด์นี้เป็นรูปล้วน)</em></p>
+<p class="img">🖼️ <strong>Fig. 21.35 Comparison of the morphologic features of rheumatoid arthritis and osteoarthritis</strong></p>
+<div class="tw"><table class="cmp sum">
+<thead>
+<tr>
+<th></th>
+<th><strong>OSTEOARTHRITIS</strong></th>
+<th><strong>RHEUMATOID ARTHRITIS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Labels ในรูป</td>
+<td>Bony spur, <strong>No ankylosis</strong>, Subchondral cyst, Subchondral sclerosis, Osteophyte, Thinned and fibrillated cartilage</td>
+<td>Inflammation, Pannus, Eroding cartilage, <strong>Fibrous ankylosis</strong>, <strong>Bony ankylosis</strong></td>
+</tr>
+</tbody>
+</table></div>
+
+</div></details></section><section class="panel" data-tab="meta" id="meta-2"><div class="organism-head"><h2>ANKYLOSING SPONDYLOARTHRITIS</h2></div><details class="accordion" open><summary><span>Ankylosing Spondyloarthritis <span class="sl">สไลด์ 12</span></span></summary><div class="acc-body"><ul>
+<li>A <strong>chronic synovitis</strong> that causes <strong>destruction of articular cartilage</strong></li>
+<li>Inflammation of <strong>tendinoligamentous insertion sites</strong></li>
+<li><strong>Fusion of the vertebral bodies</strong></li>
+<li><strong>Bony outgrowths</strong></li>
+<li>Result in <strong>severe spinal immobility</strong></li>
+<li>Symptomatic in <strong>20-30 years old</strong></li>
+<li><strong>Men: women, 2-3:1</strong></li>
+</ul>
+<p class="img">🖼️ แผนภาพกระดูกสันหลัง: <strong>HEALTHY SPINE</strong> เทียบกับ <strong>ANKYLOSING SPONDYLITIS</strong> — label: <em>Inflammation of joints</em>, <em>Vertebrae fuse together</em> (+ กล่องข้อความเล็กในรูป อ่านไม่ชัด)</p>
+</div></details><details class="accordion" open><summary><span>Clinical Course <span class="sl">สไลด์ 13</span></span></summary><div class="acc-body"><ul>
+<li><strong>Low back pain</strong>, which frequently follows a <strong>chronic progressive course</strong></li>
+<li><strong>1/3</strong> of case Involvement of <strong>peripheral joints</strong>, such as the <strong>hips, knees, and shoulders</strong></li>
+<li>Complications : <strong>Fracture of the spine</strong></li>
+</ul>
+<p class="img">🖼️ ภาพร่างกายด้านข้างเห็นกระดูกสันหลัง + ภาพ &quot;Ankylosing Spondylosis — An inflammatory arthritis affecting the spine and large joints&quot; (label: <em>Fusion</em>)</p>
+
+</div></details></section><section class="panel" data-tab="meta" id="meta-3"><div class="organism-head"><h2>PSORIATIC ARTHRITIS</h2></div><details class="accordion" open><summary><span>Psoriatic Arthritis <span class="sl">สไลด์ 14</span></span></summary><div class="acc-body"><ul>
+<li><strong>Chronic inflammatory arthropathy associated with psoriasis</strong></li>
+<li><strong>&gt; 50%</strong> affects <strong>peripheral and axial joints</strong> : <strong>distal interphalangeal joints</strong> of the hands and feet</li>
+<li>The <strong>large joints</strong> may be involved : <strong>ankles, knees, hips, and wrists</strong></li>
+<li><strong>Sacroiliac and spinal disease</strong> occurs in <strong>20 - 40%</strong></li>
+<li><strong>&gt; 10%</strong> of the psoriatic population</li>
+</ul>
+<p class="img">🖼️ ภาพเข่า 2 ข้างที่มีผื่น psoriasis (แผ่นหนา มีสะเก็ด) + ภาพมือ 2 ข้างที่นิ้วบวมผิดรูปและมีผื่น</p>
+
+</div></details></section><section class="panel" data-tab="meta" id="meta-4"><div class="organism-head"><h2>CRYSTAL-INDUCED ARTHRITIS</h2></div><details class="accordion" open><summary><span>CRYSTAL-INDUCED ARTHRITIS <span class="sl">สไลด์ 15</span></span></summary><div class="acc-body"><ul>
+<li><strong>Gout</strong></li>
+<li><strong>Pseudo-Gout</strong></li>
+</ul>
+<p><em>(สไลด์หัวข้อ มีกล่องสีชมพู &quot;Gout&quot; และสีฟ้า &quot;Pseudo-Gout&quot;)</em></p>
+
+</div></details><h4>GOUT</h4><details class="accordion" open><summary><span>Gouty Arthritis <span class="sl">สไลด์ 16</span></span></summary><div class="acc-body"><ul>
+<li><strong>Hyperuricemia</strong></li>
+<li><strong>lack uricase</strong> : enzyme for degradation of uric acid</li>
+<li><strong>high reabsorption rate</strong> of filtered urate</li>
+</ul>
+<p class="img">🖼️ แผนภาพ &quot;Gout&quot;: ภาพนิ้วหัวแม่เท้าบวม + ขยายวงกลม (ข้อ) + ขยายอีกวง &quot;<strong>Crystals of urate</strong>&quot; (ผลึกรูปเข็มสีส้ม) + &quot;<strong>Chemical structure of uric acid</strong>&quot;</p>
+</div></details><details class="accordion" open><summary><span>Gouty Arthritis <span class="sl">สไลด์ 17</span></span></summary><div class="acc-body"><ul>
+<li><strong>Transient attacks of acute arthritis</strong></li>
+<li>Initiated by <strong>crystallization of urates within joints</strong></li>
+<li>Leading to <strong>chronic gouty arthritis and tophi</strong></li>
+<li><strong>Tophi</strong> : large aggregates of urate crystals and the surrounding inflammatory reaction</li>
+<li><strong>Urate nephropathy</strong> : most, but not all, individuals with chronic gout also develop</li>
+<li><strong>Hyperuricemia (plasma urate level &gt; 6.8 mg/dL)</strong> is <strong>necessary but not sufficient</strong> for the development of gout</li>
+</ul>
+<blockquote><p>💡 ยูเรตสูง &gt; 6.8 mg/dL เป็น &quot;จำเป็นแต่ไม่เพียงพอ&quot; ที่จะเกิด gout (คนที่ยูเรตสูงไม่ได้เป็น gout ทุกคน)</p></blockquote>
+</div></details><details class="accordion" open><summary><span>Pathogenesis <span class="sl">สไลด์ 18</span></span></summary><div class="acc-body"><ul>
+<li><strong>Uric acid</strong> : the <strong>end product of purine metabolism</strong></li>
+<li><strong>Hyperuricemia</strong></li>
+<li><strong>10%</strong> of cases : <strong>overproduction</strong> of urate</li>
+<li><strong>90 %</strong> : <strong>reduced excretion</strong></li>
+</ul>
+<p class="img">🖼️ Flowchart (Robbins):</p>
+<ol>
+<li><strong>Hyperuricemia</strong> → <strong>Precipitation of urate crystals in joints</strong></li>
+<li><strong>ทางซ้าย:</strong> <strong>Phagocytosis by macrophages</strong> → <strong>Activation of inflammasome</strong> → <strong>Release of IL-1β</strong> → <strong>Secretion of chemokines and other cytokines</strong> → <strong>Release of proteases</strong> (ที่ cartilage/synovium) → <strong>Tissue injury and inflammation</strong></li>
+<li><strong>จาก macrophages</strong> → <strong>Release of LTB4, prostaglandins, free radicals</strong> → <strong>Neutrophil chemotaxis</strong> (และ IL-1β + chemokines/cytokines ก็ชี้ไปที่ neutrophil chemotaxis)</li>
+<li><strong>ทางขวา:</strong> <strong>Activation of complement</strong> → <strong>Neutrophil chemotaxis</strong> → <strong>Phagocytosis of crystals by neutrophils</strong> → <strong>Lysis of neutrophils</strong> (→ <strong>Release of crystals</strong> วนกลับไปที่ phagocytosis) → <strong>Release of lysosomal enzymes</strong> → <strong>Tissue injury and inflammation</strong></li>
+</ol>
+<ul>
+<li>ภาพประกอบ: ข้อเข่า (label <em>Cartilage, Synovium</em>) และเท้าที่นิ้วโป้งแดง</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Many factors <span class="sl">สไลด์ 19</span></span></summary><div class="acc-body"><ul>
+<li><strong>Genetic predisposition</strong>, <strong>X-linked abnormalities of HGPRT</strong>, multifactorial inheritance and families</li>
+<li><strong>Heavy alcohol</strong></li>
+<li><strong>Age</strong> and <strong>duration</strong> of the hyperuricemia, <strong>&gt; 20 - 30 years</strong> of hyperuricemia</li>
+<li><strong>Obesity</strong> increases the risk of asymptomatic gout</li>
+<li><strong>Drugs (e.g., thiazides)</strong> reduce excretion of urate</li>
+<li><strong>Lead toxicity</strong></li>
+</ul>
+<p class="img">🖼️ แผนภาพ &quot;<strong>X-linked recessive genetic defect - sons</strong>&quot; / &quot;How boys are affected&quot; (X-Y พ่อ, X-X แม่, ลูกชายได้รับ X ที่ผิดปกติ) + ภาพแก้วเบียร์</p>
+</div></details><details class="accordion" open><summary><span>Morphology. <span class="sl">สไลด์ 20</span></span></summary><div class="acc-body"><ul>
+<li>The distinctive morphologic changes in gout are
+<ol>
+<li><strong>acute arthritis</strong></li>
+<li><strong>chronic tophaceous arthritis</strong></li>
+<li><strong>tophi in various sites</strong>, and sometimes</li>
+<li><strong>gouty nephropathy</strong></li>
+</ol>
+</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Morphology. Acute arthritis <span class="sl">สไลด์ 21</span></span></summary><div class="acc-body"><ul>
+<li>Characterized by a <strong>dense neutrophilic infiltrate</strong> that permeates the synovium and synovial fluid</li>
+<li><strong>Long, slender, and needle shaped</strong></li>
+<li>The synovium : <strong>edematous and congested</strong>, contains scattered lymphocytes, plasma cells, and macrophages</li>
+</ul>
+<p class="img">🖼️ ภาพนิ้วหัวแม่เท้าบวมแดง (acute gout)</p>
+<blockquote><p>💡 บรรทัด &quot;Long, slender, and needle shaped&quot; ในสไลด์ไม่มีประธาน — น่าจะหมายถึง <strong>ผลึกยูเรต</strong> (needle-shaped urate crystals)</p></blockquote>
+</div></details><details class="accordion" open><summary><span>Morphology. Chronic tophaceous arthritis <span class="sl">สไลด์ 22</span></span></summary><div class="acc-body"><ul>
+<li><strong>Synovium :</strong>
+<ul>
+<li><strong>hyperplastic, fibrotic</strong></li>
+<li>thickened by inflammatory cells</li>
+<li><strong>forms a pannus</strong></li>
+<li><strong>destroys the underlying cartilage</strong> leading to <strong>bone erosions</strong></li>
+</ul>
+</li>
+<li>In severe cases, <strong>fibrous or bony ankylosis</strong> ensues, resulting in partial to complete <strong>loss of joint function</strong></li>
+</ul>
+<p class="img">🖼️ ภาพเท้าที่นิ้วหัวแม่เท้าผิดรูป มีก้อนที่ข้อ</p>
+</div></details><details class="accordion" open><summary><span>Morphology. Tophi <span class="sl">สไลด์ 23</span></span></summary><div class="acc-body"><ul>
+<li>The <strong>pathognomonic hallmark of gout</strong></li>
+<li>Formed by <strong>large aggregations of urate crystals</strong> surrounded by an intense inflammatory reaction of <strong>macrophages, lymphocytes, and large foreign body giant cells</strong>, may have crystals</li>
+<li>Tophi may appear in
+<ul>
+<li>the <strong>articular cartilage</strong> of joints</li>
+<li>the <strong>periarticular ligaments</strong></li>
+<li><strong>Tendons</strong></li>
+<li><strong>soft tissues</strong></li>
+<li><strong>Kidneys</strong></li>
+<li><strong>nasal cartilages</strong></li>
+<li><strong>skin of the fingertips, palms, soles</strong>, or elsewhere</li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ ภาพเท้าที่มี tophus นูนที่ข้อ</p>
+</div></details><details class="accordion" open><summary><span>Tophi <span class="sl">สไลด์ 24</span></span></summary><div class="acc-body"><p><em>(สไลด์รูปล้วน)</em></p>
+<p class="img">🖼️ ภาพ 4 ภาพ: ภาพ H&amp;E ของ tophus 2 ภาพ (บริเวณสีชมพูอสัณฐานล้อมรอบด้วยเซลล์อักเสบ; ภาพหนึ่งมีที่มา Robbins &amp; Cotran 8th Edition), ภาพเท้าที่มีก้อน tophus, ภาพมือสองข้างที่ข้อนิ้วมี tophi</p>
+</div></details><details class="accordion" open><summary><span>Morphology. Gouty nephropathy <span class="sl">สไลด์ 25</span></span></summary><div class="acc-body"><ul>
+<li>Associated with the <strong>deposition of crystals in the renal medullary interstitium</strong></li>
+<li>Sometimes forming <strong>tophi, uric acid renal stones</strong></li>
+<li>Secondary complications : <strong>pyelonephritis</strong>, may ensue, particularly when the urates induce some <strong>urinary obstruction</strong></li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Clinical Course (4 stages) <span class="sl">สไลด์ 26</span></span></summary><div class="acc-body"><ul>
+<li><strong>4 stages:</strong>
+<ol>
+<li><strong>asymptomatic hyperuricemia</strong></li>
+<li><strong>acute gouty arthritis</strong></li>
+<li><strong>intercritical gout</strong></li>
+<li><strong>chronic tophaceous gout</strong></li>
+</ol>
+</li>
+<li><strong>1. Asymptomatic hyperuricemia</strong>
+<ul>
+<li>Appears around <strong>puberty in males</strong> and after <strong>menopause in females</strong></li>
+</ul>
+</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Clinical Course: 2. Acute gouty arthritis <span class="sl">สไลด์ 27</span></span></summary><div class="acc-body"><ul>
+<li><strong>After many years</strong></li>
+<li><strong>Sudden onset of excruciating joint pain</strong></li>
+<li><strong>Localized hyperemia, warmth, and exquisite tenderness</strong></li>
+<li>Most first attacks are <strong>monoarticula</strong> (= monoarticular)</li>
+<li><strong>50%</strong> in <strong>first metatarsophalangeal joint</strong></li>
+<li><strong>90%</strong> in <strong>insteps, ankles, heels, knees, wrists, fingers, and elbows</strong></li>
+</ul>
+<p class="img">🖼️ ภาพนิ้วหัวแม่เท้าบวมแดง</p>
+</div></details><details class="accordion" open><summary><span>Clinical Course: 3. Chronic tophaceous gout <span class="sl">สไลด์ 28</span></span></summary><div class="acc-body"><ul>
+<li><strong>Absence of appropriate therapy</strong></li>
+<li>Attacks recur at <strong>shorter intervals</strong> and become <strong>polyarticular</strong></li>
+<li>Over the span of year</li>
+<li>On average about <strong>12 years</strong></li>
+</ul>
+<p class="img">🖼️ ภาพเท้ามีข้อบวมผิดรูป + ภาพชิ้นเนื้อ/ข้อเท้าที่ตัดผ่าเห็นการสะสมของ tophi สีขาว</p>
+<blockquote><p>⚠️ <strong>สังเกต:</strong> สไลด์ 26 ระบุ 4 stages แต่สไลด์ 28 ใส่เลขหัวข้อ chronic tophaceous gout เป็น &quot;<strong>3.</strong>&quot; และ <strong>ไม่มีสไลด์อธิบาย stage 3 (intercritical gout) โดยเฉพาะ</strong> — ถ้าอาจารย์ถามลำดับ ให้ยึด 4 stages ตามสไลด์ 26</p></blockquote>
+
+</div></details><h4>PSEUDO-GOUT</h4><details class="accordion" open><summary><span>Calcium Pyrophosphate Crystal Deposition Disease (Pseudo-Gout) <span class="sl">สไลด์ 29</span></span></summary><div class="acc-body"><ul>
+<li>One of the more common disorders associated with <strong>intra-articular crystal formation</strong></li>
+<li><strong>&gt; 50 years of age</strong></li>
+<li><strong>30 - 60% in 85 years or older</strong></li>
+<li><strong>Sexes and Races are equally affected</strong></li>
+</ul>
+<p class="img">🖼️ ภาพจุลทรรศน์ของผลึก (ขาว-ดำ) รูปทรงเหลี่ยม/สี่เหลี่ยมขนมเปียกปูน — ที่มา Kumar et al: Robbins &amp; Cotran, 8th Edition</p>
+</div></details><details class="accordion" open><summary><span>Pathogenesis : <span class="sl">สไลด์ 30</span></span></summary><div class="acc-body"><ul>
+<li><strong>Autosomal dominant</strong></li>
+<li><strong>Germline mutations in the ANKH gene</strong></li>
+<li>The <strong>secondary form</strong> is associated with various disorders, including
+<ul>
+<li><strong>previous joint damage</strong></li>
+<li><strong>hyperparathyroidism</strong></li>
+<li><strong>hemochromatosis</strong></li>
+<li><strong>hypomagnesemia</strong></li>
+<li><strong>hypothyroidism</strong></li>
+<li><strong>diabetes</strong></li>
+</ul>
+</li>
+<li>The basis for crystal formation is <strong>not known</strong></li>
+<li><strong>Altered activity of the matrix enzymes</strong> that produce and degrade <strong>pyrophosphate</strong> is suspected</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Morphology. <span class="sl">สไลด์ 31</span></span></summary><div class="acc-body"><ul>
+<li><strong>Neutrophils, macrophages and fibrosis</strong></li>
+<li>The crystals form <strong>chalky white friable deposits</strong></li>
+<li>Crystals : <strong>0.5 - 5 μm</strong> in greatest dimension, have <strong>geometric shapes</strong></li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Clinical Course <span class="sl">สไลด์ 32</span></span></summary><div class="acc-body"><ul>
+<li><strong>Frequently asymptomatic</strong></li>
+<li>Can produce <strong>acute, subacute, or chronic arthritis</strong> that can be <strong>confused with osteoarthritis or rheumatoid arthritis</strong></li>
+<li><strong>Monoarticular or polyarticular</strong></li>
+<li>Most common : <strong>Knees</strong>, followed by <strong>wrists, elbows, shoulders, and ankles</strong></li>
+</ul>
+
+</div></details></section><section class="panel" data-tab="meta" id="meta-5"><div class="organism-head"><h2>GANGLION CYST</h2></div><details class="accordion" open><summary><span>Ganglion cyst <span class="sl">สไลด์ 33</span></span></summary><div class="acc-body"><ul>
+<li>A small <strong>1-1.5 cm</strong></li>
+<li>Locatted near a <strong>joint or tendon sheath</strong></li>
+<li>A common location : <strong>wrist</strong></li>
+<li><strong>Pathogenesis</strong>: <strong>cystic or myxiod degeneration of connective tissue</strong></li>
+<li><strong>Morpgology :</strong>
+<ul>
+<li><strong>Firm, fluctuant nodule</strong></li>
+<li><strong>Cyst wall lacks a cell lining</strong></li>
+<li>The fluid <strong>similar to synovial fluid</strong></li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ ภาพข้อมือที่มีก้อนนูน + วงกลมขยายแสดงถุงซีสต์ (สีม่วง) ใกล้กระดูก/เอ็นข้อมือ</p>
+
+</div></details></section><section class="panel" data-tab="meta" id="meta-6"><div class="organism-head"><h2>OSTEOARTHRITIS (OA) — โรคกระดูกข้อเสื่อม</h2></div><details class="accordion" open><summary><span>OSTEOARTHRITIS (OA) โรคกระดูกข้อเสื่อม <span class="sl">สไลด์ 34</span></span></summary><div class="acc-body"><ul>
+<li><strong>Degenerative joint disease</strong></li>
+<li><strong>The most common type of joint disease</strong></li>
+<li>Characterized by the <strong>progressive erosion of articular cartilage</strong></li>
+<li>The term <em>osteoarthritis</em>
+<ul>
+<li>implies an inflammatory disease: <strong>usually in small numbers</strong></li>
+<li><strong>intrinsic disease of cartilage</strong> : genetic, biochemical and metabolic alterations</li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ ภาพเปรียบเทียบ &quot;<strong>Healthy joint</strong>&quot; กับ &quot;<strong>Osteoarthritis</strong>&quot;</p>
+</div></details><details class="accordion" open><summary><span>OSTEOARTHRITIS (OA) โรคกระดูกข้อเสื่อม (ต่อ) <span class="sl">สไลด์ 35</span></span></summary><div class="acc-body"><ul>
+<li><strong>5%</strong> of cases, may appear in younger having some predisposing condition (<strong>secondary osteoarthritis</strong>) such as
+<ul>
+<li><strong>previous injuries</strong> to a joint</li>
+<li>a <strong>congenital developmental deformity</strong> of a joint(s)</li>
+<li>some underlying systemic disease such as <strong>diabetes, ochronosis, hemochromatosis, or marked obesity</strong></li>
+</ul>
+</li>
+<li><strong>Gender</strong>
+<ul>
+<li><strong>Women : knees and hands</strong></li>
+<li><strong>Men : hips</strong></li>
+</ul>
+</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Pathogenesis : <span class="sl">สไลด์ 36</span></span></summary><div class="acc-body"><ul>
+<li><strong>Multifactorial disease</strong> : <strong>genetic and environmental</strong> components</li>
+<li>Families and twins have suggested that the risk of OA</li>
+<li>The major environmental factors :
+<ul>
+<li><strong>Aging</strong></li>
+<li><strong>biomechanical stress</strong></li>
+<li><strong>obesity</strong></li>
+<li><strong>muscle strength</strong></li>
+<li><strong>joint stability</strong></li>
+<li><strong>structure and alignment</strong></li>
+</ul>
+</li>
+<li><strong>Aging is strong</strong></li>
+</ul>
+<p class="img">🖼️ แผนภาพ &quot;<strong>DESTRUCTION OF CARTILAGE</strong>&quot;: ข้อปกติเทียบข้อ OA — label: <em>Thinning cartilage, Bone ends rub together, Bone spur, Thinned cartilage</em></p>
+</div></details><details class="accordion" open><summary><span>Phases of OA <span class="sl">สไลด์ 37</span></span></summary><div class="acc-body"><ul>
+<li>The mechanisms leading to OA are <strong>complex and not yet clear</strong>, but <strong>chondrocytes are at the center of the process</strong></li>
+<li>Divided into several phases:
+<ol>
+<li><strong>chondrocyte injury</strong>
+<ul>
+<li>related to <strong>aging and genetic and biochemical factors</strong></li>
+</ul>
+</li>
+<li><strong>early OA</strong>
+<ul>
+<li><strong>chondrocytes proliferate</strong> and secrete <strong>inflammatory mediators, collagens, proteoglycans, and proteases</strong></li>
+<li>initiate <strong>secondary inflammatory changes</strong> in the <strong>synovium and subchondral bone</strong></li>
+</ul>
+</li>
+<li><strong>late OA</strong>
+<ul>
+<li><strong>repetitive injury and chronic inflammation</strong> lead to <strong>chondrocyte drop out</strong>, <strong>marked loss of cartilage</strong>, and <strong>extensive subchondral bone changes</strong></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</div></details><details class="accordion" open><summary><span>OA is thought to be initiated by chondrocyte injury <span class="sl">สไลด์ 38</span></span></summary><div class="acc-body"><ul>
+<li>OA is thought to be initiated by <strong>chondrocyte injury</strong>
+<ol>
+<li>in a <strong>genetically predisposed patient</strong> leading to changes in the <strong>extracellular matrix</strong>.</li>
+<li>Although chondrocytes may <strong>proliferate</strong> and attempt to repair damaged matrix, <strong>continued degradation exceeds repair in early OA</strong>.</li>
+<li><strong>Late OA</strong> is evidenced by <strong>loss of both matrix and chondrocytes</strong> with <strong>subchondral bone damage</strong></li>
+</ol>
+</li>
+</ul>
+<p class="img">🖼️ แผนภาพ 3 ขั้น:</p>
+<ul>
+<li><strong>1. CHONDROCYTE INJURY</strong> — label: <em>Genetic, Biomechanical → Chondrocytes; Synovium</em></li>
+<li><strong>2. EARLY OSTEOARTHRITIS</strong> — label: <em>PGE<sub>2</sub>, NO, TNF; TGF-β; IL-8, BMP → Chondrocyte proliferation; MMPs → Degrade collagen; Aggrecanases → Degrade proteoglycans</em></li>
+<li><strong>3. LATE OSTEOARTHRITIS</strong> — label: <em>Chondrocyte dropout, Apoptosis, Subchondral bone changes</em></li>
+</ul>
+</div></details><details class="accordion" open><summary><span>Morphology. Grossly <span class="sl">สไลด์ 39</span></span></summary><div class="acc-body"><p><strong>Grossly</strong> : a <strong>granular soft articular surface</strong></p>
+<ul>
+<li><strong>Chondrocytes die</strong></li>
+<li><strong>bone eburnation</strong></li>
+<li><strong>Small fractures</strong></li>
+<li><strong>Mushroom-shaped osteophytes</strong> (bony outgrowths)</li>
+<li><strong>Mildly congested synovium</strong></li>
+<li>May scattered chronic inflammatory cells</li>
+</ul>
+<p class="img">🖼️ ภาพผิวข้อที่สึกกร่อน (gross specimen) มีเส้นชี้หมายเลข <strong>1, 2, 3</strong> (ในสไลด์ไม่มีคำอธิบายเลข) — ที่มา Robbins &amp; Cotran, 8th Edition</p>
+</div></details><details class="accordion" open><summary><span>Morphology. Histology <span class="sl">สไลด์ 40</span></span></summary><div class="acc-body"><p><strong>Histology :</strong></p>
+<ul>
+<li>demonstration of the characteristic <strong>fibrillation of the articular cartilage</strong>.</li>
+</ul>
+<p class="img">🖼️ ภาพ H&amp;E ผิวกระดูกอ่อนขรุขระเป็นเส้นๆ (fibrillation)</p>
+</div></details><details class="accordion" open><summary><span>Clinical Course <span class="sl">สไลด์ 41</span></span></summary><div class="acc-body"><ul>
+<li>Usually <strong>asymptomatic until e in their 50s</strong> <em>(ตามต้นฉบับ — ข้อความตกหล่น)</em></li>
+<li><strong>Young person : search for some underlying cause</strong></li>
+<li><strong>Characteristic symptoms</strong>
+<ul>
+<li><strong>Deep pain, that worsens with use</strong></li>
+<li><strong>Morning stiffness</strong></li>
+<li><strong>Crepitus</strong></li>
+<li><strong>Limitation of range of movement</strong></li>
+</ul>
+</li>
+<li><strong>Spine</strong>
+<ul>
+<li><strong>Compression of cervical and lumbar nerve root</strong></li>
+<li><strong>Radicular pain, muscle spasms, muscle atrophy, and neurologic deficits</strong></li>
+</ul>
+</li>
+</ul>
+<p class="img">🖼️ ภาพมือกุมเข่าที่เจ็บ (จุดแดงที่เข่า)</p>
+
+</div></details></section><section class="panel" data-tab="meta" id="meta-7"><div class="organism-head"><h2>OSTEOPOROSIS</h2></div><details class="accordion" open><summary><span>Osteoporosis <span class="sl">สไลด์ 42</span></span></summary><div class="acc-body"><ul>
+<li>Characterized by <strong>porous bones and a reduced bone mass</strong></li>
+<li><strong>Predispose the bone to fracture</strong></li>
+<li><strong>Primary or secondary</strong> to a large variety of conditions</li>
+<li>Most common : <strong>senile and postmenopausal osteoporosis</strong></li>
+</ul>
+<p class="img">🖼️ แผนภาพ &quot;<strong>Normal bone</strong>&quot; เทียบ &quot;<strong>Bone with Osteoporosis</strong>&quot; (กระดูกต้นขา/หัวกระดูกต้นขา)</p>
+</div></details><details class="accordion" open><summary><span>Pathogenesis : <span class="sl">สไลด์ 43</span></span></summary><div class="acc-body"><ul>
+<li><strong>New hypotheses</strong> about the pathogenesis of osteoporosis
+<ul>
+<li><strong>Age-related changes</strong></li>
+<li><strong>Reduced physical activity</strong></li>
+<li><strong>Genetic factors</strong> are also important</li>
+<li>The body's <strong>calcium nutritional state</strong></li>
+<li><strong>Hormonal influences</strong></li>
+</ul>
+</li>
+</ul>
+
+</div></details></section><div class="pager"><button id="pv">← ก่อนหน้า</button><button id="nx">ถัดไป →</button></div></main></div>
 <footer class="credits">สรุปจากสไลด์ อ.พญ. Benjaporn Buranrat — คณะแพทยศาสตร์ ม.มหาสารคาม</footer>
-<script>const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],R=document.documentElement,TH={"nsaid": {"accent": "#4b5a68", "bg": "#e7e9e8", "soft": "#d3d8d9"}, "gout": {"accent": "#264b73", "bg": "#e6ebec", "soft": "#cfd9de"}, "bone": {"accent": "#2f6b4f", "bg": "#e6ece3", "soft": "#cddbcf"}, "leg": {"accent": "#8a4b2a", "bg": "#efe3d8", "soft": "#e0cdbd"}, "joint": {"accent": "#6b3f7a", "bg": "#ece1ef", "soft": "#d9c7df"}};
+<script>const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],R=document.documentElement,TH={"nsaid": {"accent": "#4b5a68", "bg": "#e7e9e8", "soft": "#d3d8d9"}, "gout": {"accent": "#264b73", "bg": "#e6ebec", "soft": "#cfd9de"}, "bone": {"accent": "#2f6b4f", "bg": "#e6ece3", "soft": "#cddbcf"}, "leg": {"accent": "#8a4b2a", "bg": "#efe3d8", "soft": "#e0cdbd"}, "joint": {"accent": "#6b3f7a", "bg": "#ece1ef", "soft": "#d9c7df"}, "tumor": {"accent": "#8a2f3c"}, "meta": {"accent": "#2e6a6e"}};
 let cur='gout';
 function theme(t){const c=TH[t];R.style.setProperty('--accent',c.accent);}
 function openPanel(id,scroll){const p=document.getElementById(id);if(!p)return;const t=p.dataset.tab;
